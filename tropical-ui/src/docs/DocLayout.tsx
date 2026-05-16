@@ -8,8 +8,10 @@ export const DocLayout: React.FC = () => {
     <div className="doc-layout">
       <Sidebar />
       <main className="doc-main">
-        <Outlet />
-        <Footer />
+        <div className="doc-content-scroller">
+          <Outlet />
+          <Footer />
+        </div>
       </main>
     </div>
   );

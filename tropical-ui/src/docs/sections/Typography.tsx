@@ -3,7 +3,7 @@ import React from 'react';
 export const Typography: React.FC = () => {
   return (
     <section className="doc-section" id="typography">
-      <div className="section-eyebrow">03</div>
+      <div className="section-eyebrow">05</div>
       <h2 className="section-title"><em>Typography</em></h2>
       <p className="section-desc">Three fonts with distinct roles. DM Serif for display moments, DM Sans for all UI, DM Mono for data and code. These can be overridden per brand via <span className="icode">--brand-font-*</span> tokens.</p>
 

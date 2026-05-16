@@ -1,18 +1,55 @@
 import React from 'react';
 
+export type CommandBarPlatform = 'windows' | 'macos' | 'linux-gnome';
+
 interface CommandBarProps {
   children: React.ReactNode;
+  platform?: CommandBarPlatform;
+  title?: string;
+  className?: string;
 }
 
-export const CommandBar: React.FC<CommandBarProps> = ({ children }) => {
+export const CommandBar: React.FC<CommandBarProps> = ({ 
+  children, 
+  platform = 'macos',
+  title,
+  className = ''
+}) => {
   return (
-    <div className="command-bar">
-      <div className="cb-dots">
-        <div className="cb-dot r" />
-        <div className="cb-dot y" />
-        <div className="cb-dot g" />
+    <div className={`command-bar cb-platform-${platform} ${className}`}>
+      {platform === 'macos' && (
+        <div className="cb-traffic-lights">
+          <div className="cb-dot r" />
+          <div className="cb-dot y" />
+          <div className="cb-dot g" />
+        </div>
+      )}
+      
+      {platform === 'linux-gnome' && (
+        <div className="cb-gnome-controls">
+          <div className="cb-gnome-btn close"><i className="ti ti-x"></i></div>
+        </div>
+      )}
+
+      <div className="cb-content">
+        {title && <div className="cb-title">{title}</div>}
+        {children}
       </div>
-      {children}
+
+      {platform === 'windows' && (
+        <div className="cb-win-controls">
+          <div className="cb-win-btn"><i className="ti ti-minus"></i></div>
+          <div className="cb-win-btn"><i className="ti ti-square"></i></div>
+          <div className="cb-win-btn close"><i className="ti ti-x"></i></div>
+        </div>
+      )}
+
+      {platform === 'linux-gnome' && (
+        <div className="cb-gnome-actions">
+          <div className="cb-gnome-btn"><i className="ti ti-minus"></i></div>
+          <div className="cb-gnome-btn"><i className="ti ti-square"></i></div>
+        </div>
+      )}
     </div>
   );
 };
@@ -38,7 +75,7 @@ export const CommandBarSegment: React.FC<CommandBarSegmentProps> = ({
       onClick={onClick}
       style={style}
     >
-      {children}
+      <span className="cb-seg-inner">{children}</span>
     </div>
   );
 };

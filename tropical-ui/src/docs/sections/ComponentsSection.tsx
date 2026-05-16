@@ -1,5 +1,15 @@
 import React from 'react';
 import { 
+  IconFolder, IconGitBranch, IconCpu, IconTerminal2, 
+  IconLayoutSidebar, IconSearch, IconFiles, IconCode, 
+  IconSettings, 
+  IconHistory, 
+  IconBug, 
+  IconSparkles, IconDownload, IconTrash, 
+  IconKey, IconAlertCircle,
+  IconChevronRight
+} from '@tabler/icons-react';
+import { 
   CommandBar, 
   CommandBarSegment, 
   CommandBarDivider, 
@@ -15,305 +25,233 @@ import {
 export const ComponentsSection: React.FC = () => {
   return (
     <section className="doc-section" id="components">
-      <div className="section-eyebrow">06</div>
-      <h2 className="section-title"><em>Components</em></h2>
+      <div className="section-eyebrow">12</div>
+      <h2 className="section-title"><em>Components</em> Library</h2>
       <p className="section-desc">Every component references only semantic tokens. Swap the brand layer and all components rebrand automatically.</p>
 
       {/* — COMMAND BAR — */}
       <div className="subsection" id="command-bar">
-        <div className="subsection-title">Command Bar</div>
-        <div className="canvas col">
-          <CommandBar>
-            <CommandBarSegment variant="primary">
-              <svg width="9" height="9" viewBox="0 0 28 28" fill="none"><path className="anim-star" d="M14 3L16.2 10.8L24 14L16.2 17.2L14 25L11.8 17.2L4 14L11.8 10.8Z" fill="currentColor"/></svg>
-              gemini-2.5-pro
-            </CommandBarSegment>
-            <CommandBarDivider />
-            <CommandBarSegment variant="success">
-              <StatusDot on />
-              oauth-personal
-            </CommandBarSegment>
-            <CommandBarDivider />
-            <CommandBarSegment>
-              <i className="ti ti-folder" style={{ fontSize: '10px' }}></i>
-              ducer-cli
-            </CommandBarSegment>
-            <CommandBarDivider />
-            <CommandBarSegment variant="secondary">
-              <i className="ti ti-cpu" style={{ fontSize: '10px' }}></i>
-              1M · 8%
-            </CommandBarSegment>
-            <CommandBarDivider />
-            <CommandBarSegment variant="warning">
-              <i className="ti ti-git-commit" style={{ fontSize: '10px' }}></i>
-              3 checkpoints
-            </CommandBarSegment>
-            <CommandBarDivider />
-            <CommandBarSegment>
-              <i className="ti ti-plug" style={{ fontSize: '10px' }}></i>
-              2/3 mcp
-            </CommandBarSegment>
-            <CommandBarSpacer />
-            <CommandBarSegment style={{ fontSize: '9.5px' }}>
-              v0.40.1
-            </CommandBarSegment>
-          </CommandBar>
-          <div className="canvas-label">height: 38px · DM Mono 10.5px · every segment clickable→opens its drawer · leftmost = highest priority</div>
-        </div>
-        <div className="rule-box mt-2">
-          <p><strong>Segment priority order (left to right):</strong> model→auth→workspace→context/tokens→warnings→services→version. When space is constrained, remove from right first.</p>
-        </div>
-      </div>
-
-      {/* — DOCK — */}
-      <div className="subsection" id="dock">
-        <div className="subsection-title">Floating Dock</div>
-        <div className="canvas center" style={{ minHeight: '200px', gap: '40px' }}>
+        <div className="subsection-title">Command Bar · Multi-Platform</div>
+        <div className="canvas col" style={{ gap: '20px' }}>
           <div>
-            <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-disabled)', marginBottom: '10px', textAlign: 'center' }}>default (right edge)</div>
-            <div className="dock">
-              <div className="dock-btn active"><i className="ti ti-history"></i></div>
-              <div className="dock-btn" style={{ position: 'relative' }}><i className="ti ti-plug"></i><div className="dock-badge"></div></div>
-              <div className="dock-btn"><i className="ti ti-folders"></i></div>
+            <div style={{ fontSize: '10px', color: 'var(--ui-text-disabled)', marginBottom: '6px', fontFamily: 'var(--ui-font-mono)' }}>macOS (Traffic Lights)</div>
+            <CommandBar platform="macos" title="tropical-ui">
+              <CommandBarSegment variant="primary">
+                <svg width="9" height="9" viewBox="0 0 28 28" fill="none"><path d="M14 3L16.2 10.8L24 14L16.2 17.2L14 25L11.8 17.2L4 14L11.8 10.8Z" fill="currentColor"/></svg>
+                gemini-2.0-flash
+              </CommandBarSegment>
+              <CommandBarDivider />
+              <CommandBarSegment variant="success">
+                <StatusDot on />
+                connected
+              </CommandBarSegment>
+              <CommandBarSpacer />
+              <CommandBarSegment>v0.5.2</CommandBarSegment>
+            </CommandBar>
+          </div>
+          <div>
+            <div style={{ fontSize: '10px', color: 'var(--ui-text-disabled)', marginBottom: '6px', fontFamily: 'var(--ui-font-mono)' }}>Windows (Native Controls)</div>
+            <CommandBar platform="windows" title="Tropical Dev Design">
+              <CommandBarSegment>
+                <IconFolder size={14} />
+                src/components
+              </CommandBarSegment>
+              <CommandBarDivider />
+              <CommandBarSegment variant="warning">
+                <IconGitBranch size={14} />
+                feature/dock-system
+              </CommandBarSegment>
+              <CommandBarSpacer />
+              <CommandBarSegment variant="secondary">
+                <IconCpu size={14} />
+                1.2M tokens
+              </CommandBarSegment>
+            </CommandBar>
+          </div>
+        </div>
+      </div>
+
+      {/* — DOCK & DRAWERS GRID — */}
+      <div className="grid-2">
+        <div className="subsection" id="dock">
+          <div className="subsection-title">Dock System</div>
+          <div className="canvas center" style={{ minHeight: '340px', gap: '20px', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
+            <div className="dock dock-left dock-anchored">
+              <div className="dock-btn active"><IconLayoutSidebar size={18} /></div>
+              <div className="dock-btn"><IconSearch size={18} /></div>
               <div className="dock-sep"></div>
-              <div className="dock-btn"><i className="ti ti-puzzle"></i></div>
+              <div className="dock-btn"><IconFiles size={18} /></div>
+            </div>
+            <div className="dock dock-bottom dock-floating" style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
+              <div className="dock-btn"><IconTerminal2 size={18} /></div>
+              <div className="dock-btn active"><IconCode size={18} /></div>
               <div className="dock-sep"></div>
-              <div className="dock-btn"><i className="ti ti-key"></i></div>
-              <div className="dock-btn"><i className="ti ti-settings"></i></div>
+              <div className="dock-btn"><IconSettings size={18} /></div>
+            </div>
+            <div className="dock-panel dock-panel-anchored-right" style={{ width: '160px', height: '100%', position: 'absolute', right: '0' }}>
+                <div className="dock-panel-header"><span className="dock-panel-title">Props</span></div>
+                <div className="dock-panel-content">
+                  <div className="dock-panel-section"><div className="dock-panel-section-title">Visual</div></div>
+                </div>
             </div>
           </div>
-          <div style={{ fontSize: 'var(--ui-text-xs)', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-disabled)', maxWidth: '200px', lineHeight: '1.9' }}>
-            width: 46px<br/>
-            border-radius: var(--ui-r-2xl)<br/>
-            draggable via mousedown<br/>
-            active→accent bar right side<br/>
-            badge→service status dot<br/>
-            hover→scale(1.08) spring<br/>
-            position: absolute z-40
+          <div className="canvas-label">Multi-position support (top/bottom/left/right) · Variants: floating or anchored.</div>
+        </div>
+
+        <div className="subsection" id="drawers">
+          <div className="subsection-title">Drawers · Sessions</div>
+          <div className="canvas" style={{ padding: '0' }}>
+            <div className="drawer-preview" style={{ width: '100%' }}>
+              <div className="drawer-header">
+                <IconHistory size={15} style={{ color: 'var(--ui-text-tertiary)' }} />
+                <div className="drawer-title">History</div>
+              </div>
+              <div className="drawer-body">
+                <div className="sess-item active"><div className="sess-icon"><IconCode size={16} /></div><div className="sess-info"><div className="sess-title">Refactor: Layout</div></div></div>
+                <div className="sess-item"><div className="sess-icon"><IconBug size={16} /></div><div className="sess-info"><div className="sess-title">Fix: Routing</div></div></div>
+              </div>
+            </div>
           </div>
+          <div className="canvas-label">Spring physics for entry/exit · Handle-based interaction.</div>
         </div>
       </div>
 
-      {/* — DRAWERS — */}
-      <div className="subsection" id="drawers">
-        <div className="subsection-title">Drawers · Sessions</div>
-        <div className="canvas" style={{ padding: '0' }}>
-          <div className="drawer-preview" style={{ width: '100%' }}>
-            <div className="drawer-handle"></div>
-            <div className="drawer-header">
-              <i className="ti ti-history" style={{ fontSize: '15px', color: 'var(--ui-text-tertiary)' }}></i>
-              <div className="drawer-title">Sessions</div>
-              <div style={{ marginLeft: 'auto', display: 'flex', gap: '6px' }}>
-                <button className="btn ghost sm"><i className="ti ti-search" style={{ fontSize: '11px' }}></i>Search</button>
-                <div className="drawer-close"><i className="ti ti-x"></i></div>
+      {/* — WEB-BASED EXTRAS — */}
+      <div className="subsection" id="web-extras">
+        <div className="subsection-title">Web-based UI Components</div>
+        <div className="grid-2">
+           <div>
+              <div style={{ fontSize: '10px', color: 'var(--ui-text-disabled)', marginBottom: '8px', fontFamily: 'var(--ui-font-mono)' }}>BLOG_CARD</div>
+              <Card style={{ padding: '0', overflow: 'hidden' }}>
+                 <div style={{ height: '120px', background: 'var(--ui-surface-3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <IconSparkles size={40} style={{ opacity: 0.2 }} />
+                 </div>
+                 <div style={{ padding: '16px' }}>
+                    <div style={{ fontSize: '10px', color: 'var(--brand-primary)', fontWeight: 800, marginBottom: '4px' }}>ENGINEERING // MAY 16</div>
+                    <div style={{ fontSize: '16px', fontWeight: 800, marginBottom: '8px' }}>Refactoring the Orbital Grid</div>
+                    <div style={{ fontSize: '12px', color: 'var(--ui-text-tertiary)', lineHeight: '1.6' }}>How we migrated a boxy grid to a gravity-based system.</div>
+                    <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', fontWeight: 700, color: 'var(--ui-text-primary)' }}>READ_MORE <IconChevronRight size={14}/></div>
+                 </div>
+              </Card>
+           </div>
+           <div>
+              <div style={{ fontSize: '10px', color: 'var(--ui-text-disabled)', marginBottom: '8px', fontFamily: 'var(--ui-font-mono)' }}>HERO_SECTION_COMPONENT</div>
+              <div style={{ padding: '32px', background: 'var(--ui-surface-1)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', textAlign: 'center' }}>
+                 <h3 style={{ fontSize: '24px', fontWeight: 900, marginBottom: '12px' }}>Build the <span style={{ color: 'var(--brand-primary)' }}>Future</span></h3>
+                 <p style={{ fontSize: '13px', color: 'var(--ui-text-tertiary)', marginBottom: '24px' }}>The industrial-modern design system for professional workstations.</p>
+                 <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+                    <Button variant="primary">Get Started</Button>
+                    <Button variant="ghost">Documentation</Button>
+                 </div>
               </div>
-            </div>
-            <div className="drawer-body">
-              <div className="sess-item active"><div className="sess-icon"><i className="ti ti-code"></i></div><div className="sess-info"><div className="sess-title">Refactor PipelineOrchestrator</div><div className="sess-meta">12 min ago · 24 msgs</div></div><div className="tag primary" style={{ alignSelf: 'flex-start', marginTop: '4px' }}>ducer-cli</div></div>
-              <div className="sess-item"><div className="sess-icon"><i className="ti ti-bug"></i></div><div className="sess-info"><div className="sess-title">Fix UVR integration crash</div><div className="sess-meta">yesterday · 18 msgs</div></div></div>
-              <div className="sess-item"><div className="sess-icon"><i className="ti ti-music"></i></div><div className="sess-info"><div className="sess-title">REAPER Lua template audit</div><div className="sess-meta">Sunday · 9 msgs</div></div></div>
-            </div>
-          </div>
+           </div>
         </div>
-        <div className="canvas-label">Enters from bottom with spring(0.34, 1.56, 0.64, 1) · backdrop rgba(0,0,0,0.45) · handle for drag-to-dismiss</div>
+        <div className="canvas-label">Web-specific components use broader spacing and typography ramps for public-facing content.</div>
+      </div>
 
-        <div className="subsection-title mt-4">Drawers · MCP Servers</div>
-        <div className="canvas" style={{ padding: '0' }}>
-          <div className="drawer-preview" style={{ width: '100%' }}>
-            <div className="drawer-handle"></div>
-            <div className="drawer-header">
-              <i className="ti ti-plug" style={{ fontSize: '15px', color: 'var(--ui-text-tertiary)' }}></i>
-              <div className="drawer-title">MCP Servers</div>
-              <div style={{ marginLeft: 'auto', display: 'flex', gap: '6px' }}>
-                <button className="btn ghost sm"><i className="ti ti-plus" style={{ fontSize: '11px' }}></i>Add</button>
-                <div className="drawer-close"><i className="ti ti-x"></i></div>
-              </div>
+      {/* — BUTTONS & INPUTS GRID — */}
+      <div className="grid-2">
+        <div className="subsection" id="buttons">
+          <div className="subsection-title">Buttons</div>
+          <div className="canvas col" style={{ gap: '16px' }}>
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <Button variant="primary">Primary</Button>
+              <Button variant="secondary">Secondary</Button>
             </div>
-            <div className="drawer-body">
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-                <div className="mcp-card on"><div className="mcp-card-top"><div className="sdot on"></div><div className="mcp-name">context7</div></div><div className="mcp-type">stdio · npx</div><div className="mcp-tools">8 tools active</div></div>
-                <div className="mcp-card on"><div className="mcp-card-top"><div className="sdot on"></div><div className="mcp-name">github</div></div><div className="mcp-type">stdio · npx</div><div className="mcp-tools">12 tools active</div></div>
-                <div className="mcp-card"><div className="mcp-card-top"><div className="sdot off"></div><div className="mcp-name">google-workspace</div></div><div className="mcp-type">sse · url</div><div className="mcp-tools" style={{ color: 'var(--ui-text-disabled)' }}>disconnected</div></div>
-                <div className="mcp-card" style={{ borderStyle: 'dashed', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: '.45' }}><span style={{ fontSize: '11px', color: 'var(--ui-text-tertiary)', display: 'flex', alignItems: 'center', gap: '5px' }}><i className="ti ti-plus" style={{ fontSize: '13px' }}></i>add server</span></div>
-              </div>
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <Button variant="ghost" leftIcon={<IconDownload size={14} />}>Download</Button>
+              <Button variant="danger" iconOnly><IconTrash size={16} /></Button>
             </div>
           </div>
+          <div className="canvas-label">Transitions: fast (110ms) · Active scale down (0.97).</div>
         </div>
 
-        <div className="subsection-title mt-4">Drawers · Checkpoints</div>
-        <div className="canvas" style={{ padding: '0' }}>
-          <div className="drawer-preview" style={{ width: '100%' }}>
-            <div className="drawer-handle"></div>
-            <div className="drawer-header">
-              <i className="ti ti-git-commit" style={{ fontSize: '15px', color: 'rgba(251,191,36,.6)' }}></i>
-              <div className="drawer-title">Checkpoints</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginLeft: 'auto' }}>
-                <div className="toggle on" style={{ cursor: 'pointer' }}></div>
-                <span style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-tertiary)' }}>enabled</span>
-                <div className="drawer-close"><i className="ti ti-x"></i></div>
-              </div>
-            </div>
-            <div className="drawer-body">
-              <div className="cp-item"><div className="cp-line"><div className="cp-dot"></div><div className="cp-vline"></div></div><div className="cp-content"><div className="cp-title">pipeline-orchestrator.ts · write_file</div><div className="cp-meta">3 min ago</div><div className="cp-action"><i className="ti ti-corner-up-left" style={{ fontSize: '10px' }}></i>restore</div></div></div>
-              <div className="cp-item"><div className="cp-line"><div className="cp-dot ok"></div><div className="cp-vline"></div></div><div className="cp-content"><div className="cp-title">types/pipeline.ts · write_file</div><div className="cp-meta">9 min ago</div><div className="cp-action"><i className="ti ti-corner-up-left" style={{ fontSize: '10px' }}></i>restore</div></div></div>
-              <div className="cp-item"><div className="cp-line"><div className="cp-dot ok"></div></div><div className="cp-content"><div className="cp-title">src/index.ts · replace</div><div className="cp-meta">22 min ago</div><div className="cp-action"><i className="ti ti-corner-up-left" style={{ fontSize: '10px' }}></i>restore</div></div></div>
-            </div>
+        <div className="subsection" id="inputs">
+          <div className="subsection-title">Inputs</div>
+          <div className="canvas col" style={{ gap: '12px' }}>
+            <Input placeholder="Search..." leftIcon={<IconSearch size={14} />} />
+            <Input placeholder="Password" type="password" leftIcon={<IconKey size={14} />} />
+            <Input placeholder="Invalid field" leftIcon={<IconAlertCircle size={14} />} status="invalid" />
           </div>
+          <div className="canvas-label">Focus rings use primary-glow · Semantic error states.</div>
         </div>
       </div>
 
-      {/* — CHAT — */}
-      <div className="subsection" id="chat">
-        <div className="subsection-title">Chat Interface</div>
-        <div className="canvas col" style={{ gap: '14px' }}>
-          <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-            <div className="avatar sm ai">â¨</div>
-            <div className="bubble-ai">
-              I'll read the orchestrator first.
-              <div className="tool-card">
-                <div className="tool-card-hd"><i className="ti ti-file-search" style={{ fontSize: '11px' }}></i>read_file<div className="tool-ok"><i className="ti ti-check" style={{ fontSize: '9px' }}></i>ok</div></div>
-                <div className="tool-card-body">packages/core/src/pipeline-orchestrator.ts</div>
-              </div>
-              <div style={{ marginTop: '8px' }}>No <span className="icode">trusted</span> field in <span className="icode">PipelineConfig</span>. I'll add it and patch <span className="icode">executeStep()</span>.</div>
-              <div className="tool-card" style={{ marginTop: '8px' }}>
-                <div className="tool-card-hd"><i className="ti ti-pencil" style={{ fontSize: '11px' }}></i>write_file<div className="tool-run">executing...</div></div>
-                <div className="tool-card-body">types/pipeline.ts</div>
-              </div>
+      {/* — PILLS, TAGS & FEEDBACK — */}
+      <div className="grid-2">
+        <div className="subsection" id="pills">
+          <div className="subsection-title">Pills & Tags</div>
+          <div className="canvas col" style={{ gap: '12px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <Pill variant="primary">gemini-2.5</Pill>
+              <Pill variant="success"><StatusDot on /> online</Pill>
+              <Pill variant="warning">checkpoint</Pill>
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <Tag variant="primary">trusted</Tag>
+              <Tag variant="secondary">1M ctx</Tag>
+              <Tag variant="success">resolved</Tag>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', flexDirection: 'row-reverse' }}>
-            <div className="avatar sm user"><i className="ti ti-user" style={{ fontSize: '12px' }}></i></div>
-            <div className="bubble-user">--yolo only for trusted pipelines, rest keeps confirmation</div>
-          </div>
-          <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-            <div className="avatar sm ai">â¨</div>
-            <div className="bubble-ai"><div className="typing"><div className="td"></div><div className="td"></div><div className="td"></div></div></div>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div className="gd-input-wrap" style={{ flex: '1' }}><input placeholder="Type a prompt or use / for commands..." style={{ fontSize: '13px' }}/><div className="input-hint"><span>/ cmd</span><span>@ mcp</span></div></div>
-            <button className="send-btn"><i className="ti ti-arrow-up" style={{ fontSize: '13px' }}></i></button>
-          </div>
+          <div className="canvas-label">Semantic color ramps · Monospace meta labels.</div>
         </div>
-        <div className="canvas-label">AI bubble: border-radius 3px 10px 10px 10px · User: 10px 3px 10px 10px · Tool card: left border accent + amber color family</div>
-      </div>
 
-      {/* — PILLS & TAGS — */}
-      <div className="subsection" id="pills">
-        <div className="subsection-title">Pills & Tags</div>
-        <div className="canvas row" style={{ gap: '8px', alignItems: 'center' }}>
-          <Pill variant="primary"><i className="ti ti-sparkles" style={{ fontSize: '10px' }}></i>gemini-2.5-pro</Pill>
-          <Pill variant="secondary"><i className="ti ti-cpu" style={{ fontSize: '10px' }}></i>1M context</Pill>
-          <Pill variant="success"><StatusDot on />connected</Pill>
-          <Pill variant="warning"><i className="ti ti-git-commit" style={{ fontSize: '10px' }}></i>checkpoint</Pill>
-          <Pill variant="danger"><StatusDot variant="danger" />sandbox error</Pill>
-          <Pill variant="neutral"><i className="ti ti-folder" style={{ fontSize: '10px' }}></i>workspace</Pill>
+        <div className="subsection" id="feedback">
+          <div className="subsection-title">Feedback & Progress</div>
+          <div className="canvas col" style={{ gap: '20px' }}>
+            <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
+               <div className="spinner"></div>
+               <div className="typing"><div className="td"></div><div className="td"></div><div className="td"></div></div>
+               <div className="toggle on"></div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <div className="progress-bar"><div className="progress-fill" style={{ width: '68%' }}></div></div>
+              <div className="progress-bar"><div className="progress-fill" style={{ width: '35%', background: 'var(--ui-warning)' }}></div></div>
+            </div>
+          </div>
+          <div className="canvas-label">Indeterminate spinners · Linear progress tracking.</div>
         </div>
-        <div className="canvas row mt-2" style={{ gap: '6px', alignItems: 'center' }}>
-          <Tag variant="primary">trusted</Tag>
-          <Tag variant="secondary">1M ctx</Tag>
-          <Tag variant="success">resolved</Tag>
-          <Tag variant="warning">stdio</Tag>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}><StatusDot on /><span className="text-muted">online</span></div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}><StatusDot variant="warning" /><span className="text-muted">degraded</span></div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}><StatusDot variant="danger" /><span className="text-muted">error</span></div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}><StatusDot /><span className="text-muted">offline</span></div>
-        </div>
-      </div>
-
-      {/* — BUTTONS — */}
-      <div className="subsection" id="buttons">
-        <div className="subsection-title">Buttons</div>
-        <div className="canvas row" style={{ gap: '8px', alignItems: 'center' }}>
-          <Button variant="primary" leftIcon={<i className="ti ti-sparkles" style={{ fontSize: '12px' }}></i>}>Primary</Button>
-          <Button variant="secondary">Secondary</Button>
-          <Button variant="ghost" leftIcon={<i className="ti ti-download" style={{ fontSize: '12px' }}></i>}>Ghost</Button>
-          <Button variant="danger" leftIcon={<i className="ti ti-trash" style={{ fontSize: '12px' }}></i>}>Danger</Button>
-        </div>
-        <div className="canvas row mt-2" style={{ gap: '8px', alignItems: 'center' }}>
-          <Button variant="primary" size="sm">Small</Button>
-          <Button variant="ghost" size="sm">Small Ghost</Button>
-          <Button variant="primary" size="lg" leftIcon={<i className="ti ti-rocket" style={{ fontSize: '14px' }}></i>}>Large</Button>
-          <Button variant="ghost" iconOnly><i className="ti ti-dots-vertical"></i></Button>
-          <Button variant="ghost" size="sm" iconOnly><i className="ti ti-x"></i></Button>
-          <button className="send-btn"><i className="ti ti-arrow-up" style={{ fontSize: '13px' }}></i></button>
-        </div>
-        <div className="canvas-label">All buttons: transition all var(--ui-dur-fast) · active: scale(0.97) · send-btn: spring scale hover</div>
-      </div>
-
-      {/* — INPUTS — */}
-      <div className="subsection" id="inputs">
-        <div className="subsection-title">Inputs</div>
-        <div className="canvas col" style={{ gap: '10px' }}>
-          <Input placeholder="Search sessions..." leftIcon={<i className="ti ti-search" style={{ fontSize: '14px', color: 'var(--ui-text-tertiary)' }}></i>} />
-          <Input 
-            placeholder="API key" 
-            type="password" 
-            leftIcon={<i className="ti ti-key" style={{ fontSize: '14px', color: 'var(--ui-text-tertiary)' }}></i>}
-            rightIcon={<Button variant="ghost" size="sm" iconOnly><i className="ti ti-eye"></i></Button>}
-          />
-          <Input 
-            placeholder="Type a prompt or use / for commands..." 
-            defaultValue="refactor the pipeline orchestrator"
-            leftIcon={<i className="ti ti-message-2" style={{ fontSize: '14px', color: 'var(--ui-accent-primary-light)' }}></i>}
-            style={{ borderColor: 'var(--ui-accent-primary-border)', boxShadow: '0 0 0 3px var(--ui-accent-primary-bg)' }}
-            hint={<div className="input-hint"><span>/ cmd</span><span>@ mcp</span></div>}
-          />
-          <Input 
-            placeholder="Invalid URL" 
-            leftIcon={<i className="ti ti-alert-circle" style={{ fontSize: '14px', color: 'var(--ui-danger)' }}></i>}
-            style={{ borderColor: 'var(--ui-danger-border)' }}
-            status="invalid"
-          />
-        </div>
-        <div className="canvas-label">States: default→hover (border-hover)→focus (border-primary + glow)→error (border-danger)</div>
       </div>
 
       {/* — CARDS — */}
       <div className="subsection" id="cards">
         <div className="subsection-title">Surface Cards</div>
-        <div className="canvas grid2" style={{ gap: '10px' }}>
+        <div className="grid-2">
           <Card>
-            <div style={{ fontSize: '12px', color: 'var(--ui-text-disabled)', fontFamily: 'var(--ui-font-mono)', marginBottom: '6px' }}>default</div>
-            <div style={{ fontSize: 'var(--ui-text-base)', color: 'var(--ui-text-secondary)' }}>background: surface-4 · border: border-default</div>
+            <div style={{ fontSize: '11px', color: 'var(--ui-text-disabled)', marginBottom: '8px' }}>SURFACE_4</div>
+            <div style={{ fontSize: '13px', color: 'var(--ui-text-secondary)' }}>Default container for main canvas items.</div>
           </Card>
           <Card variant="elevated">
-            <div style={{ fontSize: '12px', color: 'var(--ui-text-disabled)', fontFamily: 'var(--ui-font-mono)', marginBottom: '6px' }}>elevated</div>
-            <div style={{ fontSize: 'var(--ui-text-base)', color: 'var(--ui-text-secondary)' }}>background: surface-5 · shadow-sm</div>
+            <div style={{ fontSize: '11px', color: 'var(--ui-text-disabled)', marginBottom: '8px' }}>SURFACE_5</div>
+            <div style={{ fontSize: '13px', color: 'var(--ui-text-secondary)' }}>Elevated surface for hover states.</div>
           </Card>
-          <Card style={{ borderColor: 'var(--ui-accent-primary-border)', background: 'var(--ui-accent-primary-bg)' }}>
-            <div style={{ fontSize: '12px', color: 'var(--ui-accent-primary-light)', fontFamily: 'var(--ui-font-mono)', marginBottom: '6px' }}>active / selected</div>
-            <div style={{ fontSize: 'var(--ui-text-base)', color: 'var(--ui-text-secondary)' }}>border-primary · bg-primary-bg</div>
+        </div>
+      </div>
+      {/* — TUI PRIMITIVES — */}
+      <div className="subsection" id="tui-primitives">
+        <div className="subsection-title">TUI Primitives</div>
+        <div className="grid-2">
+          <Card style={{ fontFamily: 'var(--ui-font-mono)', fontSize: '11px' }}>
+            <div style={{ color: 'var(--brand-primary)', fontWeight: 800, marginBottom: '12px' }}>DENSITY_GRADIENTS</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+               <div>█ FULL_BLOCK</div>
+               <div>▓ DARK_SHADE</div>
+               <div>▒ MEDIUM_SHADE</div>
+               <div>░ LIGHT_SHADE</div>
+            </div>
           </Card>
-          <Card style={{ borderColor: 'var(--ui-success-border)', background: 'var(--ui-success-bg)' }}>
-            <div style={{ fontSize: '12px', color: 'var(--ui-success-light)', fontFamily: 'var(--ui-font-mono)', marginBottom: '6px' }}>success state</div>
-            <div style={{ fontSize: 'var(--ui-text-base)', color: 'var(--ui-text-secondary)' }}>border-success · bg-success</div>
+          <Card style={{ fontFamily: 'var(--ui-font-mono)', fontSize: '11px' }}>
+            <div style={{ color: 'var(--brand-primary)', fontWeight: 800, marginBottom: '12px' }}>CONNECTORS</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+               <div>┣━ BRANCH_MID</div>
+               <div>┗━ BRANCH_END</div>
+               <div>┃&nbsp;&nbsp;VERTICAL_BAR</div>
+               <div>─&nbsp;&nbsp;HORIZONTAL_BAR</div>
+            </div>
           </Card>
         </div>
       </div>
 
-      {/* — STATUS & FEEDBACK — */}
-      <div className="subsection" id="feedback">
-        <div className="subsection-title">Feedback · Loading & Progress</div>
-        <div className="canvas row" style={{ gap: '20px', alignItems: 'center' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-            <div className="spinner"></div>
-            <span className="text-muted">spinner</span>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-            <div className="typing"><div className="td"></div><div className="td"></div><div className="td"></div></div>
-            <span className="text-muted">typing</span>
-          </div>
-          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <div className="progress-bar"><div className="progress-fill" style={{ width: '68%' }}></div></div>
-            <div className="progress-bar"><div className="progress-fill" style={{ width: '23%', background: 'var(--ui-warning)' }}></div></div>
-            <div className="progress-bar"><div className="progress-fill" style={{ width: '100%', background: 'var(--ui-success)' }}></div></div>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <div className="toggle on"></div>
-            <div className="toggle"></div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

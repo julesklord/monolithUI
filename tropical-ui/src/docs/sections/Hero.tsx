@@ -1,48 +1,56 @@
 import React from 'react';
-import { TUIWindow, TUIStatusBar, TUIStatusSeg, TUIRow, TUIText } from '../../components';
+import { 
+  IconMeteor, 
+  IconPalette, 
+  IconLayoutDashboard, 
+  IconShoe, 
+  IconHeart, 
+  IconArrowUpRight 
+} from '@tabler/icons-react';
 
 export const Hero: React.FC = () => {
   return (
     <section className="doc-section" style={{ paddingTop: '0px' }}>
-      
+      <div className="section-eyebrow">01</div>
       {/* System Status / Header Block */}
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', marginBottom: '32px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', background: 'var(--ui-surface-1)', border: '1.5px solid var(--ui-border-default)', padding: '24px', borderRadius: '0', gap: '24px', marginBottom: '40px' }}>
         <div style={{ 
-          width: '56px', height: '56px', borderRadius: '14px', 
-          background: 'var(--brand-primary-bg)', 
-          border: '1px solid var(--brand-primary-border)', 
+          width: '64px', height: '64px', borderRadius: '0', 
+          background: 'var(--brand-primary)', 
+          border: '1.5px solid var(--brand-primary)', 
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           flexShrink: 0
         }}>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2.5C12 2.5 5 8 5 15c0 3.866 3.134 7 7 7s7-3.134 7-7c0-7-7-12.5-7-12.5z" fill="var(--brand-primary-bg)" />
-            <path d="M12 2.5V22" stroke="var(--brand-secondary)" />
-            <path d="M12 11l4-3" stroke="var(--brand-secondary)" />
-            <path d="M12 15l3.5-2.5" stroke="var(--brand-secondary)" />
-            <path d="M12 19l3-2" stroke="var(--brand-secondary)" />
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary-text)" strokeWidth="2.5" strokeLinecap="square" strokeLinejoin="miter">
+            <path d="M12 2L4 7v10l8 5 8-5V7l-8-5z" />
+            <path d="M12 22V12" />
+            <path d="M12 12L4 7" />
+            <path d="M12 12l8-5" />
           </svg>
         </div>
         <div style={{ flex: 1 }}>
-          <h1 style={{ margin: '0 0 4px 0', fontSize: '24px', fontWeight: 500, color: 'var(--ui-text-primary)', letterSpacing: '-0.02em' }}>
-            TropicalUI <span style={{ color: 'var(--ui-text-disabled)' }}>// Core System</span>
-          </h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
+            <h1 style={{ margin: 0, fontSize: '28px', fontWeight: 800, color: 'var(--ui-text-primary)', letterSpacing: '-0.04em', textTransform: 'uppercase' }}>
+              Tropical<span style={{ color: 'var(--brand-primary)' }}>UI</span>
+            </h1>
+            <div className="tag primary" style={{ borderRadius: '0', fontWeight: 800 }}>v2.0.0</div>
+          </div>
           <div style={{ display: 'flex', gap: '12px', fontFamily: 'var(--ui-font-mono)', fontSize: '11px', color: 'var(--ui-text-tertiary)', alignItems: 'center' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}><div className="sdot on"></div> v1.0.0</span>
-            <span>·</span>
-            <span style={{ color: 'var(--brand-primary-light)' }}>status: active</span>
-            <span>·</span>
-            <span>target: multi-env (gui/tui)</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div className="sdot on" style={{ borderRadius: '0' }}></div> CORE_ENGINE: ACTIVE</span>
+            <span style={{ opacity: 0.3 }}>|</span>
+            <span>BUILD: STABLE_X64</span>
+            <span style={{ opacity: 0.3 }}>|</span>
+            <span style={{ color: 'var(--ui-text-secondary)' }}>REGION: BAJA_CALIFORNIA_SUR</span>
           </div>
         </div>
-        <div style={{ display: 'flex', gap: '8px' }}>
-          <div className="tag primary">Desktop</div>
-          <div className="tag secondary">Web</div>
-          <div className="tag neutral">Terminal</div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+          <div className="tag secondary" style={{ textAlign: 'center', borderRadius: '0', background: 'var(--ui-surface-3)' }}>STATION: 04</div>
+          <div className="tag neutral" style={{ textAlign: 'center', borderRadius: '0', background: 'var(--ui-surface-3)' }}>ARCH: 64BIT</div>
         </div>
       </div>
 
       <div className="rule-box">
-        <p><strong>Density over decoration.</strong> TropicalUI is not a marketing site template. It is an industrial-grade design system built for complex developer tools, orchestration scripts, and CLIs. It prioritizes information density, strict layout rules, and seamless terminal translation.</p>
+        <p><strong>The definitive guide to application theming.</strong> TropicalUI is not a narrow toolkit for a single use case. It is an advanced, comprehensive design system designed to be the "bible" for building any interface with a highly customizable UI. Whether you are building complex data dashboards, code editors, dynamic forms, or rich e-commerce platforms, this system provides the semantic tokens, structural rules, and physics required to make them feel native, robust, and effortlessly re-brandable.</p>
       </div>
 
       <div className="subsection">
@@ -50,26 +58,26 @@ export const Hero: React.FC = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           
           <div style={{ display: 'flex', padding: '12px 16px', background: 'var(--ui-surface-1)', border: '1px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', gap: '16px' }}>
-            <div style={{ color: 'var(--brand-primary)', width: '20px', display: 'flex', justifyContent: 'center' }}><i className="ti ti-meteor"></i></div>
+            <div style={{ color: 'var(--brand-primary)', width: '20px', display: 'flex', justifyContent: 'center' }}><IconMeteor size={20} /></div>
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ui-text-primary)', marginBottom: '4px' }}>Native OS Physics</div>
-              <div style={{ fontSize: '12px', color: 'var(--ui-text-secondary)', lineHeight: 1.5 }}>Linear interpolation is banned. Every motion utilizes bezier curves or spring physics to emulate real momentum and tactile feedback, drawing heavily from native desktop environments.</div>
+              <div style={{ fontSize: '12px', color: 'var(--ui-text-secondary)', lineHeight: 1.5 }}>Linear interpolation is banned. Every motion utilizes bezier curves or spring physics to emulate real momentum and tactile feedback, ensuring web apps feel as solid as desktop software.</div>
             </div>
           </div>
 
           <div style={{ display: 'flex', padding: '12px 16px', background: 'var(--ui-surface-1)', border: '1px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', gap: '16px' }}>
-            <div style={{ color: 'var(--ui-accent-secondary)', width: '20px', display: 'flex', justifyContent: 'center' }}><i className="ti ti-terminal-2"></i></div>
+            <div style={{ color: 'var(--ui-accent-secondary)', width: '20px', display: 'flex', justifyContent: 'center' }}><IconPalette size={20} /></div>
             <div style={{ flex: 1 }}>
-              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ui-text-primary)', marginBottom: '4px' }}>Terminal Feasibility</div>
-              <div style={{ fontSize: '12px', color: 'var(--ui-text-secondary)', lineHeight: 1.5 }}>If a component cannot be reasonably translated into a 16-color TUI using characters and ANSI sequences, it does not belong in this system. This constraint forces clarity over decoration.</div>
+              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ui-text-primary)', marginBottom: '4px' }}>Semantic Theming Engine</div>
+              <div style={{ fontSize: '12px', color: 'var(--ui-text-secondary)', lineHeight: 1.5 }}>A rigid separation between brand colors and structural tokens. By changing a few base variables, the entire application—from buttons to complex charts—re-themes automatically without touching component code.</div>
             </div>
           </div>
 
           <div style={{ display: 'flex', padding: '12px 16px', background: 'var(--ui-surface-1)', border: '1px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', gap: '16px' }}>
-            <div style={{ color: 'var(--ui-success)', width: '20px', display: 'flex', justifyContent: 'center' }}><i className="ti ti-planet"></i></div>
+            <div style={{ color: 'var(--ui-success)', width: '20px', display: 'flex', justifyContent: 'center' }}><IconLayoutDashboard size={20} /></div>
             <div style={{ flex: 1 }}>
-              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ui-text-primary)', marginBottom: '4px' }}>Orbital Layouts</div>
-              <div style={{ fontSize: '12px', color: 'var(--ui-text-secondary)', lineHeight: 1.5 }}>Content dictates layout. Toolbars and navigation do not trap content in rigid grids; they orbit it. Command bars float on top, docks on the side, and drawers emerge from below.</div>
+              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ui-text-primary)', marginBottom: '4px' }}>Universal Scalability</div>
+              <div style={{ fontSize: '12px', color: 'var(--ui-text-secondary)', lineHeight: 1.5 }}>Components are designed to scale. The same pill component used in a dense command bar works seamlessly in a sprawling e-commerce product filter or a data-heavy analytics dashboard.</div>
             </div>
           </div>
 
@@ -77,39 +85,41 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="subsection">
-        <div className="subsection-title">Cross-Environment Translation (Example)</div>
+        <div className="subsection-title">Cross-Domain Translation (Example)</div>
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
           
           <div style={{ flex: '1 1 300px' }}>
-            <div className="canvas-label" style={{ marginBottom: '8px' }}>GUI Representation</div>
-            <div className="canvas" style={{ padding: '12px', minHeight: '180px', margin: 0, display: 'flex', flexDirection: 'column' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 12px', background: 'var(--ui-surface-2)', border: '1px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', marginBottom: '12px' }}>
-                <div className="sdot on"></div>
-                <span style={{ fontSize: '12px', color: 'var(--ui-text-primary)' }}>Terminal Connected</span>
-                <div style={{ marginLeft: 'auto', display: 'flex', gap: '4px' }}>
-                  <div className="tag primary">Active</div>
-                </div>
+            <div className="canvas-label" style={{ marginBottom: '8px' }}>E-Commerce / B2C Context</div>
+            <div className="canvas" style={{ padding: '12px', minHeight: '180px', margin: 0, display: 'flex', flexDirection: 'column', background: 'var(--ui-surface-0)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ui-text-primary)' }}>Premium Sneakers</span>
+                <div className="tag primary">$129.00</div>
               </div>
-              <div style={{ flex: 1, padding: '12px', background: 'var(--ui-surface-1)', borderRadius: 'var(--ui-r-md)', border: '1px solid var(--ui-border-subtle)' }}>
-                <div style={{ fontSize: '11px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-tertiary)' }}>~ $ npm run build</div>
-                <div style={{ fontSize: '11px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-success-light)', marginTop: '4px' }}>Build completed in 1.42s</div>
+              <div style={{ flex: 1, background: 'var(--ui-surface-1)', borderRadius: 'var(--ui-r-md)', border: '1px solid var(--ui-border-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--ui-text-tertiary)' }}>
+                <IconShoe size={32} />
+              </div>
+              <div style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+                <button className="btn primary" style={{ flex: 1 }}>Add to Cart</button>
+                <button className="btn ghost icon-only"><IconHeart size={18} /></button>
               </div>
             </div>
           </div>
 
           <div style={{ flex: '1 1 300px' }}>
-            <div className="canvas-label" style={{ marginBottom: '8px' }}>TUI Representation</div>
-            <TUIWindow>
-              <TUIStatusBar>
-                <TUIStatusSeg variant="success">● Connected</TUIStatusSeg>
-                <TUIStatusSeg dim>│</TUIStatusSeg>
-                <TUIStatusSeg variant="primary">[Active]</TUIStatusSeg>
-              </TUIStatusBar>
-              <div style={{ padding: '4px' }}>
-                <TUIRow><TUIText variant="dim">~ $ npm run build</TUIText></TUIRow>
-                <TUIRow><TUIText variant="success">Build completed in 1.42s</TUIText></TUIRow>
+            <div className="canvas-label" style={{ marginBottom: '8px' }}>SaaS Dashboard Context</div>
+            <div className="canvas" style={{ padding: '12px', minHeight: '180px', margin: 0, display: 'flex', flexDirection: 'column' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ui-text-secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Revenue Metrics</span>
+                <div className="sdot on"></div>
               </div>
-            </TUIWindow>
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '4px' }}>
+                <div style={{ fontSize: '28px', fontWeight: 500, color: 'var(--ui-text-primary)' }}>$45,231.89</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <div className="tag success"><IconArrowUpRight size={12} style={{ marginRight: '2px' }} /> 12.5%</div>
+                  <span style={{ fontSize: '11px', color: 'var(--ui-text-tertiary)' }}>vs last month</span>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -122,7 +132,7 @@ export const Hero: React.FC = () => {
             Born in <strong>La Paz, Baja California Sur</strong>, TropicalUI draws its aesthetic spirit directly from its environment. It is deeply inspired by the coastal beaches, the relentless summer heat, and the vibrant, unapologetic colors of local tropical fruits like mangoes and pitahayas.
           </p>
           <p style={{ marginTop: '12px' }}>
-            What started as an internal initiative for the <strong>Tropical Media Group</strong> to build cohesive, industrial-grade developer tools (CLIs, orchestration scripts, and dashboards) eventually evolved. By merging the freshness of the tropics with the strict precision of software engineering, TropicalUI became a standalone, open-source design system built to respect developers' time and focus.
+            What started as an internal initiative for the <strong>Tropical Media Group</strong> to build cohesive developer tools evolved into something much larger. By merging the freshness of the tropics with the strict precision of semantic design tokens, TropicalUI became a standalone, universal "bible" for theming. It ensures that whether you are building a complex IDE or a consumer shopping app, the interface remains deeply customizable, structurally sound, and undeniably beautiful.
           </p>
         </div>
       </div>

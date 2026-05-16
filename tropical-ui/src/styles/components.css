@@ -80,7 +80,7 @@
   .btn.primary {
     background: var(--ui-accent-primary);
     border-color: var(--ui-accent-primary);
-    color: #fff;
+    color: var(--ui-accent-primary-text, #ffffff);
   }
   .btn.primary:hover { filter: brightness(1.05); box-shadow: 0 2px 8px var(--ui-accent-primary-glow); }
   

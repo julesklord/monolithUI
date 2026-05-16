@@ -1,67 +1,62 @@
-<div align="center">
-  <img src="public/favicon.svg" width="120" height="120" alt="TropicalUI Logo" />
-  <h1>TropicalUI</h1>
-  <p><strong>The High-Density Design System for Industrial & Technical Interfaces.</strong></p>
-
-  <p>
-    <a href="https://julesklord.github.io/TropicalUI/"><strong>Explore Documentation »</strong></a>
-  </p>
-
-  <div align="center">
-    <img src="https://img.shields.io/badge/version-0.1.0m-863bff?style=for-the-badge" alt="Version" />
-    <img src="https://img.shields.io/badge/status-active-34a853?style=for-the-badge" alt="Status" />
-    <img src="https://img.shields.io/badge/license-MIT-60a5fa?style=for-the-badge" alt="License" />
-  </div>
-</div>
-
----
-
-## 🌴 Philosophy: Dark is not Black
-
-TropicalUI is not just another UI kit. It is a technical specification for building interfaces that feel like **Command Stations**. Inspired by early-2000s technical aesthetics and modern industrial density, it prioritizes physics, depth, and semantic clarity.
-
-### ⚛️ Core Axioms
-- **Orbital Layout**: Information orbits a focal point based on visual gravity.
-- **Physics over Interpolation**: Every motion mimics real-world forces (Spring, Ease-Out).
-- **Professional Density**: Maximum utility without clutter.
-- **Brand-Agnostic Core**: Rebrand the entire system with ~10 CSS variables.
+<table border="0">
+  <tr>
+    <td width="200" align="center" valign="top">
+      <img src="logo.svg" width="180" alt="TropicalUI logo">
+    </td>
+    <td valign="top">
+      <h1>TropicalUI</h1>
+      <p><strong>Density over decoration.</strong><br/>
+      <em>An industrial-grade, brand-agnostic design system built for complex developer tools, orchestration scripts, and CLIs.</em></p>
+      <p>
+        <img src="https://img.shields.io/badge/version-0.1.0-863bff?style=plastic" alt="Version">
+        <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=plastic" alt="License MIT"></a>
+        <img src="https://img.shields.io/badge/Built%20With-React%20+%20TypeScript-0ea5e9?style=plastic" alt="Built with React + TypeScript">
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🛠️ Tech Stack
-- **Core**: React 19 + TypeScript 6
-- **Build**: Vite 8
-- **Styling**: Vanilla CSS (Layered Architecture: `@layer base, tokens, brand, components`)
-- **Icons**: @tabler/icons-react (Technical Industrial Spec)
+## Overview
+
+**TropicalUI** is a brand-agnostic design system that bridges the gap between industrial terminal efficiency and vibrant, physics-based graphical interfaces.
+
+Built upon **React 19** and **TypeScript 6**, it provides a unified, uncompromising design language that scales seamlessly from ultra-high-definition displays down to 80-column terminal environments.
 
 ---
 
-## 🚀 Quick Start
+## Core Principles
+
+- **Native OS Physics:** Linear interpolation is banned. Every motion utilizes bezier curves or spring physics to emulate real momentum and tactile feedback.
+- **Terminal Feasibility:** If a component cannot be reasonably translated into a 16-color TUI using characters and ANSI sequences, it does not belong in this system.
+- **Orbital Layouts:** Content dictates layout. Toolbars and navigation orbit the content. Command bars float on top, docks on the side, and drawers emerge from below.
+- **Brand-Agnostic Slots:** The system uses semantic token slots. The entire system rebrands with ~10 CSS variable overrides (`@layer brand`).
+
+---
+
+## Installation
+
+### From Source
 
 ```bash
-# Clone the repository
 git clone https://github.com/julesklord/TropicalUI.git
-
-# Install dependencies
+cd TropicalUI/tropical-ui
 npm install
-
-# Run development server
 npm run dev
 ```
 
-## 📖 System Structure
+---
 
-| Section | Description |
-|---|---|
-| **01-03 · Overview** | Introduction, Principles, and Design Philosophy. |
-| **04-08 · Foundations** | Color Ramps, Typography, Icons, TUI System, and Motion. |
-| **09 · Orbital Layout** | Stacking rules and Z-index solar hierarchy. |
-| **10-11 · Theming** | Brand System presets and Token Specification. |
-| **12-15 · Library & Mocks** | Component library and live examples (Desktop, Web, TUI). |
+## Origins
+
+Born in **La Paz, Baja California Sur**, TropicalUI draws its aesthetic spirit directly from its environment. It is deeply inspired by the coastal beaches, the relentless summer heat, and the vibrant colors of local tropical fruits like mangoes and pitahayas.
 
 ---
 
-<div align="center">
-  <p>Built with 💜 by <strong>TropicalDev</strong></p>
-  <p><em>Region: Baja California Sur · 2026</em></p>
-</div>
+## License
+
+<p align="center">
+  Engineered by <a href="https://github.com/julesklord">julesklord</a>.<br>
+  Released under the terms of the MIT License.
+</p>

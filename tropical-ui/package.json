@@ -1,7 +1,7 @@
 {
   "name": "tropical-ui",
   "private": true,
-  "version": "0.1.0m",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

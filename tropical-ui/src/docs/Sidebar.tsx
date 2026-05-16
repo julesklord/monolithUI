@@ -14,9 +14,7 @@ import {
   IconBrandOpenSource, 
   IconTable,
   IconDeviceLaptop, 
-  IconBrowser,
-  IconBook2,
-  IconRuler
+  IconBrowser
 } from '@tabler/icons-react';
 
 export const Sidebar: React.FC = () => {

@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="public/favicon.svg" width="120" height="120" alt="TropicalUI Logo" />
+  <h1>TropicalUI</h1>
+  <p><strong>The High-Density Design System for Industrial & Technical Interfaces.</strong></p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <p>
+    <a href="https://julesklord.github.io/TropicalUI/"><strong>Explore Documentation »</strong></a>
+  </p>
 
-Currently, two official plugins are available:
+  <div align="center">
+    <img src="https://img.shields.io/badge/version-0.1.0m-863bff?style=for-the-badge" alt="Version" />
+    <img src="https://img.shields.io/badge/status-active-34a853?style=for-the-badge" alt="Status" />
+    <img src="https://img.shields.io/badge/license-MIT-60a5fa?style=for-the-badge" alt="License" />
+  </div>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌴 Philosophy: Dark is not Black
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+TropicalUI is not just another UI kit. It is a technical specification for building interfaces that feel like **Command Stations**. Inspired by early-2000s technical aesthetics and modern industrial density, it prioritizes physics, depth, and semantic clarity.
 
-## Expanding the ESLint configuration
+### ⚛️ Core Axioms
+- **Orbital Layout**: Information orbits a focal point based on visual gravity.
+- **Physics over Interpolation**: Every motion mimics real-world forces (Spring, Ease-Out).
+- **Professional Density**: Maximum utility without clutter.
+- **Brand-Agnostic Core**: Rebrand the entire system with ~10 CSS variables.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
+- **Core**: React 19 + TypeScript 6
+- **Build**: Vite 8
+- **Styling**: Vanilla CSS (Layered Architecture: `@layer base, tokens, brand, components`)
+- **Icons**: @tabler/icons-react (Technical Industrial Spec)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/julesklord/TropicalUI.git
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📖 System Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Section | Description |
+|---|---|
+| **01-03 · Overview** | Introduction, Principles, and Design Philosophy. |
+| **04-08 · Foundations** | Color Ramps, Typography, Icons, TUI System, and Motion. |
+| **09 · Orbital Layout** | Stacking rules and Z-index solar hierarchy. |
+| **10-11 · Theming** | Brand System presets and Token Specification. |
+| **12-15 · Library & Mocks** | Component library and live examples (Desktop, Web, TUI). |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+<div align="center">
+  <p>Built with 💜 by <strong>TropicalDev</strong></p>
+  <p><em>Region: Baja California Sur · 2026</em></p>
+</div>

@@ -1,7 +1,7 @@
 <table border="0">
   <tr>
     <td width="200" align="center" valign="top">
-      <img src="tropical-ui/public/favicon.svg" width="180" alt="TropicalUI logo">
+      <img src="tropical-ui/logo.svg" width="180" alt="TropicalUI logo">
     </td>
     <td valign="top">
       <h1>TropicalUI</h1>

@@ -8,6 +8,7 @@
       <p><strong>Density over decoration.</strong><br/>
       <em>An industrial-grade, brand-agnostic design system built for complex developer tools, orchestration scripts, and CLIs.</em></p>
       <p>
+        <img src="https://img.shields.io/badge/version-0.1.0-863bff?style=plastic" alt="Version">
         <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=plastic" alt="License MIT"></a>
         <img src="https://img.shields.io/badge/Built%20With-React%20+%20TypeScript-0ea5e9?style=plastic" alt="Built with React + TypeScript">
       </p>
@@ -21,7 +22,7 @@
 
 **TropicalUI** is a brand-agnostic design system that bridges the gap between industrial terminal efficiency and vibrant, physics-based graphical interfaces.
 
-Built upon **React** and **TypeScript**, it provides a unified, uncompromising design language that scales seamlessly from ultra-high-definition displays down to 80-column terminal environments.
+Built upon **React 19** and **TypeScript 6**, it provides a unified, uncompromising design language that scales seamlessly from ultra-high-definition displays down to 80-column terminal environments.
 
 ---
 
@@ -35,12 +36,6 @@ Built upon **React** and **TypeScript**, it provides a unified, uncompromising d
 ---
 
 ## Installation
-
-### Via npm (Coming soon)
-
-```bash
-npm install tropical-ui
-```
 
 ### From Source
 
@@ -57,13 +52,7 @@ npm run dev
 
 Born in **La Paz, Baja California Sur**, TropicalUI draws its aesthetic spirit directly from its environment. It is deeply inspired by the coastal beaches, the relentless summer heat, and the vibrant colors of local tropical fruits like mangoes and pitahayas.
 
-What started as an internal initiative for the **Tropical Media Group** to build cohesive, industrial-grade developer tools eventually evolved into this standalone, open-source design system built to respect developers' time and focus.
-
 ---
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 

@@ -1,32 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
-  <!-- BCS Coastline / Horizon (Technical Grid Style) -->
-  <path d="M0 75H100" stroke="var(--brand-primary)" stroke-width="0.5" opacity="0.3"/>
-  <path d="M0 80H100" stroke="var(--brand-primary)" stroke-width="0.5" opacity="0.2"/>
-  <path d="M0 85H100" stroke="var(--brand-primary)" stroke-width="0.5" opacity="0.1"/>
-
-  <!-- The Baja Coast (Abstract Geometric Mountains) -->
-  <path d="M0 75L15 65L30 75L45 60L60 75" stroke="var(--brand-primary)" stroke-width="2" stroke-linejoin="round" opacity="0.8"/>
-
+  <!-- Sky / Atmosphere (Blue Technical Orbits) -->
+  <circle cx="50" cy="10" r="30" stroke="#0ea5e9" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4"/>
+  <circle cx="50" cy="0" r="45" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="4 4" opacity="0.2"/>
+  
   <!-- The Setting Sun (The Core) -->
-  <circle cx="50" cy="55" r="25" fill="url(#sunset-grad)">
-    <animate attributeName="cy" values="55;58;55" dur="6s" repeatCount="indefinite" />
+  <circle cx="50" cy="55" r="22" fill="url(#sunset-grad)">
+    <animate attributeName="cy" values="55;57;55" dur="6s" repeatCount="indefinite" />
   </circle>
 
+  <!-- BCS Coastline / Mountains (Brown / Cafe) -->
+  <path d="M0 75L20 62L40 75L65 58L85 75L100 70V100H0V75Z" fill="#78350f" opacity="0.9"/>
+  <!-- Mountain highlights for depth -->
+  <path d="M20 62L40 75L65 58" stroke="#92400e" stroke-width="1" opacity="0.5"/>
+
   <!-- Ocean Reflection (Reactive Lines) -->
-  <rect x="30" y="78" width="40" height="2" rx="1" fill="#f59e0b" opacity="0.6">
-    <animate attributeName="width" values="40;50;40" dur="4s" repeatCount="indefinite" />
-    <animate attributeName="x" values="30;25;30" dur="4s" repeatCount="indefinite" />
-  </rect>
-  <rect x="35" y="83" width="30" height="2" rx="1" fill="#f59e0b" opacity="0.4">
-    <animate attributeName="width" values="30;40;30" dur="4s" repeatCount="indefinite" begin="0.5s" />
-    <animate attributeName="x" values="35;30;35" dur="4s" repeatCount="indefinite" begin="0.5s" />
+  <rect x="30" y="82" width="40" height="1.5" rx="0.75" fill="#f59e0b" opacity="0.8">
+    <animate attributeName="width" values="40;55;40" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="x" values="30;22.5;30" dur="4s" repeatCount="indefinite" />
   </rect>
 
-  <!-- Technical "Orbit" Overlay -->
-  <circle cx="50" cy="50" r="48" stroke="var(--brand-primary)" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.2"/>
+  <!-- Technical Overlay / Grid -->
+  <path d="M0 75H100" stroke="white" stroke-width="0.5" opacity="0.2"/>
+  <path d="M50 0V100" stroke="#0ea5e9" stroke-width="0.2" opacity="0.1"/>
 
   <defs>
-    <linearGradient id="sunset-grad" x1="50" y1="30" x2="50" y2="80" gradientUnits="userSpaceOnUse">
+    <linearGradient id="sunset-grad" x1="50" y1="35" x2="50" y2="75" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#ef4444" /> <!-- Pitahaya Red -->
       <stop offset="100%" stop-color="#f59e0b" /> <!-- Mango Orange -->
     </linearGradient>

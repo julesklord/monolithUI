@@ -24,36 +24,40 @@ export const TokenSpec: React.FC = () => {
       </div>
 
       <div className="subsection">
-        <div className="subsection-title">Radius tokens · Progressive scale</div>
+        <div className="subsection-title">Radius tokens · Sanded Industrial</div>
         <table className="spec-table">
           <tbody>
             <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
-            <tr><td className="td-token">--ui-r-xs</td><td className="td-val">2px</td><td className="td-use">Tags, inline code, tool cards</td></tr>
-            <tr><td className="td-token">--ui-r-sm</td><td className="td-val">4px</td><td className="td-use">Small buttons, sidebar links, dock buttons</td></tr>
-            <tr><td className="td-token">--ui-r-md</td><td className="td-val">6px</td><td className="td-use">Buttons, command segments, session items</td></tr>
-            <tr><td className="td-token">--ui-r-lg</td><td className="td-val">8px</td><td className="td-use">Cards, inputs, chat bubbles, MCP cards</td></tr>
-            <tr><td className="td-token">--ui-r-xl</td><td className="td-val">12px</td><td className="td-use">Command bar, canvas, drawer top corners</td></tr>
-            <tr><td className="td-token">--ui-r-2xl</td><td className="td-val">16px</td><td className="td-use">Dock floating panel</td></tr>
-            <tr><td className="td-token">--ui-r-pill</td><td className="td-val">999px</td><td className="td-use">Pills, status indicators, round badges</td></tr>
+            <tr><td className="td-token">--ui-r-xs</td><td className="td-val">3px</td><td className="td-use">Labels, micro-keys, small tags</td></tr>
+            <tr><td className="td-token">--ui-r-sm</td><td className="td-val">4px</td><td className="td-use">Small buttons, command segments, sidebar links</td></tr>
+            <tr><td className="td-token">--ui-r-md</td><td className="td-val">6px</td><td className="td-use">Standard buttons, items, cards</td></tr>
+            <tr><td className="td-token">--ui-r-lg</td><td className="td-val">8px</td><td className="td-use">Containers, large panels, drawer handles</td></tr>
+            <tr><td className="td-token">--ui-r-xl</td><td className="td-val">12px</td><td className="td-use">Main canvas corners</td></tr>
+            <tr><td className="td-token">--ui-r-pill</td><td className="td-val">999px</td><td className="td-use">Status indicators, round badges</td></tr>
           </tbody>
         </table>
       </div>
 
       <div className="subsection">
-        <div className="subsection-title">Motion tokens · Curves &amp; Durations</div>
+        <div className="subsection-title">Motion tokens · Mechanical Resistance</div>
         <table className="spec-table">
           <tbody>
             <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
-            <tr><td className="td-token">--ui-ease-spring</td><td className="td-val">cubic-bezier(0.34, 1.56, 0.64, 1)</td><td className="td-use">Entering elements, drawer open, send-btn press</td></tr>
-            <tr><td className="td-token">--ui-ease-out</td><td className="td-val">cubic-bezier(0.16, 1, 0.3, 1)</td><td className="td-use">Backdrop fade, card appear, page transitions</td></tr>
-            <tr><td className="td-token">--ui-ease-default</td><td className="td-val">cubic-bezier(0.4, 0, 0.2, 1)</td><td className="td-use">Hover colors, border changes, toggle</td></tr>
-            <tr><td className="td-token">--ui-ease-linear</td><td className="td-val">linear</td><td className="td-use">AVOID — spinner rotation only</td></tr>
-            <tr><td className="td-token">--ui-dur-instant</td><td className="td-val">60ms</td><td className="td-use">Focus rings, immediate feedback</td></tr>
-            <tr><td className="td-token">--ui-dur-fast</td><td className="td-val">110ms</td><td className="td-use">Hover state transitions, color changes</td></tr>
-            <tr><td className="td-token">--ui-dur-base</td><td className="td-val">190ms</td><td className="td-use">Toggle, theme color change</td></tr>
-            <tr><td className="td-token">--ui-dur-slow</td><td className="td-val">320ms</td><td className="td-use">Theme switch, backdrop fade</td></tr>
-            <tr><td className="td-token">--ui-dur-drawer</td><td className="td-val">370ms</td><td className="td-use">Drawer open/close (spring)</td></tr>
-            <tr><td className="td-token">--ui-dur-page</td><td className="td-val">420ms</td><td className="td-use">Full page transitions</td></tr>
+            <tr><td className="td-token">--ui-ease-spring</td><td className="td-val">cubic-bezier(0.2, 1, 0.3, 1)</td><td className="td-use">Precise mechanical entry, no overshoot</td></tr>
+            <tr><td className="td-token">--ui-dur-fast</td><td className="td-val">160ms</td><td className="td-use">Snappy tactile feedback</td></tr>
+            <tr><td className="td-token">--ui-dur-base</td><td className="td-val">240ms</td><td className="td-use">Standard component movement</td></tr>
+            <tr><td className="td-token">--ui-dur-slow</td><td className="td-val">380ms</td><td className="td-use">Large surface transitions</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div className="subsection">
+        <div className="subsection-title">Tactile Depth · 2010 Skeuo-Modernism</div>
+        <table className="spec-table">
+          <tbody>
+            <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
+            <tr><td className="td-token">--ui-inset-shallow</td><td className="td-val">inset 0 1px 2px rgba(0,0,0,0.2)</td><td className="td-use">Embossed feel for cards and active tabs</td></tr>
+            <tr><td className="td-token">--ui-inset-deep</td><td className="td-val">inset 0 2px 4px rgba(0,0,0,0.4)</td><td className="td-use">Engraved feel for active buttons/inputs</td></tr>
           </tbody>
         </table>
       </div>

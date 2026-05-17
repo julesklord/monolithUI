@@ -109,35 +109,42 @@ Light theme:
 --ui-leading-loose: 1.75
 ```
 
-## Radius Scale
+## Radius Scale (Sanded Industrial)
 
 ```css
---ui-r-xs:   2px    /* tags, inline code */
---ui-r-sm:   4px    /* small buttons, sidebar links */
---ui-r-md:   6px    /* buttons, command segments */
---ui-r-lg:   8px    /* cards, inputs, chat bubbles */
---ui-r-xl:   12px   /* command bar, canvas, drawer top */
---ui-r-2xl:  16px   /* dock floating panel */
---ui-r-pill: 999px  /* pills, status indicators */
+--ui-r-xs:   3px    /* micro-keys, tags */
+--ui-r-sm:   4px    /* sidebar links, segments */
+--ui-r-md:   6px    /* standard buttons, cards */
+--ui-r-lg:   8px    /* containers, large panels */
+--ui-r-xl:   12px   /* main canvas corners */
+--ui-r-pill: 999px  /* status indicators, round badges */
 ```
 
-## Motion
+## Motion (Mechanical Resistance)
 
 ```css
---ui-ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1)  /* entrances, spring */
---ui-ease-out:     cubic-bezier(0.16, 1, 0.3, 1)       /* fades, page tx */
---ui-ease-default: cubic-bezier(0.4, 0, 0.2, 1)        /* hover colors */
---ui-ease-linear:  linear                               /* AVOID: spinner only */
+--ui-ease-spring:  cubic-bezier(0.2, 1, 0.3, 1)      /* Precise mechanical */
+--ui-ease-out:     cubic-bezier(0.16, 1, 0.3, 1)     /* page tx */
+--ui-ease-default: cubic-bezier(0.4, 0, 0.2, 1)      /* hover colors */
+--ui-ease-linear:  linear                            /* spinner only */
 
 --ui-dur-instant: 60ms
---ui-dur-fast:    110ms
---ui-dur-base:    190ms
---ui-dur-slow:    320ms
+--ui-dur-fast:    160ms    /* tactile feedback */
+--ui-dur-base:    240ms    /* standard movement */
+--ui-dur-slow:    380ms    /* surface transitions */
 --ui-dur-drawer:  370ms
 --ui-dur-page:    420ms
 ```
 
-## Shadows
+## Tactile Depth (2010 Skeuo-Modernism)
+
+```css
+--ui-inset-shallow: inset 0 1px 2px rgba(0,0,0,0.2)   /* embossed */
+--ui-inset-deep:    inset 0 2px 4px rgba(0,0,0,0.4)   /* engraved */
+--ui-glow-subtle:   0 0 8px var(--ui-accent-primary-glow)
+```
+
+## Shadows (Elevation)
 
 ```css
 --ui-shadow-sm:     0 1px 4px rgba(0,0,0,0.3)

@@ -40,24 +40,29 @@
         gap: 4px;
     }
     .nav-link {
-        font-size: var(--ui-text-sm);
-        font-weight: 500;
-        color: var(--ui-text-secondary);
+        font-family: var(--ui-font-mono);
+        font-size: 11px; /* sm from scale */
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--ui-text-tertiary);
         padding: 6px 12px;
-        border-radius: var(--ui-r-md);
+        border-radius: var(--ui-r-sm);
         text-decoration: none;
-        transition:
-            background var(--ui-dur-fast),
-            color var(--ui-dur-fast);
+        border: 1px solid transparent;
+        transition: all var(--ui-dur-fast);
         cursor: pointer;
     }
     .nav-link:hover {
         background: var(--ui-surface-2);
-        color: var(--ui-text-primary);
+        color: var(--ui-text-secondary);
+        border-color: var(--ui-border-subtle);
     }
     .nav-link.active {
-        color: var(--ui-accent-primary);
-        background: var(--ui-accent-primary-bg);
+        color: var(--ui-accent-primary-light);
+        background: var(--ui-surface-3);
+        border-color: var(--ui-border-default);
+        box-shadow: var(--ui-inset-shallow);
     }
 
     /* ── SIDEBAR ── */

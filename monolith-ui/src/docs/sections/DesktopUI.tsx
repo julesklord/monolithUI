@@ -26,7 +26,7 @@ export const DesktopUI: React.FC = () => {
              <p><strong>Orbital Focus:</strong> The chat canvas is Surface 0. The sidebar is Surface 2 (Inner Orbit). The system bar is Surface 3 (Outer Orbit).</p>
           </div>
         </div>
-        <div className="canvas" style={{ padding: '0', background: '#05070a', borderRadius: '3px', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto', overflowY: 'hidden' }}>
+        <div className="canvas" style={{ padding: '0', background: '#05070a', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto', overflowY: 'hidden' }}>
           <div style={{ minWidth: '800px' }}>
             {/* Outer Orbit: System Bar */}
             <div style={{ height: '28px', background: 'var(--ui-surface-3)', borderBottom: '1px solid var(--ui-border-subtle)', display: 'flex', alignItems: 'center', padding: '0 12px', gap: '16px', fontSize: '10px', color: 'var(--ui-text-tertiary)', fontFamily: 'var(--ui-font-mono)' }}>
@@ -47,7 +47,7 @@ export const DesktopUI: React.FC = () => {
               <div style={{ width: '240px', background: 'var(--ui-surface-2)', borderRight: '1px solid var(--ui-border-subtle)', padding: '12px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div>
                    <div style={{ fontSize: '9px', fontWeight: 800, color: 'var(--ui-text-disabled)', marginBottom: '8px' }}>ACTIVE_CONTEXT</div>
-                   <div style={{ padding: '10px', background: 'var(--ui-surface-0)', border: '1px solid var(--brand-primary)', borderRadius: '3px' }}>
+                   <div style={{ padding: '10px', background: 'var(--ui-surface-0)', border: '1px solid var(--brand-primary)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)' }}>
                      <div style={{ fontSize: '11px', fontWeight: 700, color: '#fff' }}>monolith.dev-Design</div>
                      <div style={{ fontSize: '10px', color: 'var(--ui-text-tertiary)', marginTop: '2px' }}>k:/source/repos/monolith-ui</div>
                    </div>
@@ -55,7 +55,7 @@ export const DesktopUI: React.FC = () => {
                 <div>
                    <div style={{ fontSize: '9px', fontWeight: 800, color: 'var(--ui-text-disabled)', marginBottom: '8px' }}>SESSION_HISTORY</div>
                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                     <div style={{ fontSize: '11px', padding: '6px 10px', background: 'var(--ui-surface-3)', borderRadius: '3px', color: 'var(--ui-text-primary)' }}>Refactor: Tabs System</div>
+                     <div style={{ fontSize: '11px', padding: '6px 10px', background: 'var(--ui-surface-3)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', color: 'var(--ui-text-primary)' }}>Refactor: Tabs System</div>
                      <div style={{ fontSize: '11px', padding: '6px 10px', color: 'var(--ui-text-tertiary)' }}>Fix: Black Screen</div>
                    </div>
                 </div>
@@ -77,7 +77,7 @@ export const DesktopUI: React.FC = () => {
                     <div style={{ alignSelf: 'flex-end', maxWidth: '85%', padding: '16px', background: 'var(--brand-primary)', color: '#fff', borderRadius: '3px 3px 0 3px', fontSize: '12px', boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.2)' }}>
                       Analyze the Orbital Layout implementation in the current view.
                     </div>
-                    <div style={{ alignSelf: 'flex-start', maxWidth: '90%', padding: '16px', background: 'var(--ui-surface-1)', border: '1.5px solid var(--brand-primary)', borderRadius: '3px', fontSize: '12px', fontFamily: 'var(--ui-font-mono)' }}>
+                    <div style={{ alignSelf: 'flex-start', maxWidth: '90%', padding: '16px', background: 'var(--ui-surface-1)', border: '1.5px solid var(--brand-primary)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', fontSize: '12px', fontFamily: 'var(--ui-font-mono)' }}>
                        <div style={{ color: 'var(--brand-primary)', fontWeight: 800, marginBottom: '8px' }}>✦ GEMINI_SYSTEM_CORE</div>
                        &gt; Scanning UI nodes...<br/>
                        &gt; Gravity Core: detected at [main_canvas]<br/>
@@ -86,8 +86,8 @@ export const DesktopUI: React.FC = () => {
                     </div>
                 </div>
                 <div style={{ padding: '16px', borderTop: '1px solid var(--ui-border-subtle)', background: 'var(--ui-surface-1)', display: 'flex', gap: '12px' }}>
-                    <div style={{ flex: 1, background: 'var(--ui-surface-0)', border: '1px solid var(--ui-border-default)', borderRadius: '3px', padding: '10px 16px', fontSize: '12px', color: 'var(--ui-text-disabled)' }}>Command Gemini...</div>
-                    <div style={{ padding: '0 24px', background: 'var(--brand-primary)', color: '#fff', borderRadius: '3px', fontSize: '11px', fontWeight: 800, display: 'flex', alignItems: 'center', boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.2)' }}>EXECUTE</div>
+                    <div style={{ flex: 1, background: 'var(--ui-surface-0)', border: '1px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', padding: '10px 16px', fontSize: '12px', color: 'var(--ui-text-disabled)' }}>Command Gemini...</div>
+                    <div style={{ padding: '0 24px', background: 'var(--brand-primary)', color: '#fff', borderRadius: 'var(--ui-r-md)', fontSize: '11px', fontWeight: 800, display: 'flex', alignItems: 'center', boxShadow: 'var(--ui-inset-deep)' }}>EXECUTE</div>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ export const DesktopUI: React.FC = () => {
           <div className="subsection-title">Example 2: T-Sonic Pro</div>
           <p className="section-desc" style={{ marginBottom: '20px' }}>Orbital audio workstation. The **Waveform Core** is surrounded by transport and library orbits.</p>
         </div>
-        <div className="canvas" style={{ padding: '0', background: 'var(--ui-surface-1)', border: '1.5px solid var(--ui-border-default)', borderRadius: '3px', overflowX: 'auto', overflowY: 'hidden' }}>
+        <div className="canvas" style={{ padding: '0', background: 'var(--ui-surface-1)', border: '1.5px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', overflowX: 'auto', overflowY: 'hidden' }}>
           <div style={{ minWidth: '800px', display: 'flex', height: '360px' }}>
             <div style={{ width: '180px', background: 'var(--ui-surface-2)', borderRight: '1px solid var(--ui-border-subtle)', padding: '16px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                <div className="ui-tab-btn active" style={{ width: '100%', justifyContent: 'center' }}>HI-RES_MODE</div>
@@ -114,20 +114,20 @@ export const DesktopUI: React.FC = () => {
             </div>
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                <div style={{ flex: 1, padding: '40px', display: 'flex', gap: '32px', alignItems: 'center' }}>
-                  <div style={{ width: '160px', height: '160px', background: 'var(--ui-surface-3)', border: '1px solid var(--ui-border-default)', borderRadius: '3px', position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ width: '160px', height: '160px', background: 'var(--ui-surface-3)', border: '1px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', position: 'relative', overflow: 'hidden' }}>
                      <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', height: '60%', background: 'linear-gradient(to top, var(--brand-primary-bg), transparent)', opacity: 0.3 }}></div>
                   </div>
                   <div style={{ flex: 1 }}>
                      <div style={{ fontSize: '24px', fontWeight: 900, marginBottom: '4px' }}>SYNTH_WAVE_04</div>
                      <div style={{ fontSize: '14px', color: 'var(--brand-primary)', fontFamily: 'var(--ui-font-mono)', fontWeight: 700 }}>MONOLITH_ENGINE // 192KHZ</div>
-                     <div style={{ marginTop: '24px', height: '40px', background: 'var(--ui-surface-0)', border: '1px solid var(--ui-border-subtle)', borderRadius: '3px', display: 'flex', alignItems: 'center', padding: '0 12px', gap: '4px' }}>
+                     <div style={{ marginTop: '24px', height: '40px', background: 'var(--ui-surface-0)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', display: 'flex', alignItems: 'center', padding: '0 12px', gap: '4px' }}>
                         {[20,40,60,80,100,70,50,30,60,90,40,20,30,50,70].map((h, i) => <div key={i} style={{ flex: 1, height: `${h}%`, background: 'var(--brand-primary)', opacity: 0.5 }}></div>)}
                      </div>
                   </div>
                </div>
                <div style={{ height: '80px', background: 'var(--ui-surface-3)', borderTop: '1px solid var(--ui-border-subtle)', padding: '0 32px', display: 'flex', alignItems: 'center', gap: '24px' }}>
                   <IconPlayerSkipBack size={20} />
-                  <div style={{ width: '48px', height: '48px', borderRadius: '3px', background: 'var(--brand-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.3)' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: 'var(--ui-r-md)', background: 'var(--brand-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', boxShadow: 'var(--ui-inset-deep)' }}>
                     <IconPlayerPlay size={24} fill="currentColor" />
                   </div>
                   <IconPlayerSkipForward size={20} />
@@ -152,7 +152,7 @@ export const DesktopUI: React.FC = () => {
           <div className="subsection-title">Example 3: T-Edit Pro</div>
           <p className="section-desc" style={{ marginBottom: '20px' }}>Orbital IDE. The **Code Core** is central, with diagnostics and documentation orbiting in specialized tiers.</p>
         </div>
-        <div className="canvas" style={{ padding: '0', background: 'var(--ui-surface-0)', border: '1.5px solid var(--ui-border-default)', borderRadius: '3px', overflowX: 'auto', overflowY: 'hidden' }}>
+        <div className="canvas" style={{ padding: '0', background: 'var(--ui-surface-0)', border: '1.5px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', overflowX: 'auto', overflowY: 'hidden' }}>
            <div style={{ minWidth: '800px', display: 'flex', flexDirection: 'column', height: '400px' }}>
              <div style={{ height: '40px', background: 'var(--ui-surface-2)', borderBottom: '1px solid var(--ui-border-subtle)', display: 'flex', alignItems: 'center', padding: '0 12px', gap: '8px' }}>
                 <div className="ui-tab-btn active"><IconCode size={14}/> App.tsx</div>

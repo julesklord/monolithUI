@@ -513,26 +513,26 @@ body {
     display: flex;
     align-items: center;
     gap: 7px;
-    padding: 5px 8px;
+    padding: 6px 10px;
     border-radius: var(--ui-r-sm);
     font-size: var(--ui-text-xs);
     color: var(--ui-text-tertiary);
     cursor: pointer;
     text-decoration: none;
-    transition:
-        background var(--ui-dur-fast),
-        color var(--ui-dur-fast);
+    border: 1px solid transparent;
+    transition: all var(--ui-dur-fast);
 }
 .sidebar-link:hover {
-    background: var(--ui-surface-5);
+    background: var(--ui-surface-2);
     color: var(--ui-text-secondary);
 }
 .sidebar-link.active {
     background: var(--ui-surface-3);
     color: var(--brand-primary);
-    font-weight: 600;
-    border-left: 4px solid var(--brand-primary);
-    box-shadow: var(--ui-inner-glow);
+    font-weight: 700;
+    border-color: var(--ui-border-default);
+    box-shadow: var(--ui-inset-shallow);
+    transform: translateX(1px);
 }
 .sidebar-link i {
     font-size: 13px;
@@ -906,23 +906,24 @@ body {
 /* Segments */
 .cb-seg {
     height: 28px;
-    padding: 0 8px;
+    padding: 0 10px;
     border-radius: var(--ui-r-md);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     font-size: 10.5px;
     font-family: var(--ui-font-mono);
     cursor: pointer;
     transition: all var(--ui-dur-fast);
     white-space: nowrap;
     min-width: 0;
-    flex-shrink: 0; /* Don't shrink individual segments */
+    flex-shrink: 0;
+    border: 1px solid transparent;
 }
 .cb-seg-inner {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -930,10 +931,13 @@ body {
 
 .cb-seg:hover {
     background: var(--ui-surface-2);
+    border-color: var(--ui-border-subtle);
 }
 .cb-seg.active {
     background: var(--ui-surface-3);
-    border: 1px solid var(--ui-border-subtle);
+    border: 1px solid var(--ui-border-default);
+    box-shadow: var(--ui-inset-shallow);
+    transform: translateY(0.5px);
 }
 
 .cb-seg.primary {
@@ -1304,15 +1308,16 @@ body {
 
 /* Technical Tabs - Button Style */
 .ui-tab-btn {
-    padding: 6px 14px;
+    padding: 6px 16px;
     font-size: 11px;
+    font-family: var(--ui-font-mono);
     font-weight: 700;
-    border: 1px solid var(--ui-border-subtle);
-    border-radius: 3px;
+    border: 1px solid var(--ui-border-default);
+    border-radius: var(--ui-r-sm);
     background: var(--ui-surface-2);
     color: var(--ui-text-tertiary);
     cursor: pointer;
-    transition: all 0.2s var(--ui-motion-spring);
+    transition: all var(--ui-dur-fast) var(--ui-ease-spring);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1323,13 +1328,14 @@ body {
 .ui-tab-btn:hover {
     background: var(--ui-surface-3);
     color: var(--ui-text-secondary);
+    border-color: var(--ui-border-hover);
 }
 
 .ui-tab-btn.active {
     background: var(--brand-primary);
     color: var(--brand-primary-text);
     border-color: var(--brand-primary);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--ui-inset-deep);
     transform: translateY(1px);
 }
 

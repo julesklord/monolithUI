@@ -23,15 +23,15 @@ export const WebUI: React.FC = () => {
           <div className="subsection-title">1. VibePulse Dashboard</div>
           <p className="section-desc" style={{ marginBottom: '20px' }}>A high-fidelity data visualization platform. The **Pulse Core** (main chart) dominates the center.</p>
         </div>
-        <div className="canvas" style={{ padding: '24px', background: 'radial-gradient(circle at 50% 50%, var(--ui-surface-1) 0%, var(--ui-surface-0) 100%)', borderRadius: '3px', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto' }}>
+        <div className="canvas" style={{ padding: '24px', background: 'radial-gradient(circle at 50% 50%, var(--ui-surface-1) 0%, var(--ui-surface-0) 100%)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto' }}>
           <div style={{ minWidth: '800px', height: '360px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 8px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                   <div style={{ width: '20px', height: '20px', background: 'var(--brand-primary)', borderRadius: '3px' }}></div>
+                   <div style={{ width: '20px', height: '20px', background: 'var(--brand-primary)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)' }}></div>
                    <span style={{ fontWeight: 800, fontSize: '12px' }}>VIBEPULSE</span>
                 </div>
                 <div style={{ flex: 1, margin: '0 40px', maxWidth: '300px', position: 'relative' }}>
-                   <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid var(--ui-border-subtle)', borderRadius: '3px', padding: '5px 12px 5px 32px', fontSize: '11px', color: 'var(--ui-text-disabled)' }}>Search metrics...</div>
+                   <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', padding: '5px 12px 5px 32px', fontSize: '11px', color: 'var(--ui-text-disabled)' }}>Search metrics...</div>
                    <IconSearch size={12} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', opacity: 0.5 }} />
                 </div>
                 <div style={{ display: 'flex', gap: '12px', color: 'var(--ui-text-tertiary)' }}>
@@ -39,12 +39,12 @@ export const WebUI: React.FC = () => {
                 </div>
              </div>
              <div style={{ flex: 1, display: 'flex', gap: '16px' }}>
-                <div style={{ width: '56px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--ui-border-subtle)', borderRadius: '3px', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '16px 0', gap: '20px' }}>
+                <div style={{ width: '56px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '16px 0', gap: '20px' }}>
                    <div className="ui-tab-btn active" style={{ padding: '6px' }}><IconLayoutDashboard size={18} /></div>
                    <IconUsers size={18} style={{ opacity: 0.5 }} />
                    <IconChartBar size={18} style={{ opacity: 0.5 }} />
                 </div>
-                <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--ui-border-subtle)', borderRadius: '3px', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
                       <div>
                          <div style={{ fontSize: '10px', color: 'var(--brand-primary)', fontWeight: 800 }}>LIVE_PULSE_RATE</div>
@@ -69,7 +69,7 @@ export const WebUI: React.FC = () => {
           <div className="subsection-title">2. T-Blog Portfolio</div>
           <p className="section-desc">A minimal, typography-focused blog using <strong>BlogCard</strong> components. Focuses on readability and industrial aesthetics.</p>
         </div>
-        <div className="canvas" style={{ padding: '24px', background: 'var(--ui-surface-0)', borderRadius: '3px', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto' }}>
+        <div className="canvas" style={{ padding: '24px', background: 'var(--ui-surface-0)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto' }}>
           <div style={{ minWidth: '800px', height: '360px', display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '700px', margin: '0 auto' }}>
              <header style={{ borderBottom: '1px solid var(--ui-border-subtle)', paddingBottom: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ fontWeight: 900, fontSize: '18px', letterSpacing: '-0.02em' }}>J_DEV<span style={{ color: 'var(--brand-primary)' }}>.log</span></div>
@@ -79,7 +79,7 @@ export const WebUI: React.FC = () => {
              </header>
              <main style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
                 <div style={{ display: 'flex', gap: '24px' }}>
-                   <div style={{ width: '140px', height: '100px', background: 'var(--ui-surface-2)', borderRadius: '3px', border: '1px solid var(--ui-border-subtle)', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                   <div style={{ width: '140px', height: '100px', background: 'var(--ui-surface-2)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1px solid var(--ui-border-subtle)', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <IconSparkles size={32} style={{ opacity: 0.1 }} />
                    </div>
                    <div>
@@ -89,7 +89,7 @@ export const WebUI: React.FC = () => {
                    </div>
                 </div>
                 <div style={{ display: 'flex', gap: '24px' }}>
-                   <div style={{ width: '140px', height: '100px', background: 'var(--ui-surface-2)', borderRadius: '3px', border: '1px solid var(--ui-border-subtle)', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                   <div style={{ width: '140px', height: '100px', background: 'var(--ui-surface-2)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1px solid var(--ui-border-subtle)', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <IconFiles size={32} style={{ opacity: 0.1 }} />
                    </div>
                    <div>
@@ -109,7 +109,7 @@ export const WebUI: React.FC = () => {
           <div className="subsection-title">3. T-Sonic Pro Landing</div>
           <p className="section-desc">A marketing landing page using the <strong>HeroSectionComponent</strong>. Combines high-end tech branding with direct call-to-actions.</p>
         </div>
-        <div className="canvas" style={{ padding: '0', background: 'var(--ui-surface-0)', borderRadius: '3px', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto', overflowY: 'hidden' }}>
+        <div className="canvas" style={{ padding: '0', background: 'var(--ui-surface-0)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto', overflowY: 'hidden' }}>
           <div style={{ minWidth: '800px', height: '400px', display: 'flex', flexDirection: 'column' }}>
              <nav style={{ padding: '16px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--ui-border-subtle)' }}>
                 <div style={{ fontWeight: 900, fontSize: '16px' }}>T-SONIC</div>
@@ -123,8 +123,8 @@ export const WebUI: React.FC = () => {
                 <h1 style={{ fontSize: '42px', fontWeight: 900, lineHeight: '1', marginBottom: '16px', maxWidth: '500px' }}>Sound that <span style={{ color: 'var(--brand-primary)' }}>Orbits</span> You.</h1>
                 <p style={{ fontSize: '14px', color: 'var(--ui-text-tertiary)', maxWidth: '400px', marginBottom: '32px' }}>Experience spatial audio with zero latency. Powered by the tropical.dev core engine.</p>
                 <div style={{ display: 'flex', gap: '16px' }}>
-                   <div style={{ padding: '12px 24px', background: 'var(--brand-primary)', color: 'var(--ui-surface-0)', fontWeight: 800, borderRadius: '3px', fontSize: '12px' }}>PRE_ORDER_V1</div>
-                   <div style={{ padding: '12px 24px', border: '1px solid var(--ui-border-default)', fontWeight: 700, borderRadius: '3px', fontSize: '12px' }}>WATCH_REEL</div>
+                   <div style={{ padding: '12px 24px', background: 'var(--brand-primary)', color: 'var(--ui-surface-0)', fontWeight: 800, borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', fontSize: '12px' }}>PRE_ORDER_V1</div>
+                   <div style={{ padding: '12px 24px', border: '1px solid var(--ui-border-default)', fontWeight: 700, borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', fontSize: '12px' }}>WATCH_REEL</div>
                 </div>
              </div>
              <div style={{ display: 'flex', borderTop: '1px solid var(--ui-border-subtle)', background: 'var(--ui-surface-1)' }}>

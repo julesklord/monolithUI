@@ -553,7 +553,15 @@ body {
     margin-bottom: 72px;
     scroll-margin-top: 64px;
     position: relative;
-    padding-top: 12px;
+    padding: 32px;
+    background: var(--ui-surface-1);
+    border: 1px solid var(--ui-border-default);
+    border-radius: var(--ui-r-lg);
+    box-shadow: var(--ui-inset-shallow);
+}
+[data-theme="light"] .doc-section {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03), var(--ui-inset-shallow);
 }
 .section-eyebrow {
     font-family: var(--ui-font-mono);
@@ -650,6 +658,12 @@ body {
 }
 .rule-box.secondary strong {
     color: var(--ui-accent-secondary);
+}
+.rule-box.success {
+    border-color: var(--ui-success-border);
+}
+.rule-box.success strong {
+    color: var(--ui-success);
 }
 
 .warn-box p {

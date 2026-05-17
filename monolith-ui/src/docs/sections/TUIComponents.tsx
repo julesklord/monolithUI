@@ -96,7 +96,7 @@ export const TUIComponents: React.FC = () => {
           <div className="subsection">
             <div className="subsection-title">TUI_NAV_ORBIT</div>
             <p className="section-desc">Vertical navigation using block indicators.</p>
-            <div className="canvas" style={{ padding: '24px', background: 'var(--ui-surface-0)', fontFamily: 'var(--ui-font-mono)', fontSize: '12px' }}>
+            <div className="canvas" style={{ padding: '24px', background: 'var(--ui-surface-0)', fontFamily: 'var(--ui-font-mono)', fontSize: '12px', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)' }}>
                <div style={{ borderLeft: '2px solid var(--brand-primary)', paddingLeft: '15px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                   <div style={{ opacity: 0.5 }}>01. OVERVIEW</div>
                   <div style={{ color: 'var(--brand-primary)', fontWeight: 800 }}>❯ 02. TELEMETRY</div>
@@ -200,7 +200,7 @@ export const TUIComponents: React.FC = () => {
             </div>
 
             {/* ARCHETYPE B */}
-            <div className="rule-box" style={{ borderLeftColor: 'var(--ui-success)' }}>
+            <div className="rule-box success">
                <div style={{ color: 'var(--ui-success)', fontWeight: 800, marginBottom: '8px' }}>TYPE_B: TELEMETRY DASHBOARD</div>
                <p>Best for monitoring tools. Prioritizes data density and multiple simultaneous metrics.</p>
                <div className="code" style={{ marginTop: '10px', fontSize: '9px' }}>
@@ -222,7 +222,7 @@ export const TUIComponents: React.FC = () => {
 
           <div className="grid-2">
             {/* ARCHETYPE C */}
-            <div className="rule-box" style={{ borderLeftColor: 'var(--ui-accent-secondary)' }}>
+            <div className="rule-box secondary">
                <div style={{ color: 'var(--ui-accent-secondary)', fontWeight: 800, marginBottom: '8px' }}>TYPE_C: FOCUSED UTILITY</div>
                <p>Best for single-purpose tools (Fetch, Generators). High brand impact with centered data.</p>
                <div className="code" style={{ marginTop: '10px', fontSize: '9px' }}>

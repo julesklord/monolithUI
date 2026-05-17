@@ -29,15 +29,15 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: 'tropical-ui/package-lock.json'
+          cache-dependency-path: 'monolith-ui/package-lock.json'
           
       - name: Install dependencies
         run: npm ci
-        working-directory: tropical-ui
+        working-directory: monolith-ui
         
       - name: Build
         run: npm run build
-        working-directory: tropical-ui
+        working-directory: monolith-ui
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -45,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'tropical-ui/dist'
+          path: 'monolith-ui/dist'
           
       - name: Deploy to GitHub Pages
         id: deployment

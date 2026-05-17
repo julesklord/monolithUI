@@ -4,7 +4,7 @@ Specific instructions for the **Gemini CLI** agent. Pay attention, machine.
 
 ## Working Context
 
-- This project follows the TropicalUI standard. (Don't deviate.)
+- This project follows the MonolithUI standard. (Don't deviate.)
 - Prioritize using `grep_search` to navigate the code.
 - Always check `git status` before every commit. Basic hygiene.
 

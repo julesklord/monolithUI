@@ -1,7 +1,7 @@
 <table border="0">
   <tr>
     <td width="200" align="center" valign="top">
-      <img src="monolith-ui/logo.svg" width="180" alt="MonolithUI logo">
+      <img src="logo.svg" width="180" alt="MonolithUI logo">
     </td>
     <td valign="top">
       <h1>MonolithUI</h1>

@@ -22,7 +22,7 @@
 
 **MonolithUI** is a brand-agnostic design system that bridges the gap between industrial terminal efficiency and vibrant, physics-based graphical interfaces.
 
-Built upon **React 19** and **TypeScript 6**, it provides a unified, uncompromising design language that scales seamlessly from ultra-high-definition displays down to 80-column terminal environments.
+Built upon **React 19**, **TypeScript**, and **Phosphor Icons**, it provides a unified, uncompromising design language that scales seamlessly from ultra-high-definition displays down to 80-column terminal environments.
 
 ---
 
@@ -32,6 +32,7 @@ Built upon **React 19** and **TypeScript 6**, it provides a unified, uncompromis
 - **Terminal Feasibility:** If a component cannot be reasonably translated into a 16-color TUI using characters and ANSI sequences, it does not belong in this system.
 - **Orbital Layouts:** Content dictates layout. Toolbars and navigation orbit the content. Command bars float on top, docks on the side, and drawers emerge from below.
 - **Brand-Agnostic Slots:** The system uses semantic token slots. The entire system rebrands with ~10 CSS variable overrides (`@layer brand`).
+- **Industrial Duotone Iconography:** Leverages Phosphor Icons with a custom CSS layer that binds the secondary duotone shape to the active brand's base color at 15% opacity.
 
 ---
 

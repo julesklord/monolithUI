@@ -1,22 +1,24 @@
 ﻿@layer components {
   /* Common component-like classes from the original HTML */
   
-  /* SURFACE CARDS */
+  /* SURFACE CARDS (Refined Modules) */
   .surface-card {
-    background: var(--ui-surface-4);
-    border: 1px solid var(--ui-border-default);
-    border-radius: var(--ui-r-lg);
-    padding: 14px 16px;
-    transition: background var(--ui-dur-fast), border-color var(--ui-dur-fast);
+    background: var(--ui-surface-3); /* Solid architecture */
+    border: 1.5px solid var(--ui-border-default);
+    border-radius: var(--ui-r-md);
+    padding: 20px;
+    transition: all var(--ui-dur-fast) var(--ui-ease-default);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03); /* Sanded edge highlight */
   }
   .surface-card:hover {
-    background: var(--ui-surface-5);
+    background: var(--ui-surface-4);
     border-color: var(--ui-border-hover);
+    transform: translateY(-1px);
   }
   .surface-card.elevated {
-    background: var(--ui-surface-3);
-    box-shadow: var(--ui-shadow-sm);
-    border-color: var(--ui-border-subtle);
+    background: var(--ui-surface-4);
+    border-color: var(--ui-border-hover);
+    box-shadow: var(--ui-shadow-md), var(--ui-inset-shallow);
   }
   [data-theme="light"] .surface-card.elevated {
     background: #ffffff;
@@ -62,34 +64,48 @@
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 0 14px;
-    height: 32px;
+    gap: 8px;
+    padding: 0 16px;
+    height: 34px;
     border-radius: var(--ui-r-md);
     font-size: var(--ui-text-sm);
-    font-family: var(--ui-font-sans);
-    font-weight: 600;
+    font-family: var(--ui-font-mono); /* Industrial voice */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     cursor: pointer;
-    border: 1px solid;
+    border: 1.5px solid;
     user-select: none;
     transition: all var(--ui-dur-fast) var(--ui-ease-default);
-    background: transparent;
+    background: var(--ui-surface-2);
     color: var(--ui-text-primary);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05); /* Micro-highlight */
   }
-  .btn:active { transform: scale(0.97); }
+  .btn:active { 
+    transform: translateY(1px); 
+    box-shadow: var(--ui-inset-shallow);
+  }
+  
   .btn.primary {
     background: var(--ui-accent-primary);
     border-color: var(--ui-accent-primary);
     color: var(--ui-accent-primary-text, #ffffff);
   }
-  .btn.primary:hover { filter: brightness(1.05); box-shadow: 0 2px 8px var(--ui-accent-primary-glow); }
+  .btn.primary:hover { 
+    filter: brightness(1.08); 
+    box-shadow: var(--ui-glow-subtle);
+  }
+  .btn.primary:active {
+    background: var(--ui-accent-primary-light);
+    box-shadow: var(--ui-inset-deep);
+  }
   
   .btn.secondary {
-    background: var(--ui-accent-primary-bg);
-    border-color: var(--ui-accent-primary-border);
-    color: var(--ui-accent-primary);
+    background: var(--ui-surface-3);
+    border-color: var(--ui-border-default);
+    color: var(--ui-text-primary);
   }
-  .btn.secondary:hover { background: var(--ui-accent-primary-border); }
+  .btn.secondary:hover { border-color: var(--ui-border-hover); background: var(--ui-surface-4); }
   
   .btn.ghost {
     background: transparent;

@@ -45,9 +45,10 @@
     --ui-border-hover: rgba(255, 255, 255, 0.22);
     --ui-border-active: var(--ui-accent-primary-border);
 
-    /* Inner Glows — REMOVED as per request */
-    --ui-inner-glow: none;
-    --ui-inner-glow-lg: none;
+    /* Inner Inset Depth (2010 Skeuo-Modernism) — Refined tactile feel */
+    --ui-inset-shallow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    --ui-inset-deep: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+    --ui-glow-subtle: 0 0 8px var(--ui-accent-primary-glow);
 
     /* Text — Sharper contrast */
     --ui-text-primary: rgba(255, 255, 255, 0.92);
@@ -98,11 +99,9 @@
     --ui-info-bg: rgba(96, 165, 250, 0.12);
     --ui-info-border: rgba(96, 165, 250, 0.25);
 
-    /* Gradient — brand fills these */
-    --ui-gradient-primary: var(
-        --brand-gradient,
-        linear-gradient(135deg, #4285f4, #c5a9f5)
-    );
+    /* Gradient — FLATTENED for industrial integrity */
+    --ui-gradient-primary: var(--brand-primary, #4285f4); 
+
 
     /* Typography */
     --ui-font-sans: var(--brand-font-sans, "DM Sans", system-ui, sans-serif);
@@ -141,26 +140,26 @@
     --ui-sp-10: 40px;
     --ui-sp-12: 48px;
 
-    /* Radius — Technical Softness (progressive scale) */
-    --ui-r-xs: 2px; /* tags, inline code, tool cards */
-    --ui-r-sm: 4px; /* small buttons, sidebar links */
-    --ui-r-md: 6px; /* buttons, command segments, items */
-    --ui-r-lg: 8px; /* cards, inputs, bubbles, MCP cards */
-    --ui-r-xl: 12px; /* command bar, canvas, drawer top */
-    --ui-r-2xl: 16px; /* dock floating panel */
-    --ui-r-pill: 999px; /* pills, status indicators */
+    /* Radius — "Sanded" Industrial (refined, not raw) */
+    --ui-r-xs: 3px;  /* labels, micro-keys */
+    --ui-r-sm: 4px;  /* small buttons, command segments */
+    --ui-r-md: 6px;  /* standard buttons, items, cards */
+    --ui-r-lg: 8px;  /* containers, large panels */
+    --ui-r-xl: 12px; /* main canvas corners */
+    --ui-r-2xl: 16px; /* floating modules */
+    --ui-r-pill: 999px;
 
-    /* Motion */
-    --ui-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* Motion — Mechanical Resistance (precise and snappy) */
+    --ui-ease-spring: cubic-bezier(0.2, 1, 0.3, 1); /* High damping, no overshoot */
     --ui-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     --ui-ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ui-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
-    --ui-ease-linear: linear; /* AVOID — only for looping anims */
+    --ui-ease-linear: linear;
 
     --ui-dur-instant: 60ms;
-    --ui-dur-fast: 110ms;
-    --ui-dur-base: 190ms;
-    --ui-dur-slow: 320ms;
+    --ui-dur-fast: 160ms;
+    --ui-dur-base: 240ms;
+    --ui-dur-slow: 380ms;
     --ui-dur-drawer: 370ms;
     --ui-dur-page: 420ms;
 

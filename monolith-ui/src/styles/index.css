@@ -388,10 +388,9 @@
 body {
     font-family: var(--ui-font-sans);
     background: var(--ui-surface-0);
-    background-image:
-        linear-gradient(var(--ui-border-subtle) 1px, transparent 1px),
-        linear-gradient(90deg, var(--ui-border-subtle) 1px, transparent 1px);
-    background-size: 64px 64px;
+    /* Refined Industrial Micro-dot Pattern */
+    background-image: radial-gradient(var(--ui-border-subtle) 1px, transparent 1px);
+    background-size: 24px 24px;
     background-attachment: fixed;
     color: var(--ui-text-primary);
     min-height: 100vh;

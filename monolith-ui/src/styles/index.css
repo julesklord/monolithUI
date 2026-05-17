@@ -627,7 +627,60 @@ body {
     height: 1px;
     background: var(--brand-primary);
 }
-/* ── INFO BOXES (Refined Tactile Modules) ── */
+/* ── INDUSTRIAL ICONOGRAPHY (Phosphor Integration) ── */
+svg {
+    stroke-linecap: square !important;
+    stroke-linejoin: miter !important;
+}
+
+.ui-icon-duotone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--ui-text-primary);
+}
+
+/* Secondary layer in duotone icons automatically inherits brand background */
+.ui-icon-duotone [opacity="0.2"] {
+    fill: var(--brand-primary);
+    opacity: 0.15 !important;
+}
+
+.ui-icon-duotone.success [opacity="0.2"] { fill: var(--ui-success); }
+.ui-icon-duotone.warning [opacity="0.2"] { fill: var(--ui-warning); }
+.ui-icon-duotone.danger [opacity="0.2"] { fill: var(--ui-danger); }
+.ui-icon-duotone.secondary [opacity="0.2"] { fill: var(--brand-secondary); }
+
+/* Tactical Icon Wrapper */
+.icon-tactical {
+    width: 32px;
+    height: 32px;
+    background: var(--ui-surface-2);
+    border: 1px solid var(--ui-border-default);
+    border-radius: var(--ui-r-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--ui-inset-shallow);
+    transition: all var(--ui-dur-fast) var(--ui-ease-spring);
+    position: relative;
+}
+.icon-tactical:hover {
+    border-color: var(--brand-primary-border);
+    background: var(--ui-surface-3);
+    transform: translateY(-1px);
+    box-shadow: var(--ui-shadow-sm), var(--ui-inset-shallow);
+}
+.icon-tactical::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+    pointer-events: none;
+}
+
 .rule-box {
     border: 1px solid var(--ui-border-default);
     padding: 18px 22px;

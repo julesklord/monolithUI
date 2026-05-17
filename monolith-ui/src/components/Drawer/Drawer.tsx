@@ -1,5 +1,5 @@
-﻿import React from 'react';
-import { IconX } from '@tabler/icons-react';
+﻿import React from "react";
+import { X } from "@phosphor-icons/react";
 
 interface DrawerProps {
   children: React.ReactNode;
@@ -16,35 +16,43 @@ export const Drawer: React.FC<DrawerProps> = ({
   onClose,
   title,
   icon,
-  headerActions
+  headerActions,
 }) => {
   return (
     <>
-      <div 
-        className={`drawer-backdrop ${isOpen ? 'open' : ''}`} 
+      <div
+        className={`drawer-backdrop ${isOpen ? "open" : ""}`}
         onClick={() => {
-          console.log('Backdrop clicked');
+          console.log("Backdrop clicked");
           onClose();
-        }} 
+        }}
       />
-      <div className={`drawer-preview ${isOpen ? 'open' : ''}`}>
+      <div className={`drawer-preview ${isOpen ? "open" : ""}`}>
         <div className="drawer-handle" onClick={onClose} />
         <div className="drawer-header">
           {icon && <span className="drawer-icon">{icon}</span>}
           {title && <div className="drawer-title">{title}</div>}
-          <div style={{ marginLeft: 'auto', display: 'flex', gap: '6px', alignItems: 'center' }}>
+          <div
+            style={{
+              marginLeft: "auto",
+              display: "flex",
+              gap: "6px",
+              alignItems: "center",
+            }}
+          >
             {headerActions}
-            <div className="drawer-close" onClick={() => {
-              console.log('Drawer close clicked');
-              onClose();
-            }}>
-              <IconX size={16} />
+            <div
+              className="drawer-close"
+              onClick={() => {
+                console.log("Drawer close clicked");
+                onClose();
+              }}
+            >
+              <X size={16} weight="duotone" />
             </div>
           </div>
         </div>
-        <div className="drawer-body">
-          {children}
-        </div>
+        <div className="drawer-body">{children}</div>
       </div>
     </>
   );

@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  IconMeteor,
-  IconPalette,
-  IconLayoutDashboard,
-  IconShoe,
-  IconHeart,
-  IconArrowUpRight,
-} from "@tabler/icons-react";
+  Meteor,
+  Palette,
+  Layout,
+  Sneaker,
+  Heart,
+  ArrowUpRight,
+} from "@phosphor-icons/react";
 import { Logo } from "../../components";
 
 export const Hero: React.FC = () => {
@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
                 justifyContent: "center",
               }}
             >
-              <IconMeteor size={20} />
+              <Meteor weight="duotone" size={20} />
             </div>
             <div style={{ flex: 1 }}>
               <div
@@ -200,7 +200,7 @@ export const Hero: React.FC = () => {
                 justifyContent: "center",
               }}
             >
-              <IconPalette size={20} />
+              <Palette weight="duotone" size={20} />
             </div>
             <div style={{ flex: 1 }}>
               <div
@@ -248,7 +248,7 @@ export const Hero: React.FC = () => {
                 justifyContent: "center",
               }}
             >
-              <IconLayoutDashboard size={20} />
+              <Layout weight="duotone" size={20} />
             </div>
             <div style={{ flex: 1 }}>
               <div
@@ -328,14 +328,14 @@ export const Hero: React.FC = () => {
                   color: "var(--ui-text-tertiary)",
                 }}
               >
-                <IconShoe size={32} />
+                <Sneaker weight="duotone" size={32} />
               </div>
               <div style={{ display: "flex", gap: "8px", marginTop: "12px" }}>
                 <button className="btn primary" style={{ flex: 1 }}>
                   Add to Cart
                 </button>
                 <button className="btn ghost icon-only">
-                  <IconHeart size={18} />
+                  <Heart weight="duotone" size={18} />
                 </button>
               </div>
             </div>
@@ -398,7 +398,7 @@ export const Hero: React.FC = () => {
                   style={{ display: "flex", alignItems: "center", gap: "6px" }}
                 >
                   <div className="tag success">
-                    <IconArrowUpRight
+                    <ArrowUpRight weight="duotone"
                       size={12}
                       style={{ marginRight: "2px" }}
                     />{" "}

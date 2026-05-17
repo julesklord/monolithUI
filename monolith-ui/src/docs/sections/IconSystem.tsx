@@ -1,55 +1,66 @@
 import React from 'react';
 import { 
-  IconExclamationCircle, 
-  IconCircleCheck, 
-  IconAlertTriangle, 
-  IconInfoCircle,
-  IconSearch,
-  IconCommand,
-  IconTerminal,
-  IconCode,
-  IconCpu,
-  IconDatabase,
-  IconCloud,
-  IconSettings,
-  IconBell,
-  IconLock,
-  IconHistory,
-  IconDeviceDesktop,
-  IconDeviceLaptop,
-  IconDeviceMobile
-} from '@tabler/icons-react';
+  CheckCircle, 
+  Info, 
+  Warning, 
+  WarningCircle,
+  MagnifyingGlass,
+  Command,
+  TerminalWindow,
+  Code,
+  Cpu,
+  Database,
+  Gear,
+  Bell,
+  LockKey,
+  ClockCounterClockwise,
+  Desktop,
+  Laptop,
+  DeviceMobile,
+  Fingerprint,
+  Cube,
+  ShieldCheck,
+  IdentificationCard
+} from '@phosphor-icons/react';
 
 export const IconSystem: React.FC = () => {
   const ICON_GROUPS = [
     {
-      title: 'Status & Semantic',
+      title: 'Status & Semantic (Duotone)',
       icons: [
-        { Icon: IconCircleCheck, label: 'Success', use: 'Process completed, healthy state' },
-        { Icon: IconInfoCircle, label: 'Info', use: 'System telemetry, general info' },
-        { Icon: IconAlertTriangle, label: 'Warning', use: 'Non-critical error, caution' },
-        { Icon: IconExclamationCircle, label: 'Danger', use: 'Critical failure, urgent' },
+        { Icon: CheckCircle, label: 'Success', use: 'Process completed', class: 'success' },
+        { Icon: Info, label: 'Info', use: 'System telemetry', class: '' },
+        { Icon: Warning, label: 'Warning', use: 'Caution required', class: 'warning' },
+        { Icon: WarningCircle, label: 'Danger', use: 'Critical failure', class: 'danger' },
       ]
     },
     {
-      title: 'Industrial & Technical',
+      title: 'Industrial Core',
       icons: [
-        { Icon: IconTerminal, label: 'Console', use: 'TUI, Command line' },
-        { Icon: IconCode, label: 'Code', use: 'Editor, source data' },
-        { Icon: IconCpu, label: 'Engine', use: 'Compute, core processing' },
-        { Icon: IconDatabase, label: 'Data', use: 'Storage, memory nodes' },
-        { Icon: IconCloud, label: 'Network', use: 'Remote sync, API' },
+        { Icon: TerminalWindow, label: 'Console', use: 'TUI / CLI Root', class: '' },
+        { Icon: Code, label: 'Source', use: 'Data processing', class: '' },
+        { Icon: Cpu, label: 'Processor', use: 'Logic engine', class: '' },
+        { Icon: Database, label: 'Vault', use: 'Memory storage', class: '' },
+        { Icon: Cube, label: 'Module', use: 'Component unit', class: '' },
       ]
     },
     {
-      title: 'Interface Control',
+      title: 'Tactical Operations',
       icons: [
-        { Icon: IconCommand, label: 'Command', use: 'System action, keyhint' },
-        { Icon: IconSearch, label: 'Search', use: 'Global lookup' },
-        { Icon: IconSettings, label: 'System', use: 'Configuration' },
-        { Icon: IconBell, label: 'Signals', use: 'Notifications' },
-        { Icon: IconLock, label: 'Security', use: 'Auth, permissions' },
-        { Icon: IconHistory, label: 'Logs', use: 'Session history' },
+        { Icon: Fingerprint, label: 'Auth', use: 'Biometric access', class: '' },
+        { Icon: ShieldCheck, label: 'Secure', use: 'Validated state', class: '' },
+        { Icon: IdentificationCard, label: 'Identity', use: 'User credentials', class: '' },
+        { Icon: LockKey, label: 'Encypt', use: 'Security layer', class: '' },
+      ]
+    },
+    {
+      title: 'System Interface',
+      icons: [
+        { Icon: Command, label: 'Action', use: 'System command', class: '' },
+        { Icon: MagnifyingGlass, label: 'Lookup', use: 'Global search', class: '' },
+        { Icon: Gear, label: 'Config', use: 'Control panel', class: '' },
+        { Icon: Bell, label: 'Signals', use: 'Notification', class: '' },
+        { Icon: ClockCounterClockwise, label: 'Log', use: 'History trace', class: '' },
       ]
     }
   ];
@@ -58,23 +69,23 @@ export const IconSystem: React.FC = () => {
     <section className="doc-section" id="icon-system">
       <div className="section-eyebrow">06</div>
       <h2 className="section-title">Icon <em>System</em></h2>
-      <p className="section-desc">Strict geometry using <strong>Tabler Icons</strong>. Icons must use a consistent 1.5px stroke weight (2px for status) and follow the 14px-32px scale.</p>
+      <p className="section-desc">We use <strong>Phosphor Icons (Duotone)</strong> as the primary visual language. This adds a second layer of brand depth, where the background shape inherits the primary brand tint at 15% opacity.</p>
 
       <div className="rule-box secondary">
-        <p><strong>Industrial Stroke Rule //</strong> Do not use filled icons. Only use outlined icons with squared caps and miter joins to maintain the architectural 'blueprint' feel.</p>
+        <p><strong>Industrial Blueprint Rule //</strong> Force <span className="icode">stroke-linecap: square</span> and <span className="icode">stroke-linejoin: miter</span> globally. This transforms generic curves into sharp, architectural segments that integrate with the orbital layout.</p>
       </div>
 
       {ICON_GROUPS.map((group, idx) => (
         <div className="subsection" key={idx}>
           <div className="subsection-title">{group.title}</div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '20px' }}>
             {group.icons.map((item, i) => (
-              <div key={i} className="surface-card" style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-                <div style={{ padding: '12px', background: 'var(--ui-surface-2)', borderRadius: 'var(--ui-r-sm)', color: 'var(--brand-primary)', boxShadow: 'var(--ui-inset-shallow)' }}>
-                  <item.Icon size={20} stroke={1.5} />
+              <div key={i} className="surface-card" style={{ display: 'flex', gap: '16px', alignItems: 'center', padding: '16px' }}>
+                <div className={`icon-tactical ui-icon-duotone ${item.class}`}>
+                  <item.Icon size={20} weight="duotone" />
                 </div>
                 <div>
-                  <div style={{ fontSize: '11px', fontWeight: 800, fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-primary)' }}>{item.label}</div>
+                  <div style={{ fontSize: '11px', fontWeight: 800, fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-primary)', textTransform: 'uppercase' }}>{item.label}</div>
                   <div style={{ fontSize: '10px', color: 'var(--ui-text-tertiary)', marginTop: '2px' }}>{item.use}</div>
                 </div>
               </div>
@@ -84,19 +95,19 @@ export const IconSystem: React.FC = () => {
       ))}
 
       <div className="subsection">
-        <div className="subsection-title">Platform Assets</div>
-        <div className="canvas" style={{ display: 'flex', gap: '40px', padding: '32px', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div className="subsection-title">Platform Assets (Thin Lineage)</div>
+        <div className="canvas" style={{ display: 'flex', gap: '48px', padding: '40px', flexWrap: 'wrap', justifyContent: 'center', background: 'var(--ui-surface-0)' }}>
            <div style={{ textAlign: 'center' }}>
-              <IconDeviceDesktop size={48} stroke={1} style={{ opacity: 0.5, marginBottom: '12px' }} />
-              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)' }}>STATION_X64</div>
+              <Desktop size={56} weight="thin" style={{ color: 'var(--brand-primary)', opacity: 0.6, marginBottom: '16px' }} />
+              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', letterSpacing: '0.1em' }}>STATION_X64</div>
            </div>
            <div style={{ textAlign: 'center' }}>
-              <IconDeviceLaptop size={48} stroke={1} style={{ opacity: 0.5, marginBottom: '12px' }} />
-              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)' }}>STATION_MOBILE_LAB</div>
+              <Laptop size={56} weight="thin" style={{ color: 'var(--brand-primary)', opacity: 0.6, marginBottom: '16px' }} />
+              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', letterSpacing: '0.1em' }}>STATION_MOBILE</div>
            </div>
            <div style={{ textAlign: 'center' }}>
-              <IconDeviceMobile size={48} stroke={1} style={{ opacity: 0.5, marginBottom: '12px' }} />
-              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)' }}>FIELD_TRANSCEIVER</div>
+              <DeviceMobile size={56} weight="thin" style={{ color: 'var(--brand-primary)', opacity: 0.6, marginBottom: '16px' }} />
+              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', letterSpacing: '0.1em' }}>FIELD_UNIT</div>
            </div>
         </div>
       </div>

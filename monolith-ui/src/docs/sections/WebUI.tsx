@@ -1,14 +1,14 @@
 import React from 'react';
 import { 
-  IconLayoutDashboard, 
-  IconUsers, 
-  IconChartBar, 
-  IconSettings,
-  IconBell,
-  IconSearch,
-  IconSparkles,
-  IconFiles
-} from '@tabler/icons-react';
+  Layout, 
+  Users, 
+  ChartBar, 
+  Gear,
+  Bell,
+  MagnifyingGlass,
+  Sparkle,
+  Files
+} from '@phosphor-icons/react';
 
 export const WebUI: React.FC = () => {
   return (
@@ -32,19 +32,18 @@ export const WebUI: React.FC = () => {
                 </div>
                 <div style={{ flex: 1, margin: '0 40px', maxWidth: '300px', position: 'relative' }}>
                    <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', padding: '5px 12px 5px 32px', fontSize: '11px', color: 'var(--ui-text-disabled)' }}>Search metrics...</div>
-                   <IconSearch size={12} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', opacity: 0.5 }} />
+                   <MagnifyingGlass size={12} weight="duotone" style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', opacity: 0.5 }} />
                 </div>
                 <div style={{ display: 'flex', gap: '12px', color: 'var(--ui-text-tertiary)' }}>
-                   <IconBell size={18} /><IconSettings size={18} />
+                   <Bell size={18} weight="duotone" /><Gear size={18} weight="duotone" />
                 </div>
              </div>
              <div style={{ flex: 1, display: 'flex', gap: '16px' }}>
-                <div style={{ width: '56px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '16px 0', gap: '20px' }}>
-                   <div className="ui-tab-btn active" style={{ padding: '6px' }}><IconLayoutDashboard size={18} /></div>
-                   <IconUsers size={18} style={{ opacity: 0.5 }} />
-                   <IconChartBar size={18} style={{ opacity: 0.5 }} />
-                </div>
-                <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+             <div style={{ width: '56px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '16px 0', gap: '20px' }}>
+                <div className="ui-tab-btn active" style={{ padding: '6px' }}><Layout size={18} weight="duotone" /></div>
+                <Users size={18} weight="duotone" style={{ opacity: 0.5 }} />
+                <ChartBar size={18} weight="duotone" style={{ opacity: 0.5 }} />
+             </div>                <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
                       <div>
                          <div style={{ fontSize: '10px', color: 'var(--brand-primary)', fontWeight: 800 }}>LIVE_PULSE_RATE</div>

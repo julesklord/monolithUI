@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
-  IconSun
-} from '@tabler/icons-react';
+  Sun
+} from '@phosphor-icons/react';
 
 export const Layout: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ export const Layout: React.FC = () => {
       <div className="canvas center" style={{ height: '400px', background: 'radial-gradient(circle at 50% 50%, var(--ui-surface-2) 0%, var(--ui-surface-0) 70%)', position: 'relative', overflow: 'hidden' }}>
           {/* THE CORE */}
           <div className="orbital-sun">
-             <IconSun size={40} style={{ color: 'var(--brand-primary)', filter: 'drop-shadow(0 0 20px var(--brand-primary-bg))' }} />
+             <Sun weight="duotone" size={40} style={{ color: 'var(--brand-primary)', filter: 'drop-shadow(0 0 20px var(--brand-primary-bg))' }} />
              <div style={{ marginTop: '12px', fontSize: '10px', fontWeight: 800, color: 'var(--brand-primary)', letterSpacing: '0.1em' }}>THE_CORE</div>
           </div>
 

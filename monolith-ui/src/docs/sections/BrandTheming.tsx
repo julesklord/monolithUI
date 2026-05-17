@@ -1,9 +1,9 @@
 import React from 'react';
 import { 
-  IconSparkles, 
-  IconCode, 
-  IconBug 
-} from '@tabler/icons-react';
+  Sparkle, 
+  Code, 
+  Bug 
+} from '@phosphor-icons/react';
 
 interface BrandThemingProps {
   brand: string;
@@ -51,7 +51,7 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({ brand, handleBrandCl
             </div>
             
             <button className="btn primary">
-              <IconSparkles size={14} stroke={2} />
+              <Sparkle weight="duotone" size={14} stroke={2} />
               Execute Command
             </button>
             
@@ -93,14 +93,14 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({ brand, handleBrandCl
             <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-disabled)', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>POLARITY: DARK</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                <div className="surface-card" style={{ background: 'var(--brand-primary-bg)', borderColor: 'var(--brand-primary-border)', padding: '12px', display: 'flex', gap: '12px', alignItems: 'center' }}>
-                  <div style={{ padding: '8px', background: 'var(--brand-primary)', borderRadius: 'var(--ui-r-sm)', color: '#000' }}><IconCode size={16} /></div>
+                  <div style={{ padding: '8px', background: 'var(--brand-primary)', borderRadius: 'var(--ui-r-sm)', color: '#000' }}><Code weight="duotone" size={16} /></div>
                   <div>
                     <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--brand-primary-light)' }}>ENGINE_REFACTOR</div>
                     <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-tertiary)' }}>ACTIVE_SESSION // 12m</div>
                   </div>
                </div>
                <div className="surface-card" style={{ padding: '12px', display: 'flex', gap: '12px', alignItems: 'center', opacity: 0.6 }}>
-                  <div style={{ padding: '8px', background: 'var(--ui-surface-3)', borderRadius: 'var(--ui-r-sm)', color: 'var(--ui-text-secondary)' }}><IconBug size={16} /></div>
+                  <div style={{ padding: '8px', background: 'var(--ui-surface-3)', borderRadius: 'var(--ui-r-sm)', color: 'var(--ui-text-secondary)' }}><Bug weight="duotone" size={16} /></div>
                   <div>
                     <div style={{ fontSize: '13px', fontWeight: 700 }}>FIX_KERNEL_PANIC</div>
                     <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)' }}>LOG_ENTRY // 2d</div>
@@ -112,14 +112,14 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({ brand, handleBrandCl
             <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.4)', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>POLARITY: CONCRETE</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                <div className="surface-card" style={{ background: 'rgba(0,0,0,0.05)', borderColor: 'var(--brand-primary)', borderLeftWidth: '4px', padding: '12px', display: 'flex', gap: '12px', alignItems: 'center' }}>
-                  <div style={{ padding: '8px', background: 'var(--brand-primary)', borderRadius: 'var(--ui-r-sm)', color: '#fff' }}><IconCode size={16} /></div>
+                  <div style={{ padding: '8px', background: 'var(--brand-primary)', borderRadius: 'var(--ui-r-sm)', color: '#fff' }}><Code weight="duotone" size={16} /></div>
                   <div>
                     <div style={{ fontSize: '13px', fontWeight: 700, color: '#000' }}>ENGINE_REFACTOR</div>
                     <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.5)' }}>ACTIVE_SESSION // 12m</div>
                   </div>
                </div>
                <div className="surface-card" style={{ padding: '12px', display: 'flex', gap: '12px', alignItems: 'center', opacity: 0.6 }}>
-                  <div style={{ padding: '8px', background: 'rgba(0,0,0,0.08)', borderRadius: 'var(--ui-r-sm)', color: '#444' }}><IconBug size={16} /></div>
+                  <div style={{ padding: '8px', background: 'rgba(0,0,0,0.08)', borderRadius: 'var(--ui-r-sm)', color: '#444' }}><Bug weight="duotone" size={16} /></div>
                   <div>
                     <div style={{ fontSize: '13px', fontWeight: 700, color: '#000' }}>FIX_KERNEL_PANIC</div>
                     <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.5)' }}>LOG_ENTRY // 2d</div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, NavLink, useLocation } from "react-router-dom";
-import { IconSun, IconMoon, IconChevronRight } from "@tabler/icons-react";
+import { Sun, Moon, CaretRight } from "@phosphor-icons/react";
 import { DocLayout } from "./docs/DocLayout";
 import { Logo } from "./components";
 import {
@@ -113,7 +113,7 @@ export default function App() {
         </NavLink>
         <div className="nav-sep" />
         <div className="nav-breadcrumb">
-          <IconChevronRight size={14} style={{ opacity: 0.3 }} />
+          <CaretRight size={14} style={{ opacity: 0.3 }} />
           <span>{getBreadcrumb()}</span>
         </div>
 
@@ -166,7 +166,7 @@ export default function App() {
             title="Toggle theme (CTRL+T)"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            {theme === "dark" ? <IconSun size={16} /> : <IconMoon size={16} />}
+            {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
         </div>
       </nav>

@@ -1,14 +1,15 @@
 import React from 'react';
 import { 
-  IconPlayerPlay, 
-  IconPlayerSkipForward, 
-  IconPlayerSkipBack,
-  IconCpu,
-  IconGitBranch,
-  IconCode,
-  IconDatabase,
-  IconVolume
-} from '@tabler/icons-react';
+  CaretCircleRight, 
+  CaretCircleDoubleRight, 
+  CaretCircleDoubleLeft,
+  Cpu,
+  GitBranch,
+  Code,
+  Database,
+  SpeakerHigh,
+  PlayCircle
+} from '@phosphor-icons/react';
 
 export const DesktopUI: React.FC = () => {
   return (
@@ -33,11 +34,11 @@ export const DesktopUI: React.FC = () => {
               <div style={{ display: 'flex', gap: '8px', color: 'var(--ui-text-primary)', fontWeight: 800 }}><span>GEMINI_STATION v0.8</span></div>
               <div style={{ opacity: 0.3 }}>|</div>
               <div style={{ display: 'flex', gap: '4px', alignItems: 'center', color: 'var(--ui-text-secondary)' }}>
-                <IconGitBranch size={12} /> master*
+                <GitBranch size={12} weight="duotone" /> master*
               </div>
               <div style={{ flex: 1 }}></div>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                <IconCpu size={12} /> 12%
+                <Cpu size={12} weight="duotone" /> 12%
                 <span>10:42 AM</span>
               </div>
             </div>
@@ -126,16 +127,16 @@ export const DesktopUI: React.FC = () => {
                   </div>
                </div>
                <div style={{ height: '80px', background: 'var(--ui-surface-3)', borderTop: '1px solid var(--ui-border-subtle)', padding: '0 32px', display: 'flex', alignItems: 'center', gap: '24px' }}>
-                  <IconPlayerSkipBack size={20} />
+                  <CaretCircleDoubleLeft size={20} weight="duotone" />
                   <div style={{ width: '48px', height: '48px', borderRadius: 'var(--ui-r-md)', background: 'var(--brand-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', boxShadow: 'var(--ui-inset-deep)' }}>
-                    <IconPlayerPlay size={24} fill="currentColor" />
+                    <PlayCircle size={28} weight="duotone" />
                   </div>
-                  <IconPlayerSkipForward size={20} />
+                  <CaretCircleDoubleRight size={20} weight="duotone" />
                   <div style={{ flex: 1, height: '4px', background: 'var(--ui-surface-4)', borderRadius: '2px' }}>
                     <div style={{ width: '35%', height: '100%', background: 'var(--brand-primary)', borderRadius: '2px' }}></div>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <IconVolume size={18} />
+                    <SpeakerHigh size={18} weight="duotone" />
                     <div style={{ width: '80px', height: '14px', background: 'var(--ui-surface-2)', border: '1px solid var(--ui-border-subtle)', borderRadius: '2px', padding: '0 2px', display: 'flex', alignItems: 'center' }}>
                        <div style={{ width: '70%', height: '8px', background: 'var(--ui-text-primary)', borderRadius: '1px' }}></div>
                     </div>
@@ -155,8 +156,8 @@ export const DesktopUI: React.FC = () => {
         <div className="canvas" style={{ padding: '0', background: 'var(--ui-surface-0)', border: '1.5px solid var(--ui-border-default)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', overflowX: 'auto', overflowY: 'hidden' }}>
            <div style={{ minWidth: '800px', display: 'flex', flexDirection: 'column', height: '400px' }}>
              <div style={{ height: '40px', background: 'var(--ui-surface-2)', borderBottom: '1px solid var(--ui-border-subtle)', display: 'flex', alignItems: 'center', padding: '0 12px', gap: '8px' }}>
-                <div className="ui-tab-btn active"><IconCode size={14}/> App.tsx</div>
-                <div className="ui-tab-btn"><IconDatabase size={14}/> Schema.sql</div>
+                <div className="ui-tab-btn active"><Code size={14} weight="duotone"/> App.tsx</div>
+                <div className="ui-tab-btn"><Database size={14} weight="duotone"/> Schema.sql</div>
                 <div style={{ flex: 1 }}></div>
                 <div className="ui-tab-btn active">DEPLOY</div>
              </div>

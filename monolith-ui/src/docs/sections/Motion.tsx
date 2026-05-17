@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  IconBounceRight,
-  IconArrowDownCircle,
-  IconMinus,
-  IconRotateClockwise,
-  IconDots,
-} from "@tabler/icons-react";
+  ArrowBendUpRight,
+  ArrowCircleDown,
+  Minus,
+  ClockCounterClockwise,
+  DotsThree,
+} from "@phosphor-icons/react";
 
 export const Motion: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ export const Motion: React.FC = () => {
         <div className="canvas col" style={{ padding: "20px 24px", gap: "0" }}>
           <div className="motion-row">
             <div className="motion-icon">
-              <IconBounceRight size={20} />
+              <ArrowBendUpRight weight="duotone" size={20} />
             </div>
             <div className="motion-info">
               <div className="motion-name">Spring</div>
@@ -48,7 +48,7 @@ export const Motion: React.FC = () => {
                 color: "var(--ui-accent-secondary)",
               }}
             >
-              <IconArrowDownCircle size={20} />
+              <ArrowCircleDown weight="duotone" size={20} />
             </div>
             <div className="motion-info">
               <div className="motion-name">Ease Out</div>
@@ -69,7 +69,7 @@ export const Motion: React.FC = () => {
                 color: "var(--ui-success-light)",
               }}
             >
-              <IconMinus size={20} />
+              <Minus weight="duotone" size={20} />
             </div>
             <div className="motion-info">
               <div className="motion-name">Default</div>
@@ -90,7 +90,7 @@ export const Motion: React.FC = () => {
                 color: "var(--ui-warning)",
               }}
             >
-              <IconRotateClockwise size={20} />
+              <ClockCounterClockwise weight="duotone" size={20} />
             </div>
             <div className="motion-info">
               <div className="motion-name">Linear (spinner only)</div>
@@ -111,7 +111,7 @@ export const Motion: React.FC = () => {
                 color: "var(--ui-danger)",
               }}
             >
-              <IconDots size={20} />
+              <DotsThree weight="duotone" size={20} />
             </div>
             <div className="motion-info">
               <div className="motion-name">Stagger</div>

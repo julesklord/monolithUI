@@ -1,14 +1,14 @@
 import React from 'react';
 import { 
-  IconFolder, IconGitBranch, IconCpu, IconTerminal2, 
-  IconLayoutSidebar, IconSearch, IconFiles, IconCode, 
-  IconSettings, 
-  IconHistory, 
-  IconBug, 
-  IconSparkles, IconDownload, IconTrash, 
-  IconKey, IconAlertCircle,
-  IconChevronRight
-} from '@tabler/icons-react';
+  Folder, GitBranch, Cpu, TerminalWindow, 
+  Sidebar, MagnifyingGlass, Files, Code, 
+  Gear, 
+  ClockCounterClockwise, 
+  Bug, 
+  Sparkle, Download, Trash, 
+  Key, WarningCircle,
+  CaretRight
+} from '@phosphor-icons/react';
 import { 
   CommandBar, 
   CommandBarSegment, 
@@ -53,17 +53,17 @@ export const ComponentsSection: React.FC = () => {
             <div style={{ fontSize: '10px', color: 'var(--ui-text-disabled)', marginBottom: '6px', fontFamily: 'var(--ui-font-mono)' }}>Windows (Native Controls)</div>
             <CommandBar platform="windows" title="monolith.dev Design">
               <CommandBarSegment>
-                <IconFolder size={14} />
+                <Folder size={14} weight="duotone" />
                 src/components
               </CommandBarSegment>
               <CommandBarDivider />
               <CommandBarSegment variant="warning">
-                <IconGitBranch size={14} />
+                <GitBranch size={14} weight="duotone" />
                 feature/dock-system
               </CommandBarSegment>
               <CommandBarSpacer />
               <CommandBarSegment variant="secondary">
-                <IconCpu size={14} />
+                <Cpu size={14} weight="duotone" />
                 1.2M tokens
               </CommandBarSegment>
             </CommandBar>
@@ -77,16 +77,16 @@ export const ComponentsSection: React.FC = () => {
           <div className="subsection-title">Dock System</div>
           <div className="canvas center" style={{ minHeight: '340px', gap: '20px', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
             <div className="dock dock-left dock-anchored">
-              <div className="dock-btn active"><IconLayoutSidebar size={18} /></div>
-              <div className="dock-btn"><IconSearch size={18} /></div>
+              <div className="dock-btn active"><Sidebar size={18} weight="duotone" /></div>
+              <div className="dock-btn"><MagnifyingGlass size={18} weight="duotone" /></div>
               <div className="dock-sep"></div>
-              <div className="dock-btn"><IconFiles size={18} /></div>
+              <div className="dock-btn"><Files size={18} weight="duotone" /></div>
             </div>
             <div className="dock dock-bottom dock-floating" style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
-              <div className="dock-btn"><IconTerminal2 size={18} /></div>
-              <div className="dock-btn active"><IconCode size={18} /></div>
+              <div className="dock-btn"><TerminalWindow size={18} weight="duotone" /></div>
+              <div className="dock-btn active"><Code size={18} weight="duotone" /></div>
               <div className="dock-sep"></div>
-              <div className="dock-btn"><IconSettings size={18} /></div>
+              <div className="dock-btn"><Gear size={18} weight="duotone" /></div>
             </div>
             <div className="dock-panel dock-panel-anchored-right" style={{ width: '160px', height: '100%', position: 'absolute', right: '0' }}>
                 <div className="dock-panel-header"><span className="dock-panel-title">Props</span></div>
@@ -103,12 +103,12 @@ export const ComponentsSection: React.FC = () => {
           <div className="canvas" style={{ padding: '0' }}>
             <div className="drawer-preview" style={{ width: '100%' }}>
               <div className="drawer-header">
-                <IconHistory size={15} style={{ color: 'var(--ui-text-tertiary)' }} />
+                <ClockCounterClockwise size={15} weight="duotone" style={{ color: 'var(--ui-text-tertiary)' }} />
                 <div className="drawer-title">History</div>
               </div>
               <div className="drawer-body">
-                <div className="sess-item active"><div className="sess-icon"><IconCode size={16} /></div><div className="sess-info"><div className="sess-title">Refactor: Layout</div></div></div>
-                <div className="sess-item"><div className="sess-icon"><IconBug size={16} /></div><div className="sess-info"><div className="sess-title">Fix: Routing</div></div></div>
+                <div className="sess-item active"><div className="sess-icon"><Code size={16} weight="duotone" /></div><div className="sess-info"><div className="sess-title">Refactor: Layout</div></div></div>
+                <div className="sess-item"><div className="sess-icon"><Bug size={16} weight="duotone" /></div><div className="sess-info"><div className="sess-title">Fix: Routing</div></div></div>
               </div>
             </div>
           </div>
@@ -124,13 +124,13 @@ export const ComponentsSection: React.FC = () => {
               <div style={{ fontSize: '10px', color: 'var(--ui-text-disabled)', marginBottom: '8px', fontFamily: 'var(--ui-font-mono)' }}>BLOG_CARD</div>
               <Card style={{ padding: '0', overflow: 'hidden' }}>
                  <div style={{ height: '120px', background: 'var(--ui-surface-3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <IconSparkles size={40} style={{ opacity: 0.2 }} />
+                    <Sparkle size={40} weight="duotone" style={{ opacity: 0.2 }} />
                  </div>
                  <div style={{ padding: '16px' }}>
                     <div style={{ fontSize: '10px', color: 'var(--brand-primary)', fontWeight: 800, marginBottom: '4px' }}>ENGINEERING // MAY 16</div>
                     <div style={{ fontSize: '16px', fontWeight: 800, marginBottom: '8px' }}>Refactoring the Orbital Grid</div>
                     <div style={{ fontSize: '12px', color: 'var(--ui-text-tertiary)', lineHeight: '1.6' }}>How we migrated a boxy grid to a gravity-based system.</div>
-                    <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', fontWeight: 700, color: 'var(--ui-text-primary)' }}>READ_MORE <IconChevronRight size={14}/></div>
+                    <div style={{ marginTop: '16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '11px', fontWeight: 700, color: 'var(--ui-text-primary)' }}>READ_MORE <CaretRight size={14} weight="duotone" /></div>
                  </div>
               </Card>
            </div>
@@ -159,8 +159,8 @@ export const ComponentsSection: React.FC = () => {
               <Button variant="secondary">Secondary</Button>
             </div>
             <div style={{ display: 'flex', gap: '8px' }}>
-              <Button variant="ghost" leftIcon={<IconDownload size={14} />}>Download</Button>
-              <Button variant="danger" iconOnly><IconTrash size={16} /></Button>
+              <Button variant="ghost" leftIcon={<Download size={14} weight="duotone" />}>Download</Button>
+              <Button variant="danger" iconOnly><Trash size={16} weight="duotone" /></Button>
             </div>
           </div>
           <div className="canvas-label">Transitions: fast (110ms) · Active scale down (0.97).</div>
@@ -169,9 +169,9 @@ export const ComponentsSection: React.FC = () => {
         <div className="subsection" id="inputs">
           <div className="subsection-title">Inputs</div>
           <div className="canvas col" style={{ gap: '12px' }}>
-            <Input placeholder="Search..." leftIcon={<IconSearch size={14} />} />
-            <Input placeholder="Password" type="password" leftIcon={<IconKey size={14} />} />
-            <Input placeholder="Invalid field" leftIcon={<IconAlertCircle size={14} />} status="invalid" />
+            <Input placeholder="Search..." leftIcon={<MagnifyingGlass size={14} weight="duotone" />} />
+            <Input placeholder="Password" type="password" leftIcon={<Key size={14} weight="duotone" />} />
+            <Input placeholder="Invalid field" leftIcon={<WarningCircle size={14} weight="duotone" />} status="invalid" />
           </div>
           <div className="canvas-label">Focus rings use primary-glow · Semantic error states.</div>
         </div>

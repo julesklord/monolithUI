@@ -230,21 +230,21 @@
    BRAND PRESETS — 5 Base Colors
 ════════════════════════════════════════════ */
 
-/* 1. MASTER NEUTRAL: Tropic Vibes (Structured Master Palette) */
-.brand-tropic-vibes {
+/* 1. MASTER NEUTRAL: PLASMA_CORE (Structured Master Palette) */
+.brand-plasma-core {
     --brand-primary: #22d3ee; /* Electric Cyan */
     --brand-primary-text: #0a0a0a;
     --brand-primary-light: #67e8f9;
     --brand-primary-bg: rgba(34, 211, 238, 0.12);
     --brand-primary-border: rgba(34, 211, 238, 0.3);
     --brand-primary-glow: rgba(34, 211, 238, 0.2);
-    --brand-secondary: #a855f7; /* Balandra Purple */
+    --brand-secondary: #a855f7; /* Violet Reaction */
     --brand-secondary-bg: rgba(168, 85, 247, 0.12);
     --brand-gradient: linear-gradient(
         135deg,
         #22d3ee,
         #a855f7
-    ); /* Cyan to Purple - Tech Tropical */
+    ); /* Cyan to Purple - Industrial Neon */
     --brand-font-sans: "DM Sans", system-ui, sans-serif;
     --brand-font-mono: "DM Mono", monospace;
 
@@ -266,8 +266,8 @@
     --brand-surface-light-6: #e8e8e8;
 }
 
-/* 2. YELLOW: Mango */
-.brand-mango {
+/* 2. YELLOW: OXIDIZED_GOLD */
+.brand-oxidized-gold {
     --brand-primary: #f59e0b;
     --brand-primary-text: #451a03; /* Accessible dark brown for contrast */
     --brand-primary-light: #fbbf24;
@@ -294,8 +294,8 @@
     --brand-surface-light-6: #ebe9e5;
 }
 
-/* 3. PURPLE/CRIMSON: Balandra */
-.brand-balandra {
+/* 3. PURPLE/CRIMSON: VIOLET_REACTION */
+.brand-violet-reaction {
     --brand-primary: #a855f7;
     --brand-primary-text: #ffffff;
     --brand-primary-light: #c084fc;
@@ -322,8 +322,8 @@
     --brand-surface-light-6: #e9e6ec;
 }
 
-/* 4. BLUE/TURQUOISE: Playa */
-.brand-playa {
+/* 4. BLUE/TURQUOISE: COOLANT_LIQUID */
+.brand-coolant-liquid {
     --brand-primary: #06b6d4;
     --brand-primary-text: #083344; /* Accessible dark blue for contrast */
     --brand-primary-light: #22d3ee;
@@ -335,8 +335,8 @@
     --brand-gradient: linear-gradient(135deg, #06b6d4, #2dd4bf);
 }
 
-/* 5. SCARLET RED: Pitahaya */
-.brand-pitahaya {
+/* 5. SCARLET RED: CRITICAL_MASS */
+.brand-critical-mass {
     --brand-primary: #ef4444;
     --brand-primary-text: #ffffff;
     --brand-primary-light: #f87171;
@@ -364,21 +364,21 @@
 }
 
 /* BRAND ACCESSIBILITY OVERRIDES FOR LIGHT THEME */
-[data-theme="light"].brand-mango {
+[data-theme="light"].brand-oxidized-gold {
     --brand-primary: #b45309; /* Darker amber for text contrast */
     --brand-primary-bg: rgba(245, 158, 11, 0.2); /* Slightly stronger bg */
     --brand-primary-border: rgba(245, 158, 11, 0.35);
 }
-[data-theme="light"].brand-playa {
+[data-theme="light"].brand-coolant-liquid {
     --brand-primary: #0891b2; /* Darker cyan for text contrast */
     --brand-primary-bg: rgba(6, 182, 212, 0.2);
     --brand-primary-border: rgba(6, 182, 212, 0.35);
 }
-[data-theme="light"].brand-balandra {
+[data-theme="light"].brand-violet-reaction {
     --brand-primary: #9333ea; /* Darker purple */
     --brand-primary-bg: rgba(168, 85, 247, 0.15);
 }
-[data-theme="light"].brand-pitahaya {
+[data-theme="light"].brand-critical-mass {
     --brand-primary: #dc2626; /* Darker red */
     --brand-primary-bg: rgba(239, 68, 68, 0.15);
 }

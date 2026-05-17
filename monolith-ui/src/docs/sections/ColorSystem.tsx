@@ -100,11 +100,11 @@ export const ColorSystem: React.FC = () => {
         <div className="subsection-title">The 5 base brand presets</div>
         <div className="color-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))' }}>
           {[
-            { name: 'Tropic Vibes', primary: '#22d3ee', secondary: '#a855f7', class: 'brand-tropic-vibes' },
-            { name: 'Mango',        primary: '#f59e0b', secondary: '#fbbf24', class: 'brand-mango' },
-            { name: 'Balandra',     primary: '#a855f7', secondary: '#e11d48', class: 'brand-balandra' },
-            { name: 'Playa',        primary: '#06b6d4', secondary: '#2dd4bf', class: 'brand-playa' },
-            { name: 'Pitahaya',     primary: '#ef4444', secondary: '#991b1b', class: 'brand-pitahaya' },
+            { name: 'Plasma Core',    primary: '#22d3ee', secondary: '#a855f7', class: 'brand-plasma-core' },
+            { name: 'Oxidized Gold',  primary: '#f59e0b', secondary: '#fbbf24', class: 'brand-oxidized-gold' },
+            { name: 'Violet Reaction', primary: '#a855f7', secondary: '#e11d48', class: 'brand-violet-reaction' },
+            { name: 'Coolant Liquid', primary: '#06b6d4', secondary: '#2dd4bf', class: 'brand-coolant-liquid' },
+            { name: 'Critical Mass',  primary: '#ef4444', secondary: '#991b1b', class: 'brand-critical-mass' },
           ].map(b => (
             <div className="swatch" key={b.class}>
               <div style={{ height: '40px', background: `linear-gradient(135deg, ${b.primary}, ${b.secondary})` }} />

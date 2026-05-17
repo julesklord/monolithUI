@@ -50,7 +50,7 @@ const SECTION_MAP: Record<string, string> = {
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
-  const [brand, setBrand] = useState("brand-tropic-vibes");
+  const [brand, setBrand] = useState('brand-plasma-core');
   const location = useLocation();
 
   const getBreadcrumb = () => {

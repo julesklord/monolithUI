@@ -1,6 +1,6 @@
 ﻿@layer brand {
-  /* PRESET: Mango (Flat Pastel) */
-  .brand-mango {
+  /* PRESET: OXIDIZED_GOLD (Amber) */
+  .brand-oxidized-gold {
     --brand-primary:        #FFB347;
     --brand-primary-light:  #FFCC80;
     --brand-primary-bg:     #FFF3E0;
@@ -12,8 +12,8 @@
     --brand-gradient:       #FFB347;
   }
 
-  /* PRESET: Ocean (Flat Pastel) */
-  .brand-ocean {
+  /* PRESET: COOLANT_LIQUID (Ocean/Blue) */
+  .brand-coolant-liquid {
     --brand-primary:        #4FA4D8;
     --brand-primary-light:  #90CAF9;
     --brand-primary-bg:     #E3F2FD;
@@ -25,8 +25,8 @@
     --brand-gradient:       #4FA4D8;
   }
 
-  /* PRESET: Pitahaya (BCS Inspired) */
-  .brand-pitahaya {
+  /* PRESET: CRITICAL_MASS (Red) */
+  .brand-critical-mass {
     --brand-primary:        #FF2400;
     --brand-primary-light:  #FF5C4D;
     --brand-primary-bg:     #FFF0F0;
@@ -38,8 +38,8 @@
     --brand-gradient:       #FF2400;
   }
 
-  /* PRESET: Papaya (Flat Pastel) */
-  .brand-papaya {
+  /* PRESET: VIOLET_REACTION (Purple) */
+  .brand-violet-reaction {
     --brand-primary:        #FF8A65;
     --brand-primary-light:  #FFAB91;
     --brand-primary-bg:     #FBE9E7;

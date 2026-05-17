@@ -2,12 +2,12 @@
 
 Apply a preset by adding the class to `<html>` or `<body>`.
 
-## 1. Tropic Vibes (Default Master)
+## 1. PLASMA_CORE (Default Master)
 
-Electric Cyan + Balandra Purple. The neutral master palette.
+Electric Cyan + Violet Reaction. The neutral master palette.
 
 ```css
-.brand-tropic-vibes {
+.brand-plasma-core {
   --brand-primary:        #22d3ee;
   --brand-primary-text:   #0a0a0a;
   --brand-primary-light:  #67e8f9;
@@ -28,12 +28,12 @@ Electric Cyan + Balandra Purple. The neutral master palette.
 
 TUI truecolor: `Color::Rgb(34, 211, 238)` / `Color::Rgb(168, 85, 247)`
 
-## 2. Mango
+## 2. OXIDIZED_GOLD
 
 Amber yellow. Warm tech. Slight brown surface tint.
 
 ```css
-.brand-mango {
+.brand-oxidized-gold {
   --brand-primary:        #f59e0b;
   --brand-primary-text:   #451a03;
   --brand-primary-light:  #fbbf24;
@@ -51,7 +51,7 @@ Amber yellow. Warm tech. Slight brown surface tint.
 }
 
 /* Light theme fix */
-[data-theme="light"].brand-mango {
+[data-theme="light"].brand-oxidized-gold {
   --brand-primary: #b45309;
   --brand-primary-bg: rgba(245, 158, 11, 0.20);
   --brand-primary-border: rgba(245, 158, 11, 0.35);
@@ -60,12 +60,12 @@ Amber yellow. Warm tech. Slight brown surface tint.
 
 TUI truecolor: `Color::Rgb(245, 158, 11)`
 
-## 3. Balandra
+## 3. VIOLET_REACTION
 
-Purple + Crimson. BCS bay at sunset.
+Purple + Crimson. High-energy industrial violet.
 
 ```css
-.brand-balandra {
+.brand-violet-reaction {
   --brand-primary:        #a855f7;
   --brand-primary-text:   #ffffff;
   --brand-primary-light:  #c084fc;
@@ -82,7 +82,7 @@ Purple + Crimson. BCS bay at sunset.
   --brand-surface-6: #2e2936;
 }
 
-[data-theme="light"].brand-balandra {
+[data-theme="light"].brand-violet-reaction {
   --brand-primary: #9333ea;
   --brand-primary-bg: rgba(168, 85, 247, 0.15);
 }
@@ -90,12 +90,12 @@ Purple + Crimson. BCS bay at sunset.
 
 TUI truecolor: `Color::Rgb(168, 85, 247)`
 
-## 4. Playa
+## 4. COOLANT_LIQUID
 
-Cyan + Teal. Clean coastal.
+Cyan + Teal. Clean industrial coolant.
 
 ```css
-.brand-playa {
+.brand-coolant-liquid {
   --brand-primary:        #06b6d4;
   --brand-primary-text:   #083344;
   --brand-primary-light:  #22d3ee;
@@ -108,7 +108,7 @@ Cyan + Teal. Clean coastal.
   /* Uses default neutral surfaces */
 }
 
-[data-theme="light"].brand-playa {
+[data-theme="light"].brand-coolant-liquid {
   --brand-primary: #0891b2;
   --brand-primary-bg: rgba(6, 182, 212, 0.20);
   --brand-primary-border: rgba(6, 182, 212, 0.35);
@@ -117,12 +117,12 @@ Cyan + Teal. Clean coastal.
 
 TUI truecolor: `Color::Rgb(6, 182, 212)`
 
-## 5. Pitahaya
+## 5. CRITICAL_MASS
 
-Scarlet Red. BCS pitahaya cactus fruit.
+Scarlet Red. High-stress thermal warning.
 
 ```css
-.brand-pitahaya {
+.brand-critical-mass {
   --brand-primary:        #ef4444;
   --brand-primary-text:   #ffffff;
   --brand-primary-light:  #f87171;
@@ -139,7 +139,7 @@ Scarlet Red. BCS pitahaya cactus fruit.
   --brand-surface-6: #352a2c;
 }
 
-[data-theme="light"].brand-pitahaya {
+[data-theme="light"].brand-critical-mass {
   --brand-primary: #dc2626;
   --brand-primary-bg: rgba(239, 68, 68, 0.15);
 }

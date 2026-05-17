@@ -21,25 +21,25 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({ brand, handleBrandCl
       <div className="subsection">
         <div className="subsection-title">Live brand switcher</div>
         <div className="brand-switcher" id="brandSwitcher">
-          <div className={`brand-btn ${brand === 'brand-tropic-vibes' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-tropic-vibes')}>
+          <div className={`brand-btn ${brand === 'brand-plasma-core' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-plasma-core')}>
             <div className="brand-dot" style={{ background: 'linear-gradient(135deg, #ef4444 0%, #f59e0b 35%, #06b6d4 70%, #a855f7 100%)' }}></div>
-            Tropic Vibes
+            Plasma Core
           </div>
-          <div className={`brand-btn ${brand === 'brand-mango' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-mango')}>
+          <div className={`brand-btn ${brand === 'brand-oxidized-gold' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-oxidized-gold')}>
             <div className="brand-dot" style={{ background: 'linear-gradient(135deg,#f59e0b,#fbbf24)' }}></div>
-            Mango
+            Oxidized Gold
           </div>
-          <div className={`brand-btn ${brand === 'brand-balandra' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-balandra')}>
+          <div className={`brand-btn ${brand === 'brand-violet-reaction' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-violet-reaction')}>
             <div className="brand-dot" style={{ background: 'linear-gradient(135deg,#a855f7,#e11d48)' }}></div>
-            Balandra
+            Violet Reaction
           </div>
-          <div className={`brand-btn ${brand === 'brand-playa' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-playa')}>
+          <div className={`brand-btn ${brand === 'brand-coolant-liquid' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-coolant-liquid')}>
             <div className="brand-dot" style={{ background: 'linear-gradient(135deg,#06b6d4,#2dd4bf)' }}></div>
-            Playa
+            Coolant Liquid
           </div>
-          <div className={`brand-btn ${brand === 'brand-pitahaya' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-pitahaya')}>
+          <div className={`brand-btn ${brand === 'brand-critical-mass' ? 'active' : ''}`} onClick={() => handleBrandClick('brand-critical-mass')}>
             <div className="brand-dot" style={{ background: 'linear-gradient(135deg,#ef4444,#991b1b)' }}></div>
-            Pitahaya
+            Critical Mass
           </div>
         </div>
         <div className="canvas row" style={{ gap: '10px', alignItems: 'center' }} id="brandPreview">

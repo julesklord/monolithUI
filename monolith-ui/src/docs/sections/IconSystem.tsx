@@ -1,77 +1,103 @@
 import React from 'react';
 import { 
-  IconBox, 
-  IconGridDots, 
-  IconVector, 
-  IconLineHeight, 
-  IconBorderAll, 
-  IconCircleFilled, 
-  IconSquareRoundedFilled,
-  IconBrandTabler
+  IconExclamationCircle, 
+  IconCircleCheck, 
+  IconAlertTriangle, 
+  IconInfoCircle,
+  IconSearch,
+  IconCommand,
+  IconTerminal,
+  IconCode,
+  IconCpu,
+  IconDatabase,
+  IconCloud,
+  IconSettings,
+  IconBell,
+  IconLock,
+  IconHistory,
+  IconDeviceDesktop,
+  IconDeviceLaptop,
+  IconDeviceMobile
 } from '@tabler/icons-react';
 
 export const IconSystem: React.FC = () => {
+  const ICON_GROUPS = [
+    {
+      title: 'Status & Semantic',
+      icons: [
+        { Icon: IconCircleCheck, label: 'Success', use: 'Process completed, healthy state' },
+        { Icon: IconInfoCircle, label: 'Info', use: 'System telemetry, general info' },
+        { Icon: IconAlertTriangle, label: 'Warning', use: 'Non-critical error, caution' },
+        { Icon: IconExclamationCircle, label: 'Danger', use: 'Critical failure, urgent' },
+      ]
+    },
+    {
+      title: 'Industrial & Technical',
+      icons: [
+        { Icon: IconTerminal, label: 'Console', use: 'TUI, Command line' },
+        { Icon: IconCode, label: 'Code', use: 'Editor, source data' },
+        { Icon: IconCpu, label: 'Engine', use: 'Compute, core processing' },
+        { Icon: IconDatabase, label: 'Data', use: 'Storage, memory nodes' },
+        { Icon: IconCloud, label: 'Network', use: 'Remote sync, API' },
+      ]
+    },
+    {
+      title: 'Interface Control',
+      icons: [
+        { Icon: IconCommand, label: 'Command', use: 'System action, keyhint' },
+        { Icon: IconSearch, label: 'Search', use: 'Global lookup' },
+        { Icon: IconSettings, label: 'System', use: 'Configuration' },
+        { Icon: IconBell, label: 'Signals', use: 'Notifications' },
+        { Icon: IconLock, label: 'Security', use: 'Auth, permissions' },
+        { Icon: IconHistory, label: 'Logs', use: 'Session history' },
+      ]
+    }
+  ];
+
   return (
-    <section className="doc-section" id="icons">
+    <section className="doc-section" id="icon-system">
       <div className="section-eyebrow">06</div>
       <h2 className="section-title">Icon <em>System</em></h2>
-      <p className="section-desc">A rigid, industrial iconography language. Icons are not decorative illustrations; they are functional components of the machine interface.</p>
+      <p className="section-desc">Strict geometry using <strong>Tabler Icons</strong>. Icons must use a consistent 1.5px stroke weight (2px for status) and follow the 14px-32px scale.</p>
 
-      <div className="subsection">
-        <div className="subsection-title">Construction Rules</div>
-        <div className="canvas grid2" style={{ gap: '20px' }}>
-          <div className="surface-card">
-            <div style={{ color: 'var(--brand-primary)', marginBottom: '12px' }}><IconVector size={24} /></div>
-            <div style={{ fontSize: '13px', fontWeight: 700, marginBottom: '8px' }}>STRICT GEOMETRY</div>
-            <p style={{ fontSize: '12px', color: 'var(--ui-text-secondary)', lineHeight: 1.6 }}>
-              Use <span className="icode">stroke-linecap: square</span> and <span className="icode">stroke-linejoin: miter</span>. Avoid rounded caps. Every icon must feel like a technical drawing.
-            </p>
-          </div>
-          <div className="surface-card">
-            <div style={{ color: 'var(--ui-accent-secondary)', marginBottom: '12px' }}><IconLineHeight size={24} /></div>
-            <div style={{ fontSize: '13px', fontWeight: 700, marginBottom: '8px' }}>STROKE WEIGHT</div>
-            <p style={{ fontSize: '12px', color: 'var(--ui-text-secondary)', lineHeight: 1.6 }}>
-              Standard weight is <span className="icode">1.5px</span> for 24px icons. Increase to <span className="icode">2px</span> for high-emphasis system status indicators.
-            </p>
-          </div>
-        </div>
+      <div className="rule-box secondary">
+        <p><strong>Industrial Stroke Rule //</strong> Do not use filled icons. Only use outlined icons with squared caps and miter joins to maintain the architectural 'blueprint' feel.</p>
       </div>
 
-      <div className="subsection">
-        <div className="subsection-title">Size Matrix</div>
-        <div className="canvas row" style={{ gap: '32px', alignItems: 'flex-end', padding: '24px' }}>
-          <div style={{ textAlign: 'center' }}>
-            <IconBox size={14} stroke={1.5} />
-            <div style={{ fontSize: '9px', marginTop: '8px', color: 'var(--ui-text-disabled)' }}>14px (Micro)</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <IconBox size={18} stroke={1.5} />
-            <div style={{ fontSize: '9px', marginTop: '8px', color: 'var(--ui-text-disabled)' }}>18px (Compact)</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <IconBox size={24} stroke={1.5} />
-            <div style={{ fontSize: '9px', marginTop: '8px', color: 'var(--ui-text-disabled)' }}>24px (Base)</div>
-          </div>
-          <div style={{ textAlign: 'center' }}>
-            <IconBox size={32} stroke={2} />
-            <div style={{ fontSize: '9px', marginTop: '8px', color: 'var(--ui-text-disabled)' }}>32px (Header)</div>
+      {ICON_GROUPS.map((group, idx) => (
+        <div className="subsection" key={idx}>
+          <div className="subsection-title">{group.title}</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+            {group.icons.map((item, i) => (
+              <div key={i} className="surface-card" style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+                <div style={{ padding: '12px', background: 'var(--ui-surface-2)', borderRadius: 'var(--ui-r-sm)', color: 'var(--brand-primary)', boxShadow: 'var(--ui-inset-shallow)' }}>
+                  <item.Icon size={20} stroke={1.5} />
+                </div>
+                <div>
+                  <div style={{ fontSize: '11px', fontWeight: 800, fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-primary)' }}>{item.label}</div>
+                  <div style={{ fontSize: '10px', color: 'var(--ui-text-tertiary)', marginTop: '2px' }}>{item.use}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      ))}
 
       <div className="subsection">
-        <div className="subsection-title">Library Integration</div>
-        <div className="rule-box">
-          <p>
-            We utilize <strong>@tabler/icons-react</strong> as the base engine. However, we force-override their default soft rendering via global CSS to match our industrial specification.
-          </p>
-        </div>
-        <div className="canvas" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          <IconGridDots size={20} />
-          <IconBorderAll size={20} />
-          <IconCircleFilled size={20} />
-          <IconSquareRoundedFilled size={20} />
-          <IconBrandTabler size={20} />
+        <div className="subsection-title">Platform Assets</div>
+        <div className="canvas" style={{ display: 'flex', gap: '40px', padding: '32px', flexWrap: 'wrap', justifyContent: 'center' }}>
+           <div style={{ textAlign: 'center' }}>
+              <IconDeviceDesktop size={48} stroke={1} style={{ opacity: 0.5, marginBottom: '12px' }} />
+              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)' }}>STATION_X64</div>
+           </div>
+           <div style={{ textAlign: 'center' }}>
+              <IconDeviceLaptop size={48} stroke={1} style={{ opacity: 0.5, marginBottom: '12px' }} />
+              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)' }}>STATION_MOBILE_LAB</div>
+           </div>
+           <div style={{ textAlign: 'center' }}>
+              <IconDeviceMobile size={48} stroke={1} style={{ opacity: 0.5, marginBottom: '12px' }} />
+              <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)' }}>FIELD_TRANSCEIVER</div>
+           </div>
         </div>
       </div>
     </section>

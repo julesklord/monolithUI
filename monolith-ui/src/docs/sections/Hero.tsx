@@ -53,14 +53,14 @@ export const Hero: React.FC = () => {
             <h1
               style={{
                 margin: 0,
-                fontSize: "28px",
-                fontWeight: 800,
+                fontSize: "34px",
+                fontWeight: 500,
+                fontFamily: "var(--ui-font-serif)",
                 color: "var(--ui-text-primary)",
-                letterSpacing: "-0.04em",
-                textTransform: "uppercase",
+                letterSpacing: "-0.01em",
               }}
             >
-              Monolith<span style={{ color: "var(--brand-primary)" }}>UI</span>
+              Monolith<span style={{ color: "var(--brand-primary)", fontStyle: 'italic', marginLeft: '2px' }}>UI</span>
             </h1>
             <div
               className="tag primary"

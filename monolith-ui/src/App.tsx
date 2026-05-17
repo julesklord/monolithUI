@@ -100,14 +100,16 @@ export default function App() {
           <Logo size={20} style={{ marginRight: "8px" }} />
           <span
             style={{
-              fontWeight: 800,
+              fontWeight: 500,
+              fontFamily: "var(--ui-font-serif)",
               color: "var(--ui-text-primary)",
-              letterSpacing: "-0.02em",
+              fontSize: "16px",
+              letterSpacing: "-0.01em",
             }}
           >
             Monolith
           </span>
-          <span style={{ fontWeight: 400, opacity: 0.7 }}>UI</span>
+          <span style={{ fontWeight: 400, opacity: 0.7, fontStyle: 'italic', fontFamily: "var(--ui-font-serif)", color: "var(--brand-primary)" }}>UI</span>
         </NavLink>
         <div className="nav-sep" />
         <div className="nav-breadcrumb">

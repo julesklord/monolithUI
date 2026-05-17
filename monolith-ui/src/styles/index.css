@@ -181,25 +181,31 @@
     --ui-z-modal: 60;
 }
 
-/* ── LIGHT THEME OVERRIDES ── */
+/* ── LIGHT THEME OVERRIDES (Industrial Concrete / Hormigón) ── */
 [data-theme="light"] {
-    --ui-surface-0: var(--brand-surface-light-0, #f0f2f5);
-    --ui-surface-1: var(--brand-surface-light-1, #e8eaed);
-    --ui-surface-2: var(--brand-surface-light-2, #e2e5e9);
-    --ui-surface-3: var(--brand-surface-light-3, #ffffff);
-    --ui-surface-4: var(--brand-surface-light-4, #f8f9fa);
-    --ui-surface-5: var(--brand-surface-light-5, #f1f3f4);
-    --ui-surface-6: var(--brand-surface-light-6, #e8eaed);
+    --ui-surface-0: var(--brand-surface-light-0, #bcc0c9); /* Deep Concrete */
+    --ui-surface-1: var(--brand-surface-light-1, #c5c9d2); 
+    --ui-surface-2: var(--brand-surface-light-2, #ced3db);
+    --ui-surface-3: var(--brand-surface-light-3, #d7dce4); /* Main Concrete Canvas */
+    --ui-surface-4: var(--brand-surface-light-4, #e0e4eb);
+    --ui-surface-5: var(--brand-surface-light-5, #e9ecf2);
+    --ui-surface-6: var(--brand-surface-light-6, #f2f5f9);
 
-    --ui-border-subtle: rgba(0, 0, 0, 0.05);
-    --ui-border-default: rgba(0, 0, 0, 0.12);
-    --ui-border-hover: rgba(0, 0, 0, 0.2);
-    --ui-border-active: rgba(0, 0, 0, 0.3);
+    --ui-border-subtle: rgba(0, 0, 0, 0.08);
+    --ui-border-default: rgba(0, 0, 0, 0.18);
+    --ui-border-hover: rgba(0, 0, 0, 0.28);
+    --ui-border-active: rgba(0, 0, 0, 0.4);
 
     --ui-text-primary: rgba(0, 0, 0, 0.95);
-    --ui-text-secondary: rgba(0, 0, 0, 0.75);
-    --ui-text-tertiary: rgba(0, 0, 0, 0.5);
-    --ui-text-disabled: rgba(0, 0, 0, 0.3);
+    --ui-text-secondary: rgba(0, 0, 0, 0.78);
+    --ui-text-tertiary: rgba(0, 0, 0, 0.55);
+    --ui-text-disabled: rgba(0, 0, 0, 0.35);
+
+    /* Shadow adjustments for grey background */
+    --ui-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.15);
+    --ui-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.18);
+    --ui-inset-shallow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+    --ui-inset-deep: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 
     /* Contrast Accessibility Tweaks for Light Theme */
     --ui-warning: #b45309; /* Darker amber for contrast on light backgrounds */

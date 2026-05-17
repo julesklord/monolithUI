@@ -108,21 +108,21 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({ brand, handleBrandCl
                </div>
             </div>
           </div>
-          <div data-theme="light" className="surface-card elevated" style={{ padding: '24px', background: '#ffffff', color: '#000' }}>
-            <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.3)', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>POLARITY: LIGHT</div>
+          <div data-theme="light" className="surface-card elevated" style={{ padding: '24px', background: '#d7dce4', color: '#000' }}>
+            <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.4)', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.1em' }}>POLARITY: CONCRETE</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-               <div className="surface-card" style={{ background: 'rgba(0,0,0,0.03)', borderColor: 'var(--brand-primary)', borderLeftWidth: '4px', padding: '12px', display: 'flex', gap: '12px', alignItems: 'center' }}>
+               <div className="surface-card" style={{ background: 'rgba(0,0,0,0.05)', borderColor: 'var(--brand-primary)', borderLeftWidth: '4px', padding: '12px', display: 'flex', gap: '12px', alignItems: 'center' }}>
                   <div style={{ padding: '8px', background: 'var(--brand-primary)', borderRadius: 'var(--ui-r-sm)', color: '#fff' }}><IconCode size={16} /></div>
                   <div>
                     <div style={{ fontSize: '13px', fontWeight: 700, color: '#000' }}>ENGINE_REFACTOR</div>
-                    <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.4)' }}>ACTIVE_SESSION // 12m</div>
+                    <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.5)' }}>ACTIVE_SESSION // 12m</div>
                   </div>
                </div>
                <div className="surface-card" style={{ padding: '12px', display: 'flex', gap: '12px', alignItems: 'center', opacity: 0.6 }}>
-                  <div style={{ padding: '8px', background: 'rgba(0,0,0,0.05)', borderRadius: 'var(--ui-r-sm)', color: '#666' }}><IconBug size={16} /></div>
+                  <div style={{ padding: '8px', background: 'rgba(0,0,0,0.08)', borderRadius: 'var(--ui-r-sm)', color: '#444' }}><IconBug size={16} /></div>
                   <div>
                     <div style={{ fontSize: '13px', fontWeight: 700, color: '#000' }}>FIX_KERNEL_PANIC</div>
-                    <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.4)' }}>LOG_ENTRY // 2d</div>
+                    <div style={{ fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'rgba(0,0,0,0.5)' }}>LOG_ENTRY // 2d</div>
                   </div>
                </div>
             </div>

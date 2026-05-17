@@ -18,25 +18,27 @@ export const Hero: React.FC = () => {
         style={{
           display: "flex",
           alignItems: "center",
-          background: "var(--ui-surface-1)",
-          border: "1.5px solid var(--ui-border-default)",
+          background: "var(--ui-surface-2)",
+          border: "1px solid var(--ui-border-default)",
           padding: "24px",
-          borderRadius: "0",
+          borderRadius: "var(--ui-r-md)",
           gap: "24px",
           marginBottom: "40px",
+          boxShadow: "var(--ui-inset-shallow)",
         }}
       >
         <div
           style={{
             width: "64px",
             height: "64px",
-            borderRadius: "0",
-            background: "var(--ui-surface-2)",
-            border: "1.5px solid var(--ui-border-default)",
+            borderRadius: "var(--ui-r-sm)",
+            background: "var(--ui-surface-3)",
+            border: "1px solid var(--ui-border-default)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
+            boxShadow: "var(--ui-shadow-sm)",
           }}
         >
           <Logo size={40} />
@@ -134,11 +136,13 @@ export const Hero: React.FC = () => {
           <div
             style={{
               display: "flex",
-              padding: "12px 16px",
-              background: "var(--ui-surface-1)",
+              padding: "20px",
+              background: "var(--ui-surface-2)",
               border: "1px solid var(--ui-border-default)",
               borderRadius: "var(--ui-r-md)",
-              gap: "16px",
+              gap: "20px",
+              boxShadow: "var(--ui-inset-shallow)",
+              transition: "all var(--ui-dur-fast) var(--ui-ease-default)",
             }}
           >
             <div
@@ -179,11 +183,13 @@ export const Hero: React.FC = () => {
           <div
             style={{
               display: "flex",
-              padding: "12px 16px",
-              background: "var(--ui-surface-1)",
+              padding: "20px",
+              background: "var(--ui-surface-2)",
               border: "1px solid var(--ui-border-default)",
               borderRadius: "var(--ui-r-md)",
-              gap: "16px",
+              gap: "20px",
+              boxShadow: "var(--ui-inset-shallow)",
+              transition: "all var(--ui-dur-fast) var(--ui-ease-default)",
             }}
           >
             <div
@@ -225,11 +231,13 @@ export const Hero: React.FC = () => {
           <div
             style={{
               display: "flex",
-              padding: "12px 16px",
-              background: "var(--ui-surface-1)",
+              padding: "20px",
+              background: "var(--ui-surface-2)",
               border: "1px solid var(--ui-border-default)",
               borderRadius: "var(--ui-r-md)",
-              gap: "16px",
+              gap: "20px",
+              boxShadow: "var(--ui-inset-shallow)",
+              transition: "all var(--ui-dur-fast) var(--ui-ease-default)",
             }}
           >
             <div
@@ -414,14 +422,10 @@ export const Hero: React.FC = () => {
       <div className="subsection" style={{ marginTop: "48px" }}>
         <div className="subsection-title">System Origins</div>
         <div
-          className="rule-box"
-          style={{
-            background: "var(--ui-surface-2)",
-            borderLeftColor: "var(--ui-accent-secondary)",
-          }}
+          className="rule-box secondary"
         >
           <p>
-            Born in <strong>La Paz, Baja California Sur</strong>, MonolithUI
+            <strong>Monolith Origin //</strong> Born in <strong>La Paz, Baja California Sur</strong>, MonolithUI
             draws its aesthetic spirit directly from its environment. It is
             deeply inspired by the coastal beaches, the relentless summer heat,
             and the vibrant, unapologetic colors of local tropical fruits like
@@ -429,7 +433,7 @@ export const Hero: React.FC = () => {
           </p>
           <p style={{ marginTop: "12px" }}>
             What started as an internal initiative for the{" "}
-            <strong>Tropical Media Group</strong> to build cohesive developer
+            <strong>tropical.dev</strong> to build cohesive developer
             tools evolved into something much larger. By merging the freshness
             of the tropics with the strict precision of semantic design tokens,
             MonolithUI became a standalone, universal "bible" for theming. It

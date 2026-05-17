@@ -613,31 +613,45 @@ body {
     height: 1px;
     background: var(--brand-primary);
 }
-/* ── INFO BOXES (use semantic tokens, brand-reactive) ── */
+/* ── INFO BOXES (Refined Tactile Modules) ── */
 .rule-box {
-    border-left: 3px solid var(--ui-info);
-    padding: 14px 18px;
-    background: var(--ui-info-bg);
-    border-radius: 0 var(--ui-r-sm) var(--ui-r-sm) 0;
-    margin-bottom: 20px;
+    border: 1px solid var(--ui-info-border);
+    padding: 18px 22px;
+    background: var(--ui-surface-2);
+    border-radius: var(--ui-r-md);
+    margin-bottom: 32px;
+    box-shadow: var(--ui-inset-shallow);
+    position: relative;
 }
 .rule-box p {
     font-size: var(--ui-text-base);
-    color: var(--ui-text-primary);
+    color: var(--ui-text-secondary);
     line-height: var(--ui-leading-loose);
 }
 .rule-box strong {
     color: var(--ui-info);
-    font-weight: 600;
+    font-family: var(--ui-font-mono);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
 }
 
 .warn-box {
-    border-left: 3px solid var(--ui-warning);
-    padding: 14px 18px;
-    background: var(--ui-warning-bg);
-    border-radius: 0 var(--ui-r-sm) var(--ui-r-sm) 0;
-    margin-bottom: 20px;
+    border: 1px solid var(--ui-warning-border);
+    padding: 18px 22px;
+    background: var(--ui-surface-2);
+    border-radius: var(--ui-r-md);
+    margin-bottom: 32px;
+    box-shadow: var(--ui-inset-shallow);
+    position: relative;
 }
+.rule-box.secondary {
+    border-color: var(--ui-accent-secondary-border);
+}
+.rule-box.secondary strong {
+    color: var(--ui-accent-secondary);
+}
+
 .warn-box p {
     font-size: var(--ui-text-base);
     color: var(--ui-text-primary);

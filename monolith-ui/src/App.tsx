@@ -23,11 +23,11 @@ import {
 import "./styles/index.css";
 
 const BRAND_MAP: Record<string, { label: string; color: string }> = {
-  "brand-tropic-vibes": { label: "Tropic Vibes", color: "#22d3ee" },
-  "brand-mango": { label: "Mango", color: "#f59e0b" },
-  "brand-balandra": { label: "Balandra", color: "#a855f7" },
-  "brand-playa": { label: "Playa", color: "#06b6d4" },
-  "brand-pitahaya": { label: "Pitahaya", color: "#ef4444" },
+  "brand-plasma-core": { label: "Plasma Core", color: "#22d3ee" },
+  "brand-oxidized-gold": { label: "Oxidized Gold", color: "#f59e0b" },
+  "brand-violet-reaction": { label: "Violet Reaction", color: "#a855f7" },
+  "brand-coolant-liquid": { label: "Coolant Liquid", color: "#06b6d4" },
+  "brand-critical-mass": { label: "Critical Mass", color: "#ef4444" },
 };
 
 const SECTION_MAP: Record<string, string> = {

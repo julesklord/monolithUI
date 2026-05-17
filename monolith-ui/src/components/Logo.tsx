@@ -11,45 +11,37 @@ export const Logo: React.FC<LogoProps> = ({ size = 100, className, style }) => {
     <svg
       width={size}
       height={size}
-      viewBox="0 0 100 100"
+      viewBox="0 0 200 200"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       style={style}
     >
-      {/* Main Circular Container */}
-      <circle cx="50" cy="50" r="48" stroke="var(--brand-primary)" strokeWidth="0.5" strokeDasharray="1 3" opacity="0.2"/>
-
-      {/* Background Sky (Blue) */}
-      <path d="M50 50m-48 0a48 48 0 1 0 96 0a48 48 0 1 0 -96 0" fill="var(--brand-primary)" opacity="0.05"/>
-
-      {/* The Setting Sun (Center) */}
-      <circle cx="50" cy="52" r="24" fill="url(#logo-sunset-grad)">
-        <animate attributeName="r" values="24;25;24" dur="4s" repeatCount="indefinite" />
+      {/* Monolith Body: A brutalist, geometric slab */}
+      <path d="M60 40 L140 40 L140 160 L60 160 Z" fill="url(#monolith_grad_comp)" stroke="var(--brand-primary, #4285f4)" strokeWidth="2"/>
+      
+      {/* Perspective/Depth lines */}
+      <path d="M60 40 L70 30 L150 30 L150 150 L140 160" stroke="var(--brand-primary, #4285f4)" strokeWidth="1.5" strokeOpacity="0.5"/>
+      <path d="M140 40 L150 30" stroke="var(--brand-primary, #4285f4)" strokeWidth="1.5" strokeOpacity="0.5"/>
+      
+      {/* "Density" details: Grid lines inside the monolith */}
+      <path d="M60 70 H140 M60 100 H140 M60 130 H140" stroke="var(--brand-primary, #4285f4)" strokeWidth="0.5" strokeOpacity="0.3"/>
+      <path d="M85 40 V160 M115 40 V160" stroke="var(--brand-primary, #4285f4)" strokeWidth="0.5" strokeOpacity="0.3"/>
+      
+      {/* The "Core": A central glowing point of gravity */}
+      <circle cx="100" cy="100" r="12" fill="var(--brand-primary, #4285f4)" fillOpacity="0.1">
+        <animate attributeName="r" values="10;14;10" dur="4s" repeatCount="indefinite" />
       </circle>
-
-      {/* Ground / Desert (Brown Circular Segment) */}
-      <path d="M2 50 A48 48 0 0 0 98 50 L98 100 L2 100 Z" fill="var(--ui-surface-3)" opacity="0.9" clipPath="url(#logo-circle-clip)"/>
-
-      {/* Technical Grid Overlay (Inside the Circle) */}
-      <circle cx="50" cy="50" r="48" stroke="var(--brand-primary)" strokeWidth="1" opacity="0.3"/>
-
-      {/* Reactive Reflection Lines */}
-      <rect x="35" y="75" width="30" height="1.5" rx="0.75" fill="var(--brand-primary)" opacity="0.7">
-        <animate attributeName="width" values="30;45;30" dur="3s" repeatCount="indefinite" />
-        <animate attributeName="x" values="35;27.5;35" dur="3s" repeatCount="indefinite" />
-      </rect>
-
-      {/* Horizontal "Scanlines" (Technical Industrial feel) */}
-      <path d="M10 40H90M10 60H90M10 80H90" stroke="white" strokeWidth="0.2" opacity="0.1"/>
-
+      <circle cx="100" cy="100" r="4" fill="var(--brand-primary, #4285f4)"/>
+      
+      {/* Terminal/Code hints */}
+      <rect x="70" y="145" width="15" height="4" fill="var(--brand-secondary, #c5a9f5)" fillOpacity="0.8"/>
+      <rect x="90" y="145" width="8" height="4" fill="var(--ui-text-tertiary, #888)" fillOpacity="0.5"/>
+      
       <defs>
-        <clipPath id="logo-circle-clip">
-          <circle cx="50" cy="50" r="48" />
-        </clipPath>
-        <linearGradient id="logo-sunset-grad" x1="50" y1="30" x2="50" y2="75" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="var(--brand-primary)" />
-          <stop offset="100%" stopColor="var(--brand-secondary, #f59e0b)" />
+        <linearGradient id="monolith_grad_comp" x1="60" y1="40" x2="140" y2="160" gradientUnits="userSpaceOnUse">
+          <stop stopColor="var(--ui-surface-1, #12151c)"/>
+          <stop offset="1" stopColor="var(--ui-surface-2, #1a1d24)"/>
         </linearGradient>
       </defs>
     </svg>

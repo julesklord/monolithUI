@@ -1,139 +1,659 @@
-import React from 'react';
-import { 
-  Layout, 
-  Users, 
-  ChartBar, 
+import React from "react";
+import {
+  Layout,
+  Users,
+  ChartBar,
   Gear,
   Bell,
   MagnifyingGlass,
   Sparkle,
-  Files
-} from '@phosphor-icons/react';
+  ArrowUpRight,
+} from "@phosphor-icons/react";
 
 export const WebUI: React.FC = () => {
   return (
     <section className="doc-section" id="web-ui">
       <div className="section-eyebrow">14</div>
-      <h2 className="section-title">Mocks: Web-Based <em>UI</em></h2>
-      <p className="section-desc">Web applications utilizing <strong>Orbital Layout</strong>. From complex dashboards to public-facing landing pages and minimal blogs.</p>
+      <h2 className="section-title">
+        Mocks: Web-Based <em>UI</em>
+      </h2>
+      <p className="section-desc">
+        High-fidelity translations of the <strong>MonolithUI</strong> philosophy
+        for browser environments. These mocks demonstrate orbital balance,
+        high-density data, and industrial tactility.
+      </p>
 
       {/* 1. VIBEPULSE DASHBOARD */}
       <div className="subsection technical-grid">
         <div className="subsection-meta">
           <div className="subsection-title">1. VibePulse Dashboard</div>
-          <p className="section-desc" style={{ marginBottom: '20px' }}>A high-fidelity data visualization platform. The **Pulse Core** (main chart) dominates the center.</p>
-        </div>
-        <div className="canvas" style={{ padding: '24px', background: 'radial-gradient(circle at 50% 50%, var(--ui-surface-1) 0%, var(--ui-surface-0) 100%)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto' }}>
-          <div style={{ minWidth: '800px', height: '360px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
-             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 8px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                   <div style={{ width: '20px', height: '20px', background: 'var(--brand-primary)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)' }}></div>
-                   <span style={{ fontWeight: 800, fontSize: '12px' }}>VIBEPULSE</span>
-                </div>
-                <div style={{ flex: 1, margin: '0 40px', maxWidth: '300px', position: 'relative' }}>
-                   <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', padding: '5px 12px 5px 32px', fontSize: '11px', color: 'var(--ui-text-disabled)' }}>Search metrics...</div>
-                   <MagnifyingGlass size={12} weight="duotone" style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', opacity: 0.5 }} />
-                </div>
-                <div style={{ display: 'flex', gap: '12px', color: 'var(--ui-text-tertiary)' }}>
-                   <Bell size={18} weight="duotone" /><Gear size={18} weight="duotone" />
-                </div>
-             </div>
-             <div style={{ flex: 1, display: 'flex', gap: '16px' }}>
-             <div style={{ width: '56px', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '16px 0', gap: '20px' }}>
-                <div className="ui-tab-btn active" style={{ padding: '6px' }}><Layout size={18} weight="duotone" /></div>
-                <Users size={18} weight="duotone" style={{ opacity: 0.5 }} />
-                <ChartBar size={18} weight="duotone" style={{ opacity: 0.5 }} />
-             </div>                <div style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--ui-border-subtle)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-                      <div>
-                         <div style={{ fontSize: '10px', color: 'var(--brand-primary)', fontWeight: 800 }}>LIVE_PULSE_RATE</div>
-                         <div style={{ fontSize: '24px', fontWeight: 900 }}>84.2<span style={{ fontSize: '12px', opacity: 0.5 }}>% VIBE</span></div>
-                      </div>
-                      <div className="ui-tab-btn active" style={{ padding: '4px 10px', fontSize: '10px' }}>REAL_TIME</div>
-                   </div>
-                   <div style={{ flex: 1, borderBottom: '1px solid var(--ui-border-subtle)', display: 'flex', alignItems: 'flex-end', gap: '4px' }}>
-                      {[40, 70, 45, 90, 65, 80, 30, 50, 85, 60].map((h, i) => (
-                        <div key={i} style={{ flex: 1, height: `${h}%`, background: 'var(--brand-primary)', opacity: 0.6, borderRadius: '2px 2px 0 0' }}></div>
-                      ))}
-                   </div>
-                </div>
-             </div>
+          <p className="section-desc" style={{ marginBottom: "20px" }}>
+            A mission-critical data console. Uses a{" "}
+            <strong>Machined Sidebar</strong> and <strong>Depth-Stacked</strong>{" "}
+            charts to maintain hierarchy in high-density environments.
+          </p>
+          <div className="rule-box">
+            <p>
+              <strong>Density:</strong> Optimized for 13" and 16" workstations.
+              Zero whitespace waste.
+            </p>
           </div>
         </div>
-      </div>
-
-      {/* 2. PERSONAL BLOG / PORTFOLIO */}
-      <div className="subsection technical-grid">
-        <div className="subsection-meta">
-          <div className="subsection-title">2. T-Blog Portfolio</div>
-          <p className="section-desc">A minimal, typography-focused blog using <strong>BlogCard</strong> components. Focuses on readability and industrial aesthetics.</p>
-        </div>
-        <div className="canvas" style={{ padding: '24px', background: 'var(--ui-surface-0)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto' }}>
-          <div style={{ minWidth: '800px', height: '360px', display: 'flex', flexDirection: 'column', gap: '32px', maxWidth: '700px', margin: '0 auto' }}>
-             <header style={{ borderBottom: '1px solid var(--ui-border-subtle)', paddingBottom: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ fontWeight: 900, fontSize: '18px', letterSpacing: '-0.02em' }}>J_DEV<span style={{ color: 'var(--brand-primary)' }}>.log</span></div>
-                <nav style={{ display: 'flex', gap: '20px', fontSize: '12px', fontWeight: 600, color: 'var(--ui-text-tertiary)' }}>
-                   <span style={{ color: 'var(--ui-text-primary)' }}>Writing</span><span>Projects</span><span>About</span>
-                </nav>
-             </header>
-             <main style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
-                <div style={{ display: 'flex', gap: '24px' }}>
-                   <div style={{ width: '140px', height: '100px', background: 'var(--ui-surface-2)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1px solid var(--ui-border-subtle)', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <IconSparkles size={32} style={{ opacity: 0.1 }} />
-                   </div>
-                   <div>
-                      <div style={{ fontSize: '10px', color: 'var(--brand-primary)', fontWeight: 800, marginBottom: '6px' }}>ARTICLE // 2026.05.16</div>
-                      <h3 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '8px' }}>The Gravity of Minimal Design</h3>
-                      <p style={{ fontSize: '13px', color: 'var(--ui-text-tertiary)', lineHeight: '1.6' }}>Exploring why orbital layouts feel more natural than rigid grids in modern workstations...</p>
-                   </div>
-                </div>
-                <div style={{ display: 'flex', gap: '24px' }}>
-                   <div style={{ width: '140px', height: '100px', background: 'var(--ui-surface-2)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1px solid var(--ui-border-subtle)', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <IconFiles size={32} style={{ opacity: 0.1 }} />
-                   </div>
-                   <div>
-                      <div style={{ fontSize: '10px', color: 'var(--brand-primary)', fontWeight: 800, marginBottom: '6px' }}>GUIDE // 2026.05.10</div>
-                      <h3 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '8px' }}>Mastering TUI Components</h3>
-                      <p style={{ fontSize: '13px', color: 'var(--ui-text-tertiary)', lineHeight: '1.6' }}>A deep dive into Unicode block rendering for high-performance terminal tools.</p>
-                   </div>
-                </div>
-             </main>
+        <div
+          className="canvas"
+          style={{
+            padding: "0",
+            background: "var(--ui-surface-0)",
+            borderRadius: "var(--ui-r-lg)",
+            boxShadow: "var(--ui-inset-deep), var(--ui-shadow-lg)",
+            border: "1px solid var(--ui-border-default)",
+            overflow: "hidden",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {/* Dashboard Header */}
+          <div
+            style={{
+              height: "48px",
+              borderBottom: "1px solid var(--ui-border-subtle)",
+              background: "var(--ui-surface-1)",
+              display: "flex",
+              alignItems: "center",
+              padding: "0 16px",
+              gap: "20px",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <div
+                style={{
+                  width: "12px",
+                  height: "12px",
+                  background: "var(--brand-primary)",
+                  borderRadius: "2px",
+                  boxShadow: "0 0 8px var(--ui-accent-primary-glow)",
+                }}
+              ></div>
+              <span
+                style={{
+                  fontFamily: "var(--ui-font-mono)",
+                  fontSize: "11px",
+                  fontWeight: 800,
+                  letterSpacing: "0.05em",
+                }}
+              >
+                VIBE_OS v4.2
+              </span>
+            </div>
+            <div style={{ flex: 1, position: "relative", maxWidth: "400px" }}>
+              <MagnifyingGlass
+                size={12}
+                style={{
+                  position: "absolute",
+                  left: "10px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  color: "var(--ui-text-tertiary)",
+                }}
+              />
+              <div
+                style={{
+                  background: "var(--ui-surface-2)",
+                  border: "1px solid var(--ui-border-default)",
+                  borderRadius: "var(--ui-r-xs)",
+                  padding: "4px 12px 4px 30px",
+                  fontSize: "10px",
+                  color: "var(--ui-text-disabled)",
+                  fontFamily: "var(--ui-font-mono)",
+                }}
+              >
+                SEARCH_QUERY_NODE...
+              </div>
+            </div>
+            <div style={{ display: "flex", gap: "12px" }}>
+              <Bell
+                size={16}
+                weight="duotone"
+                style={{ color: "var(--ui-text-tertiary)" }}
+              />
+              <div
+                style={{
+                  width: "24px",
+                  height: "24px",
+                  borderRadius: "50%",
+                  background: "var(--ui-surface-3)",
+                  border: "1px solid var(--ui-border-default)",
+                }}
+              ></div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      {/* 3. PRODUCT LANDING PAGE */}
-      <div className="subsection technical-grid">
-        <div className="subsection-meta">
-          <div className="subsection-title">3. T-Sonic Pro Landing</div>
-          <p className="section-desc">A marketing landing page using the <strong>HeroSectionComponent</strong>. Combines high-end tech branding with direct call-to-actions.</p>
-        </div>
-        <div className="canvas" style={{ padding: '0', background: 'var(--ui-surface-0)', borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', border: '1.5px solid var(--ui-border-default)', overflowX: 'auto', overflowY: 'hidden' }}>
-          <div style={{ minWidth: '800px', height: '400px', display: 'flex', flexDirection: 'column' }}>
-             <nav style={{ padding: '16px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(0,0,0,0.2)', borderBottom: '1px solid var(--ui-border-subtle)' }}>
-                <div style={{ fontWeight: 900, fontSize: '16px' }}>T-SONIC</div>
-                <div style={{ display: 'flex', gap: '24px', fontSize: '11px', fontWeight: 700, color: 'var(--ui-text-tertiary)' }}>
-                   <span>FEATURES</span><span>SPECS</span><span>PRICING</span>
-                   <span style={{ color: 'var(--brand-primary)' }}>BUY_NOW</span>
-                </div>
-             </nav>
-             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '40px' }}>
-                <div style={{ fontSize: '10px', color: 'var(--brand-primary)', fontWeight: 800, letterSpacing: '0.2em', marginBottom: '12px' }}>THE_NEXT_STANDARD</div>
-                <h1 style={{ fontSize: '42px', fontWeight: 900, lineHeight: '1', marginBottom: '16px', maxWidth: '500px' }}>Sound that <span style={{ color: 'var(--brand-primary)' }}>Orbits</span> You.</h1>
-                <p style={{ fontSize: '14px', color: 'var(--ui-text-tertiary)', maxWidth: '400px', marginBottom: '32px' }}>Experience spatial audio with zero latency. Powered by the tropical.dev core engine.</p>
-                <div style={{ display: 'flex', gap: '16px' }}>
-                   <div style={{ padding: '12px 24px', background: 'var(--brand-primary)', color: 'var(--ui-surface-0)', fontWeight: 800, borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', fontSize: '12px' }}>PRE_ORDER_V1</div>
-                   <div style={{ padding: '12px 24px', border: '1px solid var(--ui-border-default)', fontWeight: 700, borderRadius: 'var(--ui-r-md)', boxShadow: 'var(--ui-inset-shallow)', fontSize: '12px' }}>WATCH_REEL</div>
-                </div>
-             </div>
-             <div style={{ display: 'flex', borderTop: '1px solid var(--ui-border-subtle)', background: 'var(--ui-surface-1)' }}>
-                {[1,2,3].map(i => (
-                  <div key={i} style={{ flex: 1, padding: '20px', borderRight: i < 3 ? '1px solid var(--ui-border-subtle)' : 'none', textAlign: 'center' }}>
-                     <div style={{ fontSize: '11px', fontWeight: 800, marginBottom: '4px' }}>FEATURE_0{i}</div>
-                     <div style={{ fontSize: '10px', color: 'var(--ui-text-tertiary)' }}>High-fidelity performance.</div>
+          <div style={{ flex: 1, display: "flex", minHeight: "340px" }}>
+            {/* Industrial Sidebar */}
+            <div
+              style={{
+                width: "50px",
+                borderRight: "1px solid var(--ui-border-subtle)",
+                background: "var(--ui-surface-1)",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                padding: "16px 0",
+                gap: "16px",
+              }}
+            >
+              <div
+                className="icon-tactical"
+                style={{
+                  width: "32px",
+                  height: "32px",
+                  background: "var(--brand-primary-bg)",
+                  borderColor: "var(--brand-primary-border)",
+                }}
+              >
+                <Layout
+                  size={16}
+                  weight="duotone"
+                  style={{ color: "var(--brand-primary)" }}
+                />
+              </div>
+              <Users size={18} weight="duotone" style={{ opacity: 0.3 }} />
+              <ChartBar size={18} weight="duotone" style={{ opacity: 0.3 }} />
+              <div style={{ marginTop: "auto" }}>
+                <Gear size={18} weight="duotone" style={{ opacity: 0.3 }} />
+              </div>
+            </div>
+
+            {/* Main Viewport */}
+            <div
+              style={{
+                flex: 1,
+                padding: "24px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+              }}
+            >
+              <div style={{ display: "flex", gap: "20px" }}>
+                <div
+                  className="surface-card"
+                  style={{ flex: 1, padding: "16px" }}
+                >
+                  <div
+                    style={{
+                      fontSize: "10px",
+                      color: "var(--ui-text-tertiary)",
+                      fontFamily: "var(--ui-font-mono)",
+                    }}
+                  >
+                    SYSTEM_UPTIME
                   </div>
-                ))}
-             </div>
+                  <div
+                    style={{
+                      fontSize: "20px",
+                      fontWeight: 800,
+                      color: "var(--ui-success)",
+                    }}
+                  >
+                    99.98%
+                  </div>
+                </div>
+                <div
+                  className="surface-card"
+                  style={{ flex: 1, padding: "16px" }}
+                >
+                  <div
+                    style={{
+                      fontSize: "10px",
+                      color: "var(--ui-text-tertiary)",
+                      fontFamily: "var(--ui-font-mono)",
+                    }}
+                  >
+                    ACTIVE_NODES
+                  </div>
+                  <div style={{ fontSize: "20px", fontWeight: 800 }}>1,240</div>
+                </div>
+              </div>
+
+              <div
+                className="surface-card"
+                style={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "12px",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "var(--ui-font-mono)",
+                      fontSize: "11px",
+                      fontWeight: 800,
+                    }}
+                  >
+                    PULSE_NETWORK_TRAFFIC
+                  </div>
+                  <div className="tag success" style={{ fontSize: "9px" }}>
+                    LIVE
+                  </div>
+                </div>
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    alignItems: "flex-end",
+                    gap: "3px",
+                    paddingBottom: "8px",
+                  }}
+                >
+                  {[
+                    40, 65, 30, 85, 45, 90, 55, 70, 35, 60, 40, 80, 50, 75, 45,
+                    95, 60, 40, 85, 50,
+                  ].map((h, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        flex: 1,
+                        height: `${h}%`,
+                        background:
+                          i === 15
+                            ? "var(--brand-primary)"
+                            : "var(--ui-surface-5)",
+                        borderRadius: "1px",
+                        boxShadow:
+                          i === 15
+                            ? "0 0 10px var(--ui-accent-primary-glow)"
+                            : "none",
+                        opacity: i === 15 ? 1 : 0.6,
+                      }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. THE MACHINED PORTFOLIO */}
+      <div className="subsection technical-grid">
+        <div className="subsection-meta">
+          <div className="subsection-title">2. Tactical Dev Journal</div>
+          <p className="section-desc">
+            A portfolio for high-end developers. Focuses on{" "}
+            <strong>Mono-spacing</strong> and{" "}
+            <strong>Structural Outlines</strong> to convey technical competence.
+          </p>
+        </div>
+        <div
+          className="canvas"
+          style={{
+            padding: "32px",
+            background: "var(--ui-surface-0)",
+            borderRadius: "var(--ui-r-lg)",
+            boxShadow: "var(--ui-inset-deep)",
+            border: "1px solid var(--ui-border-default)",
+          }}
+        >
+          <div
+            style={{
+              maxWidth: "600px",
+              margin: "0 auto",
+              display: "flex",
+              flexDirection: "column",
+              gap: "40px",
+            }}
+          >
+            <header
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-end",
+                borderBottom: "1px solid var(--ui-border-default)",
+                paddingBottom: "16px",
+              }}
+            >
+              <div>
+                <div
+                  style={{
+                    fontSize: "10px",
+                    color: "var(--brand-primary)",
+                    fontFamily: "var(--ui-font-mono)",
+                    fontWeight: 800,
+                    marginBottom: "4px",
+                  }}
+                >
+                  OPERATOR_LOG // ID: 8829
+                </div>
+                <div
+                  style={{
+                    fontSize: "24px",
+                    fontWeight: 800,
+                    fontFamily: "var(--ui-font-serif)",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
+                  Jules
+                  <span
+                    style={{
+                      color: "var(--ui-text-tertiary)",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    .engineer
+                  </span>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "16px",
+                  fontSize: "11px",
+                  fontFamily: "var(--ui-font-mono)",
+                  fontWeight: 700,
+                  color: "var(--ui-text-tertiary)",
+                }}
+              >
+                <span style={{ color: "var(--brand-primary)" }}>[01] WORK</span>
+                <span>[02] STACK</span>
+                <span>[03] CONNECT</span>
+              </div>
+            </header>
+
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "32px" }}
+            >
+              {[
+                {
+                  date: "2026.05.18",
+                  title: "Hard-Surface UI Design",
+                  desc: "Why technical interfaces require higher tactile feedback than generic web apps.",
+                },
+                {
+                  date: "2026.05.12",
+                  title: "The Physics of Motion",
+                  desc: "Emulating physical inertia in virtual scrolling systems.",
+                },
+              ].map((post, i) => (
+                <div key={i} style={{ display: "flex", gap: "24px" }}>
+                  <div
+                    style={{
+                      width: "40px",
+                      fontSize: "10px",
+                      fontFamily: "var(--ui-font-mono)",
+                      color: "var(--ui-text-disabled)",
+                      paddingTop: "4px",
+                    }}
+                  >
+                    {post.date}
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <h3
+                      style={{
+                        fontSize: "16px",
+                        fontWeight: 800,
+                        marginBottom: "8px",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
+                      }}
+                    >
+                      {post.title}
+                      <ArrowUpRight
+                        size={12}
+                        style={{ color: "var(--brand-primary)" }}
+                      />
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "13px",
+                        color: "var(--ui-text-secondary)",
+                        lineHeight: "1.6",
+                      }}
+                    >
+                      {post.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div
+              className="rule-box"
+              style={{ padding: "12px 16px", marginBottom: 0 }}
+            >
+              <p style={{ fontSize: "11px" }}>
+                <strong style={{ fontSize: "9px" }}>SYSTEM_UPDATE:</strong>{" "}
+                Currently exploring <strong>Neural Renderers</strong> for
+                real-time UI generation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. HARD-TECH PRODUCT PAGE */}
+      <div className="subsection technical-grid">
+        <div className="subsection-meta">
+          <div className="subsection-title">3. T-Sonic Product Console</div>
+          <p className="section-desc">
+            B2B Product page redesign. Uses <strong>Asymmetric Borders</strong>{" "}
+            and <strong>Glass-overlays</strong> to present hardware products as
+            precision instruments.
+          </p>
+        </div>
+        <div
+          className="canvas"
+          style={{
+            padding: "0",
+            background: "var(--ui-surface-0)",
+            borderRadius: "var(--ui-r-lg)",
+            boxShadow: "var(--ui-shadow-lg)",
+            border: "1px solid var(--ui-border-default)",
+            overflow: "hidden",
+            position: "relative",
+          }}
+        >
+          <div
+            style={{
+              height: "400px",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            {/* Product Nav */}
+            <div
+              style={{
+                padding: "20px 32px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                zIndex: 2,
+              }}
+            >
+              <div
+                style={{
+                  fontWeight: 900,
+                  fontFamily: "var(--ui-font-serif)",
+                  fontSize: "18px",
+                }}
+              >
+                T-SONIC
+                <span
+                  style={{ color: "var(--brand-primary)", fontStyle: "italic" }}
+                >
+                  .v2
+                </span>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "24px",
+                  fontSize: "10px",
+                  fontFamily: "var(--ui-font-mono)",
+                  fontWeight: 800,
+                }}
+              >
+                <span>SPECS</span>
+                <span>CORE_ENGINE</span>
+                <span
+                  className="ui-tab-btn active"
+                  style={{ padding: "4px 12px" }}
+                >
+                  ORDER_NOW
+                </span>
+              </div>
+            </div>
+
+            <div
+              style={{
+                flex: 1,
+                display: "flex",
+                alignItems: "center",
+                padding: "0 64px",
+                position: "relative",
+              }}
+            >
+              <div style={{ flex: 1, zIndex: 2 }}>
+                <div
+                  style={{
+                    fontSize: "10px",
+                    color: "var(--brand-primary)",
+                    fontFamily: "var(--ui-font-mono)",
+                    fontWeight: 800,
+                    letterSpacing: "0.3em",
+                    marginBottom: "16px",
+                  }}
+                >
+                  PRECISION_AUDIO
+                </div>
+                <h1
+                  style={{
+                    fontSize: "48px",
+                    fontWeight: 900,
+                    lineHeight: 1,
+                    marginBottom: "20px",
+                  }}
+                >
+                  MACHINED
+                  <br />
+                  SOUND.
+                </h1>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    color: "var(--ui-text-secondary)",
+                    maxWidth: "320px",
+                    lineHeight: 1.6,
+                    marginBottom: "32px",
+                  }}
+                >
+                  Acoustic architecture carved from single-block aerospace grade
+                  alloys. Zero resonance.
+                </p>
+                <button className="btn primary lg">CONFIGURE_MODULE</button>
+              </div>
+
+              {/* Visual Background Element (Abstract Shape) */}
+              <div
+                style={{
+                  position: "absolute",
+                  right: "-10%",
+                  width: "60%",
+                  height: "120%",
+                  background:
+                    "radial-gradient(circle, var(--brand-primary-bg) 0%, transparent 70%)",
+                  filter: "blur(40px)",
+                  zIndex: 1,
+                  opacity: 0.4,
+                }}
+              ></div>
+
+              <div
+                style={{
+                  width: "280px",
+                  height: "280px",
+                  border: "1px solid var(--ui-border-default)",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  position: "relative",
+                  zIndex: 2,
+                  background: "var(--ui-surface-1)",
+                  boxShadow: "var(--ui-edge-light), var(--ui-shadow-lg)",
+                }}
+              >
+                <Sparkle
+                  size={120}
+                  weight="thin"
+                  style={{ color: "var(--brand-primary)", opacity: 0.8 }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "1px",
+                    background: "var(--ui-border-subtle)",
+                  }}
+                ></div>
+                <div
+                  style={{
+                    position: "absolute",
+                    height: "100%",
+                    width: "1px",
+                    background: "var(--ui-border-subtle)",
+                  }}
+                ></div>
+              </div>
+            </div>
+
+            {/* Technical Footer */}
+            <div
+              style={{
+                background: "var(--ui-surface-1)",
+                borderTop: "1px solid var(--ui-border-subtle)",
+                display: "flex",
+              }}
+            >
+              {[
+                { label: "LATENCY", val: "0.04ms" },
+                { label: "THD_RATIO", val: "<0.001%" },
+                { label: "OUTPUT_BIT", val: "32-BIT" },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  style={{
+                    flex: 1,
+                    padding: "16px",
+                    borderRight:
+                      i < 2 ? "1px solid var(--ui-border-subtle)" : "none",
+                    textAlign: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "9px",
+                      fontFamily: "var(--ui-font-mono)",
+                      color: "var(--ui-text-disabled)",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    {stat.label}
+                  </div>
+                  <div style={{ fontSize: "14px", fontWeight: 800 }}>
+                    {stat.val}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

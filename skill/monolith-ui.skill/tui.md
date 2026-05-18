@@ -23,12 +23,12 @@ If a component requires any of the above → implement as modal panel or skip en
 ```
 ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
 │  ┣━ branch mid                              │
-│  ┗━ branch end                             │
-│  ┃  vertical bar                           │
+│  ┗━ branch end                              │
+│  ┃  vertical bar                            │
 ├─────────────────────────────────────────────┤
-│  ╔═══╗  double borders (emphasis)          │
-│  ║   ║                                     │
-│  ╚═══╝                                     │
+│  ╔═══╗  double borders (emphasis)           │
+│  ║   ║                                      │
+│  ╚═══╝                                      │
 └─────────────────────────────────────────────┘
 ```
 
@@ -44,7 +44,7 @@ If a component requires any of the above → implement as modal panel or skip en
 | `--ui-text-secondary` | White dim | — |
 | `--ui-text-tertiary` | Black bright | — |
 
-**Rule:** Use ANSI named colors as semantic base. Truecolor is additive enhancement only (for terminals that support it). Design must work in 16-color terminals.
+**Rule:** Use ANSI named colors as semantic base. Truecolor is additive enhancement only. Design must work in 16-color terminals.
 
 ## Standard Layout Archetypes
 
@@ -63,7 +63,6 @@ Best for: interactive apps (chat, editors, agent UIs)
 └─────────────────────────────────────────────────────┘
 ```
 
-Ratatui constraints:
 ```rust
 let chunks = Layout::default()
   .direction(Direction::Horizontal)
@@ -87,7 +86,6 @@ Best for: monitoring, system dashboards
 └────────────────────────┴────────────────────────────┘
 ```
 
-Ratatui constraints:
 ```rust
 Constraint::Length(3),   // Brand header
 Constraint::Ratio(1, 2)  // Equal metric panels
@@ -116,7 +114,7 @@ Best for: single-purpose tools (generators, converters, fetchers)
 ```
 - Full-width, brand-primary background, surface-0 text
 - ALL CAPS, monospace, bold
-- Segments separated by spaces or `│`
+- Segments separated by `│`
 - Max 2 lines
 
 ### Navigation (Sidebar)
@@ -126,8 +124,8 @@ Best for: single-purpose tools (generators, converters, fetchers)
 ┃  03. SETTINGS
 ```
 - Left border in brand color
-- Active item: `❯` prefix + brand color text + optional bg highlight
-- Inactive: dim text, `·` or number prefix
+- Active: `❯` prefix + brand color text
+- Inactive: dim, number prefix
 
 ### Sparkline / Telemetry
 ```
@@ -135,18 +133,13 @@ CPU_LOAD_HISTORY [30s]
 ▂ ▃ ▅ ▇ █ ▇ ▅ ▃ ▂   ▂ ▃ ▅ ▇ █
 30s ago                        NOW
 ```
-- Use `▂▃▄▅▆▇█` for height variations
-- Color: success for normal, warning for elevated, danger for critical
-- Label with time axis
+- Color: success → warning → danger by threshold
 
 ### Interactive Prompt
 ```
 julio@monolith : ~/workspace$ monolith deploy --env production█
 ```
-- Username: success color
-- Path: brand-primary color
-- Cursor: brand-primary filled block `█` (animate with pulse)
-- Previous output in dim/secondary text
+- Username: success color · Path: brand-primary · Cursor: brand `█` pulsing
 
 ### Modal Panel
 ```
@@ -159,14 +152,9 @@ julio@monolith : ~/workspace$ monolith deploy --env production█
 └───────────────────────────────────┘
 [↑↓] navigate  [Enter] open  [q] close
 ```
-- Centered on screen
-- Title in top border
-- Action shortcuts in footer (dim text)
-- Active row: reverse or bg highlight
 
 ## ASCII Art Brand Headers (TYPE_C)
 
-Template for mango/monolith style:
 ```
        _.._
      .'    '.
@@ -178,66 +166,47 @@ Template for mango/monolith style:
   A P P _ N A M E
 ```
 
-Use for tool identity. Color in brand-primary.
+Color in brand-primary.
 
 ## Ratatui Boilerplate (Rust)
 
 ```rust
 use ratatui::{
-    layout::{Constraint, Direction, Layout, Rect},
+    layout::{Constraint, Direction, Layout},
     style::{Color, Modifier, Style},
     widgets::{Block, Borders, Paragraph},
     Frame,
 };
 
 fn ui(f: &mut Frame) {
-    // Root: status bar at bottom
     let root = Layout::default()
         .direction(Direction::Vertical)
-        .constraints([
-            Constraint::Min(0),     // Main area
-            Constraint::Length(2),  // Status bar
-        ])
+        .constraints([Constraint::Min(0), Constraint::Length(2)])
         .split(f.size());
 
-    // Main: sidebar + core
     let main = Layout::default()
         .direction(Direction::Horizontal)
-        .constraints([
-            Constraint::Percentage(25), // Planetary
-            Constraint::Percentage(75), // Solar Core
-        ])
+        .constraints([Constraint::Percentage(25), Constraint::Percentage(75)])
         .split(root[0]);
 
-    // Brand color (truecolor)
-    let brand = Color::Rgb(34, 211, 238); // tropic-vibes cyan
+    let brand = Color::Rgb(34, 211, 238); // plasma-core cyan
 
-    // Status bar
     let status = Paragraph::new("[ MODE: NORMAL ] UTC-5 // 2026")
-        .style(Style::default()
-            .fg(Color::Black)
-            .bg(brand)
-            .add_modifier(Modifier::BOLD));
+        .style(Style::default().fg(Color::Black).bg(brand).add_modifier(Modifier::BOLD));
     f.render_widget(status, root[1]);
 
-    // Sidebar
     let sidebar = Block::default()
         .borders(Borders::RIGHT)
         .border_style(Style::default().fg(brand));
     f.render_widget(sidebar, main[0]);
-
-    // Core
-    let core = Block::default()
-        .borders(Borders::NONE);
-    f.render_widget(core, main[1]);
 }
 ```
 
 ## TUI Feasibility Gate
 
-Before implementing any GUI component in TUI, ask:
-- Does it require overlapping elements? → Modal panel or skip
-- Does it require transparency? → Use `░ ▒` density instead
-- Does it require arbitrary positioning? → Use layout constraints
-- Does it require gradients? → Use character density gradients
-- Does it need spring animation? → Use character-reveal timing instead
+Before implementing any GUI component in TUI:
+- Overlapping elements? → Modal panel or skip
+- Transparency? → `░ ▒` density instead
+- Arbitrary positioning? → Layout constraints
+- Gradients? → Character density gradients
+- Spring animation? → Character-reveal timing

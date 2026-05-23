@@ -1,43 +1,26 @@
 ﻿@layer tokens {
     :root {
-        /* Surface ramp — Adjusted for high contrast pastel theme */
-        /* Surface 0 remains the "deepest" but in Light mode we want pastel depth */
-        --ui-surface-0: var(--brand-surface-0, #0d1017);
-        --ui-surface-1: var(--brand-surface-1, #12151c);
-        --ui-surface-2: var(--brand-surface-2, #161920);
-        --ui-surface-3: var(--brand-surface-3, #1a1d24);
-        --ui-surface-4: var(--brand-surface-4, #1e2229);
-        --ui-surface-5: var(--brand-surface-5, #23272f);
-        --ui-surface-6: var(--brand-surface-6, #2a2e38);
+        /* Surface ramp — Pure greyscale fallbacks (brand overrides via --brand-surface-*)
+           These are only consulted when index.css :root tokens are NOT set,
+           which in practice never happens. Kept for standalone token usage. */
+        --ui-surface-0: var(--brand-surface-0, #080808);
+        --ui-surface-1: var(--brand-surface-1, #0f0f0f);
+        --ui-surface-2: var(--brand-surface-2, #161616);
+        --ui-surface-3: var(--brand-surface-3, #1e1e1e);
+        --ui-surface-4: var(--brand-surface-4, #262626);
+        --ui-surface-5: var(--brand-surface-5, #303030);
+        --ui-surface-6: var(--brand-surface-6, #3a3a3a);
         --ui-surface-terminal: #0a0c0f;
 
-        --ui-border-subtle: var(
-            --brand-border-subtle,
-            rgba(255, 255, 255, 0.05)
-        );
-        --ui-border-default: var(
-            --brand-border-default,
-            rgba(255, 255, 255, 0.08)
-        );
-        --ui-border-hover: var(--brand-border-hover, rgba(255, 255, 255, 0.14));
-        --ui-border-active: var(
-            --brand-border-active,
-            rgba(255, 255, 255, 0.22)
-        );
+        --ui-border-subtle: var(--brand-border-subtle, rgba(255, 255, 255, 0.06));
+        --ui-border-default: var(--brand-border-default, rgba(255, 255, 255, 0.12));
+        --ui-border-hover: var(--brand-border-hover, rgba(255, 255, 255, 0.22));
+        --ui-border-active: var(--brand-border-active, rgba(255, 255, 255, 0.22));
 
-        --ui-text-primary: var(--brand-text-primary, rgba(255, 255, 255, 0.85));
-        --ui-text-secondary: var(
-            --brand-text-secondary,
-            rgba(255, 255, 255, 0.52)
-        );
-        --ui-text-tertiary: var(
-            --brand-text-tertiary,
-            rgba(255, 255, 255, 0.3)
-        );
-        --ui-text-disabled: var(
-            --brand-text-disabled,
-            rgba(255, 255, 255, 0.16)
-        );
+        --ui-text-primary: var(--brand-text-primary, rgba(255, 255, 255, 0.92));
+        --ui-text-secondary: var(--brand-text-secondary, rgba(255, 255, 255, 0.65));
+        --ui-text-tertiary: var(--brand-text-tertiary, rgba(255, 255, 255, 0.4));
+        --ui-text-disabled: var(--brand-text-disabled, rgba(255, 255, 255, 0.2));
 
         --ui-accent-primary: var(--brand-primary);
         --ui-accent-primary-light: var(--brand-primary-light);
@@ -49,33 +32,9 @@
         --ui-accent-secondary-bg: var(--brand-secondary-bg);
         --ui-accent-secondary-border: var(--brand-secondary-border);
 
-        --ui-success: #34a853;
-        --ui-success-light: #81c995;
-        --ui-success-bg: rgba(52, 168, 83, 0.12);
-        --ui-success-border: rgba(52, 168, 83, 0.25);
-
-        --ui-warning: #fbbf24;
-        --ui-warning-bg: rgba(251, 191, 36, 0.1);
-        --ui-warning-border: rgba(251, 191, 36, 0.22);
-
-        --ui-danger: #f28b82;
-        --ui-danger-bg: rgba(242, 139, 130, 0.12);
-        --ui-danger-border: rgba(242, 139, 130, 0.25);
-
-        --ui-info: #60a5fa;
-        --ui-info-bg: rgba(96, 165, 250, 0.12);
-        --ui-info-border: rgba(96, 165, 250, 0.25);
-
-        --ui-gradient-primary: var(--brand-gradient);
-
-        --ui-font-sans: var(--brand-font-sans, "Oswald", system-ui, sans-serif);
-        --ui-font-mono: var(
-            --brand-font-mono,
-            "DM Mono",
-            "Fira Code",
-            monospace
-        );
-        --ui-font-serif: var(--brand-font-serif, "Oswald", sans-serif);
+        --ui-font-sans: var(--brand-font-sans, "DM Sans", system-ui, sans-serif);
+        --ui-font-mono: var(--brand-font-mono, "DM Mono", "Fira Code", monospace);
+        --ui-font-serif: var(--brand-font-serif, "DM Serif Display", Georgia, serif);
 
         --ui-text-2xs: 9.5px;
         --ui-text-xs: 10.5px;

@@ -67,20 +67,20 @@ a:focus-visible {
 /* ── SEMANTIC TOKEN SLOTS (brand-agnostic) ── */
 /* These are the REAL tokens. Brand fills them in @layer brand. */
 :root {
-    /* Surface ramp — Logarithmic depth progression */
-    --ui-surface-0: var(--brand-surface-0, #060608);
-    --ui-surface-1: var(--brand-surface-1, #0c0e12);
-    --ui-surface-2: var(--brand-surface-2, #131720);
-    --ui-surface-3: var(--brand-surface-3, #1c2130);
-    --ui-surface-4: var(--brand-surface-4, #252a3a);
-    --ui-surface-5: var(--brand-surface-5, #2e3445);
-    --ui-surface-6: var(--brand-surface-6, #3a4055);
+    /* Surface ramp — Pure greyscale, no colour tint */
+    --ui-surface-0: var(--brand-surface-0, #080808);
+    --ui-surface-1: var(--brand-surface-1, #0f0f0f);
+    --ui-surface-2: var(--brand-surface-2, #161616);
+    --ui-surface-3: var(--brand-surface-3, #1e1e1e);
+    --ui-surface-4: var(--brand-surface-4, #262626);
+    --ui-surface-5: var(--brand-surface-5, #303030);
+    --ui-surface-6: var(--brand-surface-6, #3a3a3a);
 
     /* Border ramp — Higher contrast, more "Mechanical" */
     --ui-border-subtle: rgba(255, 255, 255, 0.06);
     --ui-border-default: rgba(255, 255, 255, 0.12);
     --ui-border-hover: rgba(255, 255, 255, 0.22);
-    --ui-border-active: var(--ui-accent-primary-border);
+    --ui-border-active: var(--ui-border-hover);
 
     /* Inner Inset Depth — Skeuomorphic wells */
     --ui-inset-micro: inset 0 1px 1px rgba(0, 0, 0, 0.15);
@@ -106,29 +106,31 @@ a:focus-visible {
     --ui-text-tertiary: rgba(255, 255, 255, 0.4);
     --ui-text-disabled: rgba(255, 255, 255, 0.2);
 
-    /* Semantic accent — PRIMARY (brand action color) */
-    --ui-accent-primary: var(--brand-primary, #4285f4);
-    --ui-accent-primary-text: var(--brand-primary-text, #ffffff);
-    --ui-accent-primary-light: var(--brand-primary-light, #8ab4f8);
-    --ui-accent-primary-bg: var(--brand-primary-bg, rgba(66, 133, 244, 0.12));
+    /* Semantic accent — PRIMARY (brand action color)
+       Default is neutral white — brand MUST override this */
+    --ui-accent-primary: var(--brand-primary, rgba(255, 255, 255, 0.82));
+    --ui-accent-primary-text: var(--brand-primary-text, #0a0a0a);
+    --ui-accent-primary-light: var(--brand-primary-light, rgba(255, 255, 255, 0.65));
+    --ui-accent-primary-bg: var(--brand-primary-bg, rgba(255, 255, 255, 0.06));
     --ui-accent-primary-border: var(
         --brand-primary-border,
-        rgba(66, 133, 244, 0.25)
+        rgba(255, 255, 255, 0.14)
     );
     --ui-accent-primary-glow: var(
         --brand-primary-glow,
-        rgba(66, 133, 244, 0.18)
+        rgba(255, 255, 255, 0.08)
     );
 
-    /* Semantic accent — SECONDARY (brand complement) */
-    --ui-accent-secondary: var(--brand-secondary, #c5a9f5);
+    /* Semantic accent — SECONDARY (brand complement)
+       Default neutral — brand overrides */
+    --ui-accent-secondary: var(--brand-secondary, rgba(255, 255, 255, 0.45));
     --ui-accent-secondary-bg: var(
         --brand-secondary-bg,
-        rgba(197, 169, 245, 0.12)
+        rgba(255, 255, 255, 0.04)
     );
     --ui-accent-secondary-border: var(
         --brand-secondary-border,
-        rgba(197, 169, 245, 0.22)
+        rgba(255, 255, 255, 0.10)
     );
 
     /* Semantic — fixed across brands */
@@ -149,8 +151,8 @@ a:focus-visible {
     --ui-info-bg: rgba(96, 165, 250, 0.12);
     --ui-info-border: rgba(96, 165, 250, 0.25);
 
-    /* Gradient — FLATTENED for industrial integrity */
-    --ui-gradient-primary: var(--brand-primary, #4285f4);
+    /* Gradient — Neutral until brand defines it */
+    --ui-gradient-primary: var(--brand-gradient, linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.45)));
 
     /* Typography */
     --ui-font-sans: var(--brand-font-sans, "DM Sans", system-ui, sans-serif);
@@ -201,16 +203,16 @@ a:focus-visible {
 
 /* ── LIGHT THEME OVERRIDES (Industrial Concrete / Hormigón) ── */
 [data-theme="light"] {
-    --ui-surface-0: var(--brand-surface-light-0, #bcc0c9); /* Deep Concrete */
-    --ui-surface-1: var(--brand-surface-light-1, #c5c9d2);
-    --ui-surface-2: var(--brand-surface-light-2, #ced3db);
+    --ui-surface-0: var(--brand-surface-light-0, #c2c2c2); /* Deep Concrete */
+    --ui-surface-1: var(--brand-surface-light-1, #cbcbcb);
+    --ui-surface-2: var(--brand-surface-light-2, #d4d4d4);
     --ui-surface-3: var(
         --brand-surface-light-3,
-        #d7dce4
+        #dedede
     ); /* Main Concrete Canvas */
-    --ui-surface-4: var(--brand-surface-light-4, #e0e4eb);
-    --ui-surface-5: var(--brand-surface-light-5, #e9ecf2);
-    --ui-surface-6: var(--brand-surface-light-6, #f2f5f9);
+    --ui-surface-4: var(--brand-surface-light-4, #e8e8e8);
+    --ui-surface-5: var(--brand-surface-light-5, #f0f0f0);
+    --ui-surface-6: var(--brand-surface-light-6, #f8f8f8);
 
     --ui-border-subtle: rgba(0, 0, 0, 0.08);
     --ui-border-default: rgba(0, 0, 0, 0.18);
@@ -294,13 +296,13 @@ a:focus-visible {
     --brand-surface-5: #282828;
     --brand-surface-6: #323232;
 
-    --brand-surface-light-0: #f8f8f8;
-    --brand-surface-light-1: #f0f0f0;
-    --brand-surface-light-2: #e8e8e8;
-    --brand-surface-light-3: #ffffff;
-    --brand-surface-light-4: #fafafa;
-    --brand-surface-light-5: #f2f2f2;
-    --brand-surface-light-6: #e8e8e8;
+    --brand-surface-light-0: #c8c8c8;
+    --brand-surface-light-1: #d1d1d1;
+    --brand-surface-light-2: #dadada;
+    --brand-surface-light-3: #e3e3e3;
+    --brand-surface-light-4: #ececec;
+    --brand-surface-light-5: #f4f4f4;
+    --brand-surface-light-6: #f9f9f9;
 }
 
 /* 2. YELLOW: OXIDIZED_GOLD */
@@ -322,13 +324,13 @@ a:focus-visible {
     --brand-surface-4: #25221d;
     --brand-surface-5: #2a2722;
     --brand-surface-6: #312d27;
-    --brand-surface-light-0: #f5f3f0;
-    --brand-surface-light-1: #ebe9e5;
-    --brand-surface-light-2: #e2e0db;
-    --brand-surface-light-3: #ffffff;
-    --brand-surface-light-4: #fbfaf8;
-    --brand-surface-light-5: #f4f2ee;
-    --brand-surface-light-6: #ebe9e5;
+    --brand-surface-light-0: #d6d0c8;
+    --brand-surface-light-1: #dedad3;
+    --brand-surface-light-2: #e5e1db;
+    --brand-surface-light-3: #eceae4;
+    --brand-surface-light-4: #f2f0eb;
+    --brand-surface-light-5: #f7f5f1;
+    --brand-surface-light-6: #faf9f6;
 }
 
 /* 3. PURPLE/CRIMSON: VIOLET_REACTION */
@@ -350,26 +352,44 @@ a:focus-visible {
     --brand-surface-4: #211e28;
     --brand-surface-5: #27232e;
     --brand-surface-6: #2e2936;
-    --brand-surface-light-0: #f3f0f5;
-    --brand-surface-light-1: #e9e6ec;
-    --brand-surface-light-2: #dfdbe4;
-    --brand-surface-light-3: #ffffff;
-    --brand-surface-light-4: #f9f7fa;
-    --brand-surface-light-5: #f2eff4;
-    --brand-surface-light-6: #e9e6ec;
+    --brand-surface-light-0: #d4cedd;
+    --brand-surface-light-1: #dcd7e4;
+    --brand-surface-light-2: #e4e0ea;
+    --brand-surface-light-3: #eceaf0;
+    --brand-surface-light-4: #f1eff5;
+    --brand-surface-light-5: #f6f4f9;
+    --brand-surface-light-6: #faf8fc;
 }
 
 /* 4. BLUE/TURQUOISE: COOLANT_LIQUID */
 .brand-coolant-liquid {
     --brand-primary: #06b6d4;
-    --brand-primary-text: #083344; /* Accessible dark blue for contrast */
+    --brand-primary-text: #083344;
     --brand-primary-light: #22d3ee;
     --brand-primary-bg: rgba(6, 182, 212, 0.12);
     --brand-primary-border: rgba(6, 182, 212, 0.25);
     --brand-primary-glow: rgba(6, 182, 212, 0.18);
     --brand-secondary: #2dd4bf;
     --brand-secondary-bg: rgba(45, 212, 191, 0.12);
+    --brand-secondary-border: rgba(45, 212, 191, 0.22);
     --brand-gradient: linear-gradient(135deg, #06b6d4, #2dd4bf);
+
+    /* Surfaces with a barely-perceptible cool tint — intentional for this brand */
+    --brand-surface-0: #080b0c;
+    --brand-surface-1: #0e1214;
+    --brand-surface-2: #14191c;
+    --brand-surface-3: #1b2124;
+    --brand-surface-4: #22292c;
+    --brand-surface-5: #2a3235;
+    --brand-surface-6: #333c40;
+
+    --brand-surface-light-0: #c4cdd0;
+    --brand-surface-light-1: #cdd5d8;
+    --brand-surface-light-2: #d6dee0;
+    --brand-surface-light-3: #dfe6e8;
+    --brand-surface-light-4: #e8eef0;
+    --brand-surface-light-5: #f0f5f6;
+    --brand-surface-light-6: #f6fafa;
 }
 
 /* 5. SCARLET RED: CRITICAL_MASS */
@@ -391,13 +411,13 @@ a:focus-visible {
     --brand-surface-4: #281e20;
     --brand-surface-5: #2e2325;
     --brand-surface-6: #352a2c;
-    --brand-surface-light-0: #f5f0f0;
-    --brand-surface-light-1: #ebe5e5;
-    --brand-surface-light-2: #e2dbdb;
-    --brand-surface-light-3: #ffffff;
-    --brand-surface-light-4: #fbf7f7;
-    --brand-surface-light-5: #f4efef;
-    --brand-surface-light-6: #ebe5e5;
+    --brand-surface-light-0: #d4c8c8;
+    --brand-surface-light-1: #dcd1d1;
+    --brand-surface-light-2: #e4dbdb;
+    --brand-surface-light-3: #ece4e4;
+    --brand-surface-light-4: #f2eced;
+    --brand-surface-light-5: #f7f2f2;
+    --brand-surface-light-6: #faf6f6;
 }
 
 /* BRAND ACCESSIBILITY OVERRIDES FOR LIGHT THEME */
@@ -430,7 +450,7 @@ a:focus-visible {
     left: 0;
     right: 0;
     height: 52px;
-    background: rgba(12, 14, 18, 0.85); /* Slightly transparent for blur */
+    background: rgba(10, 10, 10, 0.88); /* Slightly transparent for blur */
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--ui-border-default);
@@ -442,7 +462,7 @@ a:focus-visible {
     box-shadow: var(--ui-edge-light), var(--ui-shadow-sm);
 }
 [data-theme="light"] .doc-nav {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(220, 220, 220, 0.88);
 }
 .nav-logo {
     display: flex;
@@ -588,7 +608,7 @@ a:focus-visible {
         var(--ui-edge-light), var(--ui-shadow-md), var(--ui-inset-micro);
 }
 [data-theme="light"] .doc-section {
-    background: #ffffff;
+    background: var(--ui-surface-5);
     box-shadow:
         var(--ui-edge-light), var(--ui-shadow-md), var(--ui-inset-micro);
 }
@@ -1777,7 +1797,7 @@ svg {
 
     /* CHAT BUBBLES */
     .bubble-ai {
-        background: rgba(255, 255, 255, 0.045);
+        background: var(--ui-surface-3);
         border: 1px solid var(--ui-border-default);
         color: var(--ui-text-primary);
         border-radius: var(--ui-r-xs) var(--ui-r-lg) var(--ui-r-lg)
@@ -1788,9 +1808,9 @@ svg {
         max-width: 72%;
     }
     .bubble-user {
-        background: var(--ui-accent-primary-bg);
-        border: 1px solid var(--ui-accent-primary-border);
-        color: var(--ui-accent-primary-light);
+        background: var(--ui-surface-4);
+        border: 1px solid var(--ui-border-hover);
+        color: var(--ui-text-primary);
         border-radius: var(--ui-r-lg) var(--ui-r-xs) var(--ui-r-lg)
             var(--ui-r-lg);
         padding: 9px 13px;
@@ -1799,13 +1819,14 @@ svg {
         max-width: 72%;
     }
     [data-theme="light"] .bubble-ai {
-        background: rgba(0, 0, 0, 0.04);
-        border-color: rgba(0, 0, 0, 0.08);
+        background: var(--ui-surface-5);
+        border-color: rgba(0, 0, 0, 0.10);
         color: var(--ui-text-primary);
     }
     [data-theme="light"] .bubble-user {
-        background: var(--ui-accent-primary-bg);
-        color: var(--ui-accent-primary);
+        background: var(--ui-surface-6);
+        border-color: rgba(0, 0, 0, 0.16);
+        color: var(--ui-text-primary);
     }
 
     /* TOOL CALL CARD */
@@ -1947,7 +1968,8 @@ svg {
         background: rgba(255, 255, 255, 0.04);
     }
     .sess-item.active {
-        background: var(--ui-accent-primary-glow);
+        background: var(--ui-surface-3);
+        border: 1px solid var(--ui-border-default);
     }
     .sess-icon {
         width: 30px;
@@ -2430,8 +2452,8 @@ svg {
 
     /* TUI BLOCK */
     .tui-block {
-        background: #0a0c0f;
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: var(--ui-surface-terminal);
+        border: 1px solid rgba(255, 255, 255, 0.10);
         border-radius: var(--ui-r-md);
         padding: 14px 16px;
         font-family: var(--ui-font-mono);
@@ -2464,7 +2486,7 @@ svg {
         padding: 0 2px;
     }
     .tui-block .tbg {
-        background: rgba(66, 133, 244, 0.2);
+        background: var(--ui-accent-primary-bg);
         color: var(--ui-accent-primary-light);
         padding: 0 2px;
     }
@@ -2818,14 +2840,14 @@ svg {
             0 4px 16px rgba(0, 0, 0, 0.08);
     }
     .terminal-header {
-        background: #1e2229;
+        background: #1a1a1a;
         padding: 8px 12px;
         display: flex;
         align-items: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     }
     [data-theme="light"] .terminal-header {
-        background: #f1f3f4;
+        background: #e8e8e8;
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
     .terminal-buttons {

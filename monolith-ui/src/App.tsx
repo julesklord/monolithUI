@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Routes, Route, NavLink, useLocation } from "react-router-dom";
 import { Sun, Moon, CaretRight } from "@phosphor-icons/react";
 import { DocLayout } from "./docs/DocLayout";
@@ -21,6 +21,44 @@ import {
   TUIComponents,
 } from "./docs/sections";
 import "./styles/index.css";
+
+const BrandSwitcherItem = React.memo(
+  ({
+    brandKey,
+    label,
+    color,
+    isActive,
+    onClick,
+  }: {
+    brandKey: string;
+    label: string;
+    color: string;
+    isActive: boolean;
+    onClick: (key: string) => void;
+  }) => {
+    const handleClick = useCallback(
+      () => onClick(brandKey),
+      [brandKey, onClick],
+    );
+
+    return (
+      <div
+        title={label}
+        onClick={handleClick}
+        style={{
+          width: "12px",
+          height: "12px",
+          borderRadius: "50%",
+          background: color,
+          cursor: "pointer",
+          border: isActive ? "2px solid #fff" : "2px solid transparent",
+          boxShadow: isActive ? "0 0 0 1px var(--ui-border-subtle)" : "none",
+          transition: "all var(--ui-dur-fast)",
+        }}
+      />
+    );
+  },
+);
 
 const BRAND_MAP: Record<string, { label: string; color: string }> = {
   "brand-plasma-core": { label: "Plasma Core", color: "#22d3ee" },
@@ -50,7 +88,7 @@ const SECTION_MAP: Record<string, string> = {
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
-  const [brand, setBrand] = useState('brand-plasma-core');
+  const [brand, setBrand] = useState("brand-plasma-core");
   const location = useLocation();
 
   const getBreadcrumb = () => {
@@ -109,7 +147,17 @@ export default function App() {
           >
             Monolith
           </span>
-          <span style={{ fontWeight: 400, opacity: 0.7, fontStyle: 'italic', fontFamily: "var(--ui-font-serif)", color: "var(--brand-primary)" }}>UI</span>
+          <span
+            style={{
+              fontWeight: 400,
+              opacity: 0.7,
+              fontStyle: "italic",
+              fontFamily: "var(--ui-font-serif)",
+              color: "var(--brand-primary)",
+            }}
+          >
+            UI
+          </span>
         </NavLink>
         <div className="nav-sep" />
         <div className="nav-breadcrumb">
@@ -138,24 +186,13 @@ export default function App() {
             }}
           >
             {Object.entries(BRAND_MAP).map(([key, { label, color }]) => (
-              <div
+              <BrandSwitcherItem
                 key={key}
-                title={label}
-                onClick={() => setBrand(key)}
-                style={{
-                  width: "12px",
-                  height: "12px",
-                  borderRadius: "50%",
-                  background: color,
-                  cursor: "pointer",
-                  border:
-                    brand === key ? "2px solid #fff" : "2px solid transparent",
-                  boxShadow:
-                    brand === key
-                      ? "0 0 0 1px var(--ui-border-subtle)"
-                      : "none",
-                  transition: "all var(--ui-dur-fast)",
-                }}
+                brandKey={key}
+                label={label}
+                color={color}
+                isActive={brand === key}
+                onClick={setBrand}
               />
             ))}
           </div>

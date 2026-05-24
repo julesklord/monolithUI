@@ -62,7 +62,16 @@ export const Hero: React.FC = () => {
                 letterSpacing: "-0.01em",
               }}
             >
-              Monolith<span style={{ color: "var(--brand-primary)", fontStyle: 'italic', marginLeft: '2px' }}>UI</span>
+              Monolith
+              <span
+                style={{
+                  color: "var(--brand-primary)",
+                  fontStyle: "italic",
+                  marginLeft: "2px",
+                }}
+              >
+                UI
+              </span>
             </h1>
             <div
               className="tag primary"
@@ -398,7 +407,8 @@ export const Hero: React.FC = () => {
                   style={{ display: "flex", alignItems: "center", gap: "6px" }}
                 >
                   <div className="tag success">
-                    <ArrowUpRight weight="duotone"
+                    <ArrowUpRight
+                      weight="duotone"
                       size={12}
                       style={{ marginRight: "2px" }}
                     />{" "}
@@ -421,21 +431,20 @@ export const Hero: React.FC = () => {
 
       <div className="subsection" style={{ marginTop: "48px" }}>
         <div className="subsection-title">System Origins</div>
-        <div
-          className="rule-box secondary"
-        >
+        <div className="rule-box secondary">
           <p>
-            <strong>Monolith Origin //</strong> Born in <strong>La Paz, Baja California Sur</strong>, MonolithUI
-            draws its aesthetic spirit directly from its environment. It is
-            deeply inspired by the coastal beaches, the relentless summer heat,
-            and the vibrant, unapologetic colors of local tropical fruits like
-            mangoes and pitahayas.
+            <strong>Monolith Origin //</strong> Born in{" "}
+            <strong>La Paz, Baja California Sur</strong>, MonolithUI draws its
+            aesthetic spirit directly from its environment. It is deeply
+            inspired by the coastal beaches, the relentless summer heat, and the
+            vibrant, unapologetic colors of local tropical fruits like mangoes
+            and pitahayas.
           </p>
           <p style={{ marginTop: "12px" }}>
             What started as an internal initiative for the{" "}
-            <strong>tropical.dev</strong> to build cohesive developer
-            tools evolved into something much larger. By merging the freshness
-            of the tropics with the strict precision of semantic design tokens,
+            <strong>tropical.dev</strong> to build cohesive developer tools
+            evolved into something much larger. By merging the freshness of the
+            tropics with the strict precision of semantic design tokens,
             MonolithUI became a standalone, universal "bible" for theming. It
             ensures that whether you are building a complex IDE or a consumer
             shopping app, the interface remains deeply customizable,

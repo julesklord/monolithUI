@@ -60,10 +60,21 @@ export const TerminalUI: React.FC = () => {
                 whiteSpace: "pre",
                 fontFamily: '"DM Mono", monospace',
               }}
-              dangerouslySetInnerHTML={{
-                __html: `┌──────────────────────────────────────────────────────────────────────────────────────────┐\n│ <span style="font-weight: 800">TUNACHAT_PRO v2.0</span> ─── [ SESSION: 0xFD42 ] ─────────────────────────── [ STATUS: <span style="color: var(--ui-success)">ONLINE</span> ] │\n└──────────────────────────────────────────────────────────────────────────────────────────┘`,
-              }}
-            />
+            >
+              {
+                "┌──────────────────────────────────────────────────────────────────────────────────────────┐\n"
+              }
+              {"│ "}
+              <span style={{ fontWeight: 800 }}>TUNACHAT_PRO v2.0</span>
+              {
+                " ─── [ SESSION: 0xFD42 ] ─────────────────────────── [ STATUS: "
+              }
+              <span style={{ color: "var(--ui-success)" }}>ONLINE</span>
+              {" ] │\n"}
+              {
+                "└──────────────────────────────────────────────────────────────────────────────────────────┘"
+              }
+            </div>
 
             <div style={{ display: "flex", gap: "0" }}>
               {/* USER LIST SIDEBAR */}
@@ -74,10 +85,24 @@ export const TerminalUI: React.FC = () => {
                   whiteSpace: "pre",
                   fontFamily: '"DM Mono", monospace',
                 }}
-                dangerouslySetInnerHTML={{
-                  __html: `┌─ USERS ──────┐\n│ <span style="color: var(--ui-success)">●</span> TunaBot   │\n│ <span style="color: var(--ui-success)">●</span> Julio_Dev │\n│ <span style="color: #555">○</span> Guest_02  │\n│              │\n│              │\n│              │\n│              │\n│              │\n└──────────────┘`,
-                }}
-              />
+              >
+                {"┌─ USERS ──────┐\n"}
+                {"│ "}
+                <span style={{ color: "var(--ui-success)" }}>●</span>
+                {" TunaBot   │\n"}
+                {"│ "}
+                <span style={{ color: "var(--ui-success)" }}>●</span>
+                {" Julio_Dev │\n"}
+                {"│ "}
+                <span style={{ color: "#555" }}>○</span>
+                {" Guest_02  │\n"}
+                {"│              │\n"}
+                {"│              │\n"}
+                {"│              │\n"}
+                {"│              │\n"}
+                {"│              │\n"}
+                {"└──────────────┘"}
+              </div>
 
               {/* CHAT BUFFER */}
               <div

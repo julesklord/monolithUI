@@ -1,0 +1,3 @@
+🎯 **What:** Added tests for the Pill component using vitest and testing-library since they were missing.
+📊 **Coverage:** Covered all variant styles, rendering of children, default variant, icon rendering, and custom class names.
+✨ **Result:** Improved overall project test coverage with a stable component test. Set up test environment with vitest and jsdom.

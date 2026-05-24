@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Sparkle, Code, Bug } from "@phosphor-icons/react";
 
 interface BrandThemingProps {
@@ -10,6 +10,26 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
   brand,
   handleBrandClick,
 }) => {
+  const onPlasmaCoreClick = useCallback(
+    () => handleBrandClick("brand-plasma-core"),
+    [handleBrandClick],
+  );
+  const onOxidizedGoldClick = useCallback(
+    () => handleBrandClick("brand-oxidized-gold"),
+    [handleBrandClick],
+  );
+  const onVioletReactionClick = useCallback(
+    () => handleBrandClick("brand-violet-reaction"),
+    [handleBrandClick],
+  );
+  const onCoolantLiquidClick = useCallback(
+    () => handleBrandClick("brand-coolant-liquid"),
+    [handleBrandClick],
+  );
+  const onCriticalMassClick = useCallback(
+    () => handleBrandClick("brand-critical-mass"),
+    [handleBrandClick],
+  );
   return (
     <section className="doc-section" id="branding">
       <div className="section-eyebrow">10</div>
@@ -27,35 +47,35 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
         <div className="brand-switcher" id="brandSwitcher">
           <div
             className={`brand-btn ${brand === "brand-plasma-core" ? "active" : ""}`}
-            onClick={() => handleBrandClick("brand-plasma-core")}
+            onClick={onPlasmaCoreClick}
           >
             <div className="brand-dot" style={{ background: "#22d3ee" }}></div>
             Plasma Core
           </div>
           <div
             className={`brand-btn ${brand === "brand-oxidized-gold" ? "active" : ""}`}
-            onClick={() => handleBrandClick("brand-oxidized-gold")}
+            onClick={onOxidizedGoldClick}
           >
             <div className="brand-dot" style={{ background: "#f59e0b" }}></div>
             Oxidized Gold
           </div>
           <div
             className={`brand-btn ${brand === "brand-violet-reaction" ? "active" : ""}`}
-            onClick={() => handleBrandClick("brand-violet-reaction")}
+            onClick={onVioletReactionClick}
           >
             <div className="brand-dot" style={{ background: "#a855f7" }}></div>
             Violet Reaction
           </div>
           <div
             className={`brand-btn ${brand === "brand-coolant-liquid" ? "active" : ""}`}
-            onClick={() => handleBrandClick("brand-coolant-liquid")}
+            onClick={onCoolantLiquidClick}
           >
             <div className="brand-dot" style={{ background: "#06b6d4" }}></div>
             Coolant Liquid
           </div>
           <div
             className={`brand-btn ${brand === "brand-critical-mass" ? "active" : ""}`}
-            onClick={() => handleBrandClick("brand-critical-mass")}
+            onClick={onCriticalMassClick}
           >
             <div className="brand-dot" style={{ background: "#ef4444" }}></div>
             Critical Mass

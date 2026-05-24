@@ -50,7 +50,7 @@ const SECTION_MAP: Record<string, string> = {
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
-  const [brand, setBrand] = useState('brand-plasma-core');
+  const [brand, setBrand] = useState("brand-plasma-core");
   const location = useLocation();
 
   const getBreadcrumb = () => {
@@ -109,7 +109,17 @@ export default function App() {
           >
             Monolith
           </span>
-          <span style={{ fontWeight: 400, opacity: 0.7, fontStyle: 'italic', fontFamily: "var(--ui-font-serif)", color: "var(--brand-primary)" }}>UI</span>
+          <span
+            style={{
+              fontWeight: 400,
+              opacity: 0.7,
+              fontStyle: "italic",
+              fontFamily: "var(--ui-font-serif)",
+              color: "var(--brand-primary)",
+            }}
+          >
+            UI
+          </span>
         </NavLink>
         <div className="nav-sep" />
         <div className="nav-breadcrumb">

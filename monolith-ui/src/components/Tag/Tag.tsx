@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 interface TagProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ export const Tag: React.FC<TagProps> = ({
   className = ''
 }) => {
   return (
-    <span className={`tag ${variant} ${className}`}>
+    <span className={`tag ${variant} ${className}`.trim()}>
       {children}
     </span>
   );

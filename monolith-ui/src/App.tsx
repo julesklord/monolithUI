@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Routes, Route, NavLink, useLocation } from "react-router-dom";
 import { Sun, Moon, CaretRight } from "@phosphor-icons/react";
 import { DocLayout } from "./docs/DocLayout";
@@ -50,8 +50,12 @@ const SECTION_MAP: Record<string, string> = {
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
-  const [brand, setBrand] = useState('brand-plasma-core');
+  const [brand, setBrand] = useState("brand-plasma-core");
   const location = useLocation();
+
+  const toggleTheme = useCallback(() => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  }, []);
 
   const getBreadcrumb = () => {
     const path = location.pathname.split("/")[1] || "";
@@ -109,7 +113,17 @@ export default function App() {
           >
             Monolith
           </span>
-          <span style={{ fontWeight: 400, opacity: 0.7, fontStyle: 'italic', fontFamily: "var(--ui-font-serif)", color: "var(--brand-primary)" }}>UI</span>
+          <span
+            style={{
+              fontWeight: 400,
+              opacity: 0.7,
+              fontStyle: "italic",
+              fontFamily: "var(--ui-font-serif)",
+              color: "var(--brand-primary)",
+            }}
+          >
+            UI
+          </span>
         </NavLink>
         <div className="nav-sep" />
         <div className="nav-breadcrumb">
@@ -164,7 +178,7 @@ export default function App() {
             className="nav-theme-btn"
             id="themeBtn"
             title="Toggle theme (CTRL+T)"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={toggleTheme}
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>

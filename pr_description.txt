@@ -1,0 +1,12 @@
+⚡ Optimize Theme Toggle Rendering
+
+💡 **What:**
+Extracted the inline arrow function from the theme toggle `<button>`'s `onClick` handler in `App.tsx` and wrapped it in a `useCallback` hook. The new `toggleTheme` function uses the functional state update pattern (`prevTheme => ...`) to eliminate the need for `theme` in the dependency array, ensuring its reference never changes across re-renders.
+
+🎯 **Why:**
+Using an inline arrow function in a JSX event handler creates a new function reference on every render. While creating functions is generally fast in modern JS engines, passing new function references as props can defeat memoization (e.g., if the button were later extracted into a `React.memo` component).
+
+📊 **Measured Improvement:**
+Since this button is currently a simple host component (`<button>`) and not a custom memoized component, the measurable performance impact (CPU cycles or memory allocation for the function creation) is negligible in this isolated case. Therefore, a meaningful numerical performance improvement cannot be empirically demonstrated with standard benchmarks.
+
+However, this change acts as a vital architectural optimization. It establishes a correct baseline pattern, preventing future performance regressions that would occur if this UI element were refactored into a heavy custom component that relies on prop stability for memoization.

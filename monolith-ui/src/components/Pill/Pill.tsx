@@ -1,17 +1,23 @@
-﻿import React from 'react';
+﻿import React from "react";
 
 interface PillProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'neutral';
+  variant?:
+    | "primary"
+    | "secondary"
+    | "success"
+    | "warning"
+    | "danger"
+    | "neutral";
   icon?: React.ReactNode;
   className?: string;
 }
 
 export const Pill: React.FC<PillProps> = ({
   children,
-  variant = 'neutral',
+  variant = "neutral",
   icon,
-  className = ''
+  className = "",
 }) => {
   return (
     <div className={`pill ${variant} ${className}`}>

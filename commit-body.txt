@@ -1,0 +1,4 @@
+🎯 What: Extracted routing and layout components out of App.tsx into distinct files.
+💡 Why: App.tsx had routing, layout, styling side-effects, and constant maps making it crowded and hard to manage.
+✅ Verification: Ran format, lint, and build. Ensured no functionality is broken by keeping identical logic in the extracted providers/layouts. Added playwright smoke test.
+✨ Result: App.tsx is clean, focusing only on wiring up the top-level providers and routes.

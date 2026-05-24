@@ -1,4 +1,4 @@
-﻿import React from 'react';
+﻿import React from "react";
 
 interface TerminalViewProps {
   children: React.ReactNode;
@@ -15,9 +15,7 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ children }) => {
         </div>
         <div className="terminal-title">bash — 80x24</div>
       </div>
-      <div className="tui-block">
-        {children}
-      </div>
+      <div className="tui-block">{children}</div>
     </div>
   );
 };

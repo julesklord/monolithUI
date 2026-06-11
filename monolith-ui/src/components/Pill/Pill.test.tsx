@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { Pill } from './Pill';
@@ -22,7 +21,7 @@ describe('Pill Component', () => {
     ];
 
     variants.forEach(variant => {
-      const { container } = render(<Pill variant={variant}>{variant} Pill</Pill>);
+      render(<Pill variant={variant}>{variant} Pill</Pill>);
       const pillElement = screen.getByText(`${variant} Pill`);
       expect(pillElement).toHaveClass('pill');
       expect(pillElement).toHaveClass(variant);

@@ -22,10 +22,7 @@ export const Drawer: React.FC<DrawerProps> = ({
     <>
       <div
         className={`drawer-backdrop ${isOpen ? "open" : ""}`}
-        onClick={() => {
-          console.log("Backdrop clicked");
-          onClose();
-        }}
+        onClick={onClose}
       />
       <div className={`drawer-preview ${isOpen ? "open" : ""}`}>
         <div className="drawer-handle" onClick={onClose} />
@@ -41,13 +38,7 @@ export const Drawer: React.FC<DrawerProps> = ({
             }}
           >
             {headerActions}
-            <div
-              className="drawer-close"
-              onClick={() => {
-                console.log("Drawer close clicked");
-                onClose();
-              }}
-            >
+            <div className="drawer-close" onClick={onClose}>
               <X size={16} weight="duotone" />
             </div>
           </div>

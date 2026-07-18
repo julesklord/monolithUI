@@ -23,7 +23,6 @@ export const Drawer: React.FC<DrawerProps> = ({
       <div
         className={`drawer-backdrop ${isOpen ? "open" : ""}`}
         onClick={() => {
-          console.log("Backdrop clicked");
           onClose();
         }}
       />
@@ -44,7 +43,6 @@ export const Drawer: React.FC<DrawerProps> = ({
             <div
               className="drawer-close"
               onClick={() => {
-                console.log("Drawer close clicked");
                 onClose();
               }}
             >

@@ -52,6 +52,19 @@ export const Header: React.FC = () => {
     return SECTION_MAP[path] || path.toUpperCase();
   };
 
+  const brandSwitcherItems = React.useMemo(() => {
+    return Object.entries(BRAND_MAP).map(([key, { label, color }]) => (
+      <BrandSwitcherItem
+        key={key}
+        brandKey={key}
+        label={label}
+        color={color}
+        isActive={brand === key}
+        onClick={setBrand}
+      />
+    ));
+  }, [brand, setBrand]);
+
   return (
     <>
       {/* ── COMMAND BAR (top strip / OS bar) ── */}
@@ -131,16 +144,7 @@ export const Header: React.FC = () => {
               border: "1px solid var(--ui-border-subtle)",
             }}
           >
-            {Object.entries(BRAND_MAP).map(([key, { label, color }]) => (
-              <BrandSwitcherItem
-                key={key}
-                brandKey={key}
-                label={label}
-                color={color}
-                isActive={brand === key}
-                onClick={setBrand}
-              />
-            ))}
+            {brandSwitcherItems}
           </div>
           <div className="nav-sep" />
           <button

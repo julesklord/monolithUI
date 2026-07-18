@@ -982,6 +982,7 @@ svg {
         border-top-color: var(--ui-border-hover);
         border-left-color: var(--ui-border-hover);
         border-right-color: var(--ui-border-hover);
+        border-bottom-color: var(--ui-border-hover);
         background: var(--ui-surface-4);
         box-shadow:
             var(--ui-edge-light), var(--ui-shadow-sm), var(--ui-inset-micro);

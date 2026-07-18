@@ -228,7 +228,10 @@ Apply via class on `<html>`. Full CSS in `references/brands.md`.
   box-shadow: var(--ui-edge-light), var(--ui-shadow-sm);
 }
 .surface-card:hover {
-  border-color: var(--ui-border-hover);
+  border-top-color: var(--ui-border-hover);
+  border-left-color: var(--ui-border-hover);
+  border-right-color: var(--ui-border-hover);
+  border-bottom-color: var(--ui-border-hover);
   background: var(--ui-surface-4);
   box-shadow: var(--ui-edge-light), var(--ui-shadow-sm), var(--ui-inset-micro);
   /* NO transform: translateY() */
@@ -251,7 +254,10 @@ Apply via class on `<html>`. Full CSS in `references/brands.md`.
 }
 .btn:hover {
   background: var(--ui-surface-3);
-  border-color: var(--ui-border-hover);
+  border-top-color: var(--ui-border-hover);
+  border-left-color: var(--ui-border-hover);
+  border-right-color: var(--ui-border-hover);
+  border-bottom-color: var(--ui-border-hover);
   box-shadow: var(--ui-edge-light-strong), var(--ui-shadow-md);
   transform: translateY(-1px);  /* rise on hover only, NOT on press */
 }

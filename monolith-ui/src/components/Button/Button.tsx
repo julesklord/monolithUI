@@ -1,8 +1,8 @@
-﻿import React from 'react';
+﻿import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: "primary" | "secondary" | "ghost" | "danger";
+  size?: "sm" | "md" | "lg";
   iconOnly?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
@@ -10,25 +10,27 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button: React.FC<ButtonProps> = ({
   children,
-  variant = 'ghost',
-  size = 'md',
+  variant = "ghost",
+  size = "md",
   iconOnly = false,
   leftIcon,
   rightIcon,
-  className = '',
+  className = "",
   onClick,
   ...props
 }) => {
   const classes = [
-    'btn',
+    "btn",
     variant,
-    size !== 'md' ? size : '',
-    iconOnly ? 'icon-only' : '',
-    className
-  ].filter(Boolean).join(' ');
+    size !== "md" ? size : "",
+    iconOnly ? "icon-only" : "",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log('Button clicked:', variant);
+    console.log("Button clicked:", variant);
     if (onClick) onClick(e);
   };
 

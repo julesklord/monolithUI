@@ -17,7 +17,7 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
         handleBrandClick(selectedBrand);
       }
     },
-    [handleBrandClick]
+    [handleBrandClick],
   );
   return (
     <section className="doc-section" id="branding">

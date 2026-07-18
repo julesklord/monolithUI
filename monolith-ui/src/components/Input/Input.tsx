@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   leftIcon?: React.ReactNode;
@@ -14,15 +14,28 @@ export const Input: React.FC<InputProps> = ({
   hint,
   error,
   status,
-  className = '',
+  className = "",
   ...props
 }) => {
   return (
-    <div className={`gd-input-wrap ${error || status === 'invalid' ? 'error' : ''} ${className}`}>
+    <div
+      className={`gd-input-wrap ${error || status === "invalid" ? "error" : ""} ${className}`}
+    >
       {leftIcon}
       <input {...props} />
       {rightIcon}
-      {status === 'invalid' && <span style={{ fontSize: '10px', color: 'var(--ui-danger)', fontFamily: 'var(--ui-font-mono)', marginLeft: '8px' }}>invalid</span>}
+      {status === "invalid" && (
+        <span
+          style={{
+            fontSize: "10px",
+            color: "var(--ui-danger)",
+            fontFamily: "var(--ui-font-mono)",
+            marginLeft: "8px",
+          }}
+        >
+          invalid
+        </span>
+      )}
       {hint && <div className="input-hint">{hint}</div>}
     </div>
   );

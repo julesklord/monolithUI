@@ -1,7 +1,7 @@
-import React from 'react';
-import { Sidebar } from './Sidebar';
-import { Footer } from './sections/Footer';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Sidebar } from "./Sidebar";
+import { Footer } from "./sections/Footer";
+import { Outlet } from "react-router-dom";
 
 export const DocLayout: React.FC = () => {
   return (

@@ -17,114 +17,115 @@ import {
   Browser,
 } from "@phosphor-icons/react";
 
+const sections = [
+  {
+    title: "Overview",
+    items: [
+      {
+        id: "",
+        label: "01 · Introduction",
+        icon: <House weight="duotone" size={15} />,
+      },
+      {
+        id: "principles",
+        label: "02 · Principles",
+        icon: <Sparkle weight="duotone" size={15} />,
+      },
+      {
+        id: "philosophy",
+        label: "03 · Philosophy",
+        icon: <Lightbulb weight="duotone" size={15} />,
+      },
+    ],
+  },
+  {
+    title: "Foundations",
+    items: [
+      {
+        id: "color",
+        label: "04 · Color System",
+        icon: <Palette weight="duotone" size={15} />,
+      },
+      {
+        id: "typography",
+        label: "05 · Typography",
+        icon: <TextAa weight="duotone" size={15} />,
+      },
+      {
+        id: "icons",
+        label: "06 · Icon System",
+        icon: <GridFour weight="duotone" size={15} />,
+      },
+      {
+        id: "tui-system",
+        label: "07 · Terminal UI",
+        icon: <TerminalWindow weight="duotone" size={15} />,
+      },
+      {
+        id: "motion",
+        label: "08 · Motion",
+        icon: <ArrowBendUpRight weight="duotone" size={15} />,
+      },
+    ],
+  },
+  {
+    title: "Structural Theory",
+    items: [
+      {
+        id: "layout",
+        label: "09 · Orbital Layout",
+        icon: <Sun weight="duotone" size={15} />,
+      },
+    ],
+  },
+  {
+    title: "Theming",
+    items: [
+      {
+        id: "branding",
+        label: "10 · Brand System",
+        icon: <CodeBlock weight="duotone" size={15} />,
+      },
+      {
+        id: "spec",
+        label: "11 · Token Spec",
+        icon: <Table weight="duotone" size={15} />,
+      },
+    ],
+  },
+  {
+    title: "Components",
+    items: [
+      {
+        id: "components",
+        label: "12 · Library",
+        icon: <Cards weight="duotone" size={15} />,
+      },
+    ],
+  },
+  {
+    title: "Mocks · Live Examples",
+    items: [
+      {
+        id: "desktop",
+        label: "13 · Desktop Native",
+        icon: <Laptop weight="duotone" size={15} />,
+      },
+      {
+        id: "web",
+        label: "14 · Web Dashboard",
+        icon: <Browser weight="duotone" size={15} />,
+      },
+      {
+        id: "terminal",
+        label: "15 · TUI Console",
+        icon: <TerminalWindow weight="duotone" size={15} />,
+      },
+    ],
+  },
+];
+
 export const Sidebar: React.FC = () => {
-  const sections = [
-    {
-      title: "Overview",
-      items: [
-        {
-          id: "",
-          label: "01 · Introduction",
-          icon: <House weight="duotone" size={15} />,
-        },
-        {
-          id: "principles",
-          label: "02 · Principles",
-          icon: <Sparkle weight="duotone" size={15} />,
-        },
-        {
-          id: "philosophy",
-          label: "03 · Philosophy",
-          icon: <Lightbulb weight="duotone" size={15} />,
-        },
-      ],
-    },
-    {
-      title: "Foundations",
-      items: [
-        {
-          id: "color",
-          label: "04 · Color System",
-          icon: <Palette weight="duotone" size={15} />,
-        },
-        {
-          id: "typography",
-          label: "05 · Typography",
-          icon: <TextAa weight="duotone" size={15} />,
-        },
-        {
-          id: "icons",
-          label: "06 · Icon System",
-          icon: <GridFour weight="duotone" size={15} />,
-        },
-        {
-          id: "tui-system",
-          label: "07 · Terminal UI",
-          icon: <TerminalWindow weight="duotone" size={15} />,
-        },
-        {
-          id: "motion",
-          label: "08 · Motion",
-          icon: <ArrowBendUpRight weight="duotone" size={15} />,
-        },
-      ],
-    },
-    {
-      title: "Structural Theory",
-      items: [
-        {
-          id: "layout",
-          label: "09 · Orbital Layout",
-          icon: <Sun weight="duotone" size={15} />,
-        },
-      ],
-    },
-    {
-      title: "Theming",
-      items: [
-        {
-          id: "branding",
-          label: "10 · Brand System",
-          icon: <CodeBlock weight="duotone" size={15} />,
-        },
-        {
-          id: "spec",
-          label: "11 · Token Spec",
-          icon: <Table weight="duotone" size={15} />,
-        },
-      ],
-    },
-    {
-      title: "Components",
-      items: [
-        {
-          id: "components",
-          label: "12 · Library",
-          icon: <Cards weight="duotone" size={15} />,
-        },
-      ],
-    },
-    {
-      title: "Mocks · Live Examples",
-      items: [
-        {
-          id: "desktop",
-          label: "13 · Desktop Native",
-          icon: <Laptop weight="duotone" size={15} />,
-        },
-        {
-          id: "web",
-          label: "14 · Web Dashboard",
-          icon: <Browser weight="duotone" size={15} />,
-        },
-        {
-          id: "terminal",
-          label: "15 · TUI Console",
-          icon: <TerminalWindow weight="duotone" size={15} />,
-        },
-      ],
-    },
-  ];
   return (
     <aside className="doc-sidebar">
       <div

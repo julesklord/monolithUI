@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export type CommandBarPlatform = 'windows' | 'macos' | 'linux-gnome';
+export type CommandBarPlatform = "windows" | "macos" | "linux-gnome";
 
 interface CommandBarProps {
   children: React.ReactNode;
@@ -9,25 +9,27 @@ interface CommandBarProps {
   className?: string;
 }
 
-export const CommandBar: React.FC<CommandBarProps> = ({ 
-  children, 
-  platform = 'macos',
+export const CommandBar: React.FC<CommandBarProps> = ({
+  children,
+  platform = "macos",
   title,
-  className = ''
+  className = "",
 }) => {
   return (
     <div className={`command-bar cb-platform-${platform} ${className}`}>
-      {platform === 'macos' && (
+      {platform === "macos" && (
         <div className="cb-traffic-lights">
           <div className="cb-dot r" />
           <div className="cb-dot y" />
           <div className="cb-dot g" />
         </div>
       )}
-      
-      {platform === 'linux-gnome' && (
+
+      {platform === "linux-gnome" && (
         <div className="cb-gnome-controls">
-          <div className="cb-gnome-btn close"><i className="ti ti-x"></i></div>
+          <div className="cb-gnome-btn close">
+            <i className="ti ti-x"></i>
+          </div>
         </div>
       )}
 
@@ -36,18 +38,28 @@ export const CommandBar: React.FC<CommandBarProps> = ({
         {children}
       </div>
 
-      {platform === 'windows' && (
+      {platform === "windows" && (
         <div className="cb-win-controls">
-          <div className="cb-win-btn"><i className="ti ti-minus"></i></div>
-          <div className="cb-win-btn"><i className="ti ti-square"></i></div>
-          <div className="cb-win-btn close"><i className="ti ti-x"></i></div>
+          <div className="cb-win-btn">
+            <i className="ti ti-minus"></i>
+          </div>
+          <div className="cb-win-btn">
+            <i className="ti ti-square"></i>
+          </div>
+          <div className="cb-win-btn close">
+            <i className="ti ti-x"></i>
+          </div>
         </div>
       )}
 
-      {platform === 'linux-gnome' && (
+      {platform === "linux-gnome" && (
         <div className="cb-gnome-actions">
-          <div className="cb-gnome-btn"><i className="ti ti-minus"></i></div>
-          <div className="cb-gnome-btn"><i className="ti ti-square"></i></div>
+          <div className="cb-gnome-btn">
+            <i className="ti ti-minus"></i>
+          </div>
+          <div className="cb-gnome-btn">
+            <i className="ti ti-square"></i>
+          </div>
         </div>
       )}
     </div>
@@ -56,7 +68,7 @@ export const CommandBar: React.FC<CommandBarProps> = ({
 
 interface CommandBarSegmentProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'neutral';
+  variant?: "primary" | "secondary" | "success" | "warning" | "neutral";
   onClick?: () => void;
   active?: boolean;
   style?: React.CSSProperties;
@@ -64,14 +76,14 @@ interface CommandBarSegmentProps {
 
 export const CommandBarSegment: React.FC<CommandBarSegmentProps> = ({
   children,
-  variant = 'neutral',
+  variant = "neutral",
   onClick,
   active,
-  style
+  style,
 }) => {
   return (
-    <div 
-      className={`cb-seg ${variant} ${active ? 'active' : ''}`}
+    <div
+      className={`cb-seg ${variant} ${active ? "active" : ""}`}
       onClick={onClick}
       style={style}
     >

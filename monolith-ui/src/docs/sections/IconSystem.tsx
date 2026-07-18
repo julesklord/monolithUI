@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
-  CheckCircle, 
-  Info, 
-  Warning, 
+import {
+  CheckCircle,
+  Info,
+  Warning,
   WarningCircle,
   MagnifyingGlass,
   Command,
@@ -23,48 +23,48 @@ import {
   IdentificationCard
 } from '@phosphor-icons/react';
 
-export const IconSystem: React.FC = () => {
-  const ICON_GROUPS = [
-    {
-      title: 'Status & Semantic (Duotone)',
-      icons: [
-        { Icon: CheckCircle, label: 'Success', use: 'Process completed', class: 'success' },
-        { Icon: Info, label: 'Info', use: 'System telemetry', class: '' },
-        { Icon: Warning, label: 'Warning', use: 'Caution required', class: 'warning' },
-        { Icon: WarningCircle, label: 'Danger', use: 'Critical failure', class: 'danger' },
-      ]
-    },
-    {
-      title: 'Industrial Core',
-      icons: [
-        { Icon: TerminalWindow, label: 'Console', use: 'TUI / CLI Root', class: '' },
-        { Icon: Code, label: 'Source', use: 'Data processing', class: '' },
-        { Icon: Cpu, label: 'Processor', use: 'Logic engine', class: '' },
-        { Icon: Database, label: 'Vault', use: 'Memory storage', class: '' },
-        { Icon: Cube, label: 'Module', use: 'Component unit', class: '' },
-      ]
-    },
-    {
-      title: 'Tactical Operations',
-      icons: [
-        { Icon: Fingerprint, label: 'Auth', use: 'Biometric access', class: '' },
-        { Icon: ShieldCheck, label: 'Secure', use: 'Validated state', class: '' },
-        { Icon: IdentificationCard, label: 'Identity', use: 'User credentials', class: '' },
-        { Icon: LockKey, label: 'Encypt', use: 'Security layer', class: '' },
-      ]
-    },
-    {
-      title: 'System Interface',
-      icons: [
-        { Icon: Command, label: 'Action', use: 'System command', class: '' },
-        { Icon: MagnifyingGlass, label: 'Lookup', use: 'Global search', class: '' },
-        { Icon: Gear, label: 'Config', use: 'Control panel', class: '' },
-        { Icon: Bell, label: 'Signals', use: 'Notification', class: '' },
-        { Icon: ClockCounterClockwise, label: 'Log', use: 'History trace', class: '' },
-      ]
-    }
-  ];
+const ICON_GROUPS = [
+  {
+    title: 'Status & Semantic (Duotone)',
+    icons: [
+      { Icon: CheckCircle, label: 'Success', use: 'Process completed', class: 'success' },
+      { Icon: Info, label: 'Info', use: 'System telemetry', class: '' },
+      { Icon: Warning, label: 'Warning', use: 'Caution required', class: 'warning' },
+      { Icon: WarningCircle, label: 'Danger', use: 'Critical failure', class: 'danger' },
+    ]
+  },
+  {
+    title: 'Industrial Core',
+    icons: [
+      { Icon: TerminalWindow, label: 'Console', use: 'TUI / CLI Root', class: '' },
+      { Icon: Code, label: 'Source', use: 'Data processing', class: '' },
+      { Icon: Cpu, label: 'Processor', use: 'Logic engine', class: '' },
+      { Icon: Database, label: 'Vault', use: 'Memory storage', class: '' },
+      { Icon: Cube, label: 'Module', use: 'Component unit', class: '' },
+    ]
+  },
+  {
+    title: 'Tactical Operations',
+    icons: [
+      { Icon: Fingerprint, label: 'Auth', use: 'Biometric access', class: '' },
+      { Icon: ShieldCheck, label: 'Secure', use: 'Validated state', class: '' },
+      { Icon: IdentificationCard, label: 'Identity', use: 'User credentials', class: '' },
+      { Icon: LockKey, label: 'Encypt', use: 'Security layer', class: '' },
+    ]
+  },
+  {
+    title: 'System Interface',
+    icons: [
+      { Icon: Command, label: 'Action', use: 'System command', class: '' },
+      { Icon: MagnifyingGlass, label: 'Lookup', use: 'Global search', class: '' },
+      { Icon: Gear, label: 'Config', use: 'Control panel', class: '' },
+      { Icon: Bell, label: 'Signals', use: 'Notification', class: '' },
+      { Icon: ClockCounterClockwise, label: 'Log', use: 'History trace', class: '' },
+    ]
+  }
+];
 
+export const IconSystem: React.FC = () => {
   return (
     <section className="doc-section" id="icon-system">
       <div className="section-eyebrow">06</div>

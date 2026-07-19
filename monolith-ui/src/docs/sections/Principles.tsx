@@ -8,52 +8,52 @@ import {
   Ruler,
 } from "@phosphor-icons/react";
 
-export const Principles: React.FC = () => {
-  const principles = [
-    {
-      icon: <Stack weight="duotone" size={22} />,
-      color: "var(--ui-text-secondary)",
-      border: "var(--ui-border-hover)",
-      title: "Depth over flat",
-      desc: "Surfaces have weight. Use the 7-step surface ramp to create real visual hierarchy. Flat monochrome backgrounds are a failure of imagination — they cannot communicate elevation, focus, or state.",
-    },
-    {
-      icon: <ArrowBendUpRight weight="duotone" size={22} />,
-      color: "var(--ui-accent-secondary)",
-      border: "var(--ui-accent-secondary-border)",
-      title: "Physics, not interpolation",
-      desc: "Nothing in nature moves at constant speed. Every animation uses a bezier curve that mimics real physical force — spring overshoot for entrances, ease-out for fades. ease-linear is banned except for looping spinners.",
-    },
-    {
-      icon: <Sun weight="duotone" size={22} />,
-      color: "var(--ui-info)",
-      border: "var(--ui-info-border)",
-      title: "Orbital, not grid",
-      desc: "Navigation doesn't live in a sidebar. It orbits the content — a command bar on top, a floating dock on the side, drawers from below. The content always wins the prime real estate. The chrome always serves the core.",
-    },
-    {
-      icon: <CircleHalfTilt weight="duotone" size={22} />,
-      color: "var(--ui-warning)",
-      border: "var(--ui-warning-border)",
-      title: "Semantic over decorative",
-      desc: "Every color carries exactly one meaning. Primary = main action. Success = connected. Warning = caution. Danger = error. Secondary = metadata. Never decorate with semantic colors. Their power comes from their consistency.",
-    },
-    {
-      icon: <Ruler weight="duotone" size={22} />,
-      color: "var(--ui-success)",
-      border: "var(--ui-success-border)",
-      title: "Measurable, not subjective",
-      desc: "Every decision in this system has a specification: motion uses exact bezier values, surfaces use exact hex steps, spacing follows a defined scale. \"It looks good\" is not an argument. If it's not in the spec, it's not in the system.",
-    },
-    {
-      icon: <CodeBlock weight="duotone" size={22} />,
-      color: "var(--ui-danger)",
-      border: "var(--ui-danger-border)",
-      title: "Brand-agnostic slots",
-      desc: "The system uses semantic token slots. Each project fills those slots with its brand colors via @layer brand. Components never reference brand colors directly — only semantic slots. The entire system rebrands with ~10 CSS variable overrides.",
-    },
-  ];
+const principles = [
+  {
+    icon: <Stack weight="duotone" size={22} />,
+    color: "var(--ui-text-secondary)",
+    border: "var(--ui-border-hover)",
+    title: "Depth over flat",
+    desc: "Surfaces have weight. Use the 7-step surface ramp to create real visual hierarchy. Flat monochrome backgrounds are a failure of imagination — they cannot communicate elevation, focus, or state.",
+  },
+  {
+    icon: <ArrowBendUpRight weight="duotone" size={22} />,
+    color: "var(--ui-accent-secondary)",
+    border: "var(--ui-accent-secondary-border)",
+    title: "Physics, not interpolation",
+    desc: "Nothing in nature moves at constant speed. Every animation uses a bezier curve that mimics real physical force — spring overshoot for entrances, ease-out for fades. ease-linear is banned except for looping spinners.",
+  },
+  {
+    icon: <Sun weight="duotone" size={22} />,
+    color: "var(--ui-info)",
+    border: "var(--ui-info-border)",
+    title: "Orbital, not grid",
+    desc: "Navigation doesn't live in a sidebar. It orbits the content — a command bar on top, a floating dock on the side, drawers from below. The content always wins the prime real estate. The chrome always serves the core.",
+  },
+  {
+    icon: <CircleHalfTilt weight="duotone" size={22} />,
+    color: "var(--ui-warning)",
+    border: "var(--ui-warning-border)",
+    title: "Semantic over decorative",
+    desc: "Every color carries exactly one meaning. Primary = main action. Success = connected. Warning = caution. Danger = error. Secondary = metadata. Never decorate with semantic colors. Their power comes from their consistency.",
+  },
+  {
+    icon: <Ruler weight="duotone" size={22} />,
+    color: "var(--ui-success)",
+    border: "var(--ui-success-border)",
+    title: "Measurable, not subjective",
+    desc: "Every decision in this system has a specification: motion uses exact bezier values, surfaces use exact hex steps, spacing follows a defined scale. \"It looks good\" is not an argument. If it's not in the spec, it's not in the system.",
+  },
+  {
+    icon: <CodeBlock weight="duotone" size={22} />,
+    color: "var(--ui-danger)",
+    border: "var(--ui-danger-border)",
+    title: "Brand-agnostic slots",
+    desc: "The system uses semantic token slots. Each project fills those slots with its brand colors via @layer brand. Components never reference brand colors directly — only semantic slots. The entire system rebrands with ~10 CSS variable overrides.",
+  },
+];
 
+export const Principles: React.FC = () => {
   return (
     <section className="doc-section" id="principles">
       <div className="section-eyebrow">02</div>

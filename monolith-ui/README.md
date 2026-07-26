@@ -8,7 +8,7 @@
       <p><strong>Density over decoration.</strong><br/>
       <em>An industrial-grade, brand-agnostic design system built for complex developer tools, orchestration scripts, and CLIs.</em></p>
       <p>
-        <img src="https://img.shields.io/badge/version-0.1.0-863bff?style=plastic" alt="Version">
+        <img src="https://img.shields.io/badge/version-0.2.0-863bff?style=plastic" alt="Version">
         <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=plastic" alt="License MIT"></a>
         <img src="https://img.shields.io/badge/Built%20With-React%20+%20TypeScript-0ea5e9?style=plastic" alt="Built with React + TypeScript">
       </p>

@@ -8,7 +8,7 @@
       <p><strong>Industrial design system</strong><br/>
       <em>Built for developer tools, orchestration scripts, and CLIs.</em></p>
       <p>
-        <img src="https://img.shields.io/badge/version-0.1.0-863bff?style=plastic" alt="Version">
+        <img src="https://img.shields.io/badge/version-0.2.0-863bff?style=plastic" alt="Version">
         <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=plastic" alt="License MIT"></a>
         <img src="https://img.shields.io/badge/Built%20With-React%20+%20TypeScript-0ea5e9?style=plastic" alt="Built with React + TypeScript">
         <img src="https://img.shields.io/badge/Brands-5_presets-f59e0b?style=plastic" alt="5 brand presets">

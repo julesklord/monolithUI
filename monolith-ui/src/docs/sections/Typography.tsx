@@ -5,14 +5,18 @@ export const Typography: React.FC = () => {
     <section className="doc-section" id="typography">
       <div className="section-eyebrow">05</div>
       <h2 className="section-title"><em>Typography</em></h2>
-      <p className="section-desc">Three fonts with distinct roles. DM Serif for display moments, DM Sans for all UI, DM Mono for data and code. These can be overridden per brand via <span className="icode">--brand-font-*</span> tokens.</p>
+      <p className="section-desc">Fonts with distinct roles. FiraMono Compressed Black for main titles, Fira Sans Condensed for secondary titles, DM Sans for UI body, and DM Mono for code. These can be overridden per brand via <span className="icode">--brand-font-*</span> tokens.</p>
 
       <div className="subsection">
         <div className="subsection-title">Type specimen</div>
         <div className="canvas col" style={{ padding: '0', gap: '0' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '20px', padding: '16px 20px', borderBottom: '1px solid var(--ui-border-subtle)' }}>
-            <div style={{ width: '140px', flexShrink: '0', fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-disabled)', lineHeight: '1.6' }}><strong style={{ color: 'var(--ui-text-tertiary)', display: 'block' }}>DM Serif Display</strong>serif · display · titles</div>
-            <div style={{ fontFamily: 'var(--ui-font-serif)', fontSize: '30px', color: 'var(--ui-text-primary)', lineHeight: '1.2' }}>MonolithUI</div>
+            <div style={{ width: '140px', flexShrink: '0', fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-disabled)', lineHeight: '1.6' }}><strong style={{ color: 'var(--ui-text-tertiary)', display: 'block' }}>FiraMono Compressed</strong>compressed · main · titles</div>
+            <div style={{ fontFamily: 'var(--ui-font-serif)', fontSize: '30px', color: 'var(--ui-text-primary)', lineHeight: '1.2', fontWeight: 900 }}>MonolithUI</div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '20px', padding: '16px 20px', borderBottom: '1px solid var(--ui-border-subtle)' }}>
+            <div style={{ width: '140px', flexShrink: '0', fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-disabled)', lineHeight: '1.6' }}><strong style={{ color: 'var(--ui-text-tertiary)', display: 'block' }}>Fira Sans Condensed</strong>condensed · secondary · titles</div>
+            <div style={{ fontFamily: 'var(--ui-font-condensed)', fontSize: '20px', color: 'var(--ui-text-primary)', fontWeight: 700 }}>Telemetry Overview · Active Checkpoints</div>
           </div>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '20px', padding: '16px 20px', borderBottom: '1px solid var(--ui-border-subtle)' }}>
             <div style={{ width: '140px', flexShrink: '0', fontSize: '10px', fontFamily: 'var(--ui-font-mono)', color: 'var(--ui-text-disabled)', lineHeight: '1.6' }}><strong style={{ color: 'var(--ui-text-tertiary)', display: 'block' }}>DM Sans 600</strong>heavy · section labels</div>
@@ -52,7 +56,7 @@ export const Typography: React.FC = () => {
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}><span style={{ fontFamily: 'var(--ui-font-mono)', fontSize: '10px', color: 'var(--ui-text-disabled)', width: '100px' }}>lg · 16px</span><span style={{ fontSize: '16px', color: 'var(--ui-text-primary)' }}>Section titles, page headers</span></div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}><span style={{ fontFamily: 'var(--ui-font-mono)', fontSize: '10px', color: 'var(--ui-text-disabled)', width: '100px' }}>xl · 20px</span><span style={{ fontSize: '20px', color: 'var(--ui-text-primary)' }}>Hero subtitles</span></div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}><span style={{ fontFamily: 'var(--ui-font-mono)', fontSize: '10px', color: 'var(--ui-text-disabled)', width: '100px' }}>2xl · 26px</span><span style={{ fontSize: '26px', color: 'var(--ui-text-primary)', fontWeight: '300' }}>Page titles</span></div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}><span style={{ fontFamily: 'var(--ui-font-mono)', fontSize: '10px', color: 'var(--ui-text-disabled)', width: '100px' }}>3xl · 34px</span><span style={{ fontSize: '34px', color: 'var(--ui-text-primary)', fontWeight: '300', fontFamily: 'var(--ui-font-serif)' }}>Display serif</span></div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}><span style={{ fontFamily: 'var(--ui-font-mono)', fontSize: '10px', color: 'var(--ui-text-disabled)', width: '100px' }}>3xl · 34px</span><span style={{ fontSize: '34px', color: 'var(--ui-text-primary)', fontWeight: '900', fontFamily: 'var(--ui-font-serif)' }}>Display FiraMono</span></div>
         </div>
       </div>
     </section>

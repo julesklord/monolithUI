@@ -1,16 +1,16 @@
-﻿@layer tokens {
+@layer tokens {
     :root {
         /* Surface ramp — Pure greyscale fallbacks (brand overrides via --brand-surface-*)
            These are only consulted when index.css :root tokens are NOT set,
            which in practice never happens. Kept for standalone token usage. */
-        --ui-surface-0: var(--brand-surface-0, #080808);
-        --ui-surface-1: var(--brand-surface-1, #0f0f0f);
-        --ui-surface-2: var(--brand-surface-2, #161616);
-        --ui-surface-3: var(--brand-surface-3, #1e1e1e);
-        --ui-surface-4: var(--brand-surface-4, #262626);
-        --ui-surface-5: var(--brand-surface-5, #303030);
-        --ui-surface-6: var(--brand-surface-6, #3a3a3a);
-        --ui-surface-terminal: #0a0c0f;
+        --ui-surface-0: #080808;
+        --ui-surface-1: #0f0f0f;
+        --ui-surface-2: #161616;
+        --ui-surface-3: #1e1e1e;
+        --ui-surface-4: #262626;
+        --ui-surface-5: #303030;
+        --ui-surface-6: #3a3a3a;
+        --ui-surface-terminal: #0a0a0a;
 
         --ui-border-subtle: var(--brand-border-subtle, rgba(255, 255, 255, 0.06));
         --ui-border-default: var(--brand-border-default, rgba(255, 255, 255, 0.12));
@@ -34,7 +34,19 @@
 
         --ui-font-sans: var(--brand-font-sans, "DM Sans", system-ui, sans-serif);
         --ui-font-mono: var(--brand-font-mono, "DM Mono", "Fira Code", monospace);
-        --ui-font-serif: var(--brand-font-serif, "DM Serif Display", Georgia, serif);
+        --ui-font-serif: var(
+            --brand-font-serif,
+            "FiraMono Compressed Black",
+            "Fira Mono",
+            "Fira Code",
+            monospace
+        );
+        --ui-font-condensed: var(
+            --brand-font-condensed,
+            "Fira Sans Condensed",
+            "Oswald",
+            sans-serif
+        );
 
         --ui-text-2xs: 9.5px;
         --ui-text-xs: 10.5px;
@@ -62,23 +74,23 @@
         --ui-sp-12: 48px;
 
         --ui-r-xs: 3px;
-        --ui-r-sm: 5px;
-        --ui-r-md: 7px;
-        --ui-r-lg: 10px;
-        --ui-r-xl: 13px;
+        --ui-r-sm: 4px;
+        --ui-r-md: 6px;
+        --ui-r-lg: 8px;
+        --ui-r-xl: 12px;
         --ui-r-2xl: 18px;
         --ui-r-pill: 999px;
 
-        --ui-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+        --ui-ease-spring: cubic-bezier(0.2, 1, 0.3, 1);
         --ui-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
         --ui-ease-in: cubic-bezier(0.4, 0, 1, 1);
         --ui-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
         --ui-ease-linear: linear;
 
         --ui-dur-instant: 60ms;
-        --ui-dur-fast: 110ms;
-        --ui-dur-base: 190ms;
-        --ui-dur-slow: 320ms;
+        --ui-dur-fast: 160ms;
+        --ui-dur-base: 240ms;
+        --ui-dur-slow: 380ms;
         --ui-dur-drawer: 370ms;
         --ui-dur-page: 420ms;
 

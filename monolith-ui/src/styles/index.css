@@ -68,13 +68,13 @@ a:focus-visible {
 /* These are the REAL tokens. Brand fills them in @layer brand. */
 :root {
     /* Surface ramp — Pure greyscale, no colour tint */
-    --ui-surface-0: var(--brand-surface-0, #080808);
-    --ui-surface-1: var(--brand-surface-1, #0f0f0f);
-    --ui-surface-2: var(--brand-surface-2, #161616);
-    --ui-surface-3: var(--brand-surface-3, #1e1e1e);
-    --ui-surface-4: var(--brand-surface-4, #262626);
-    --ui-surface-5: var(--brand-surface-5, #303030);
-    --ui-surface-6: var(--brand-surface-6, #3a3a3a);
+    --ui-surface-0: #080808;
+    --ui-surface-1: #0f0f0f;
+    --ui-surface-2: #161616;
+    --ui-surface-3: #1e1e1e;
+    --ui-surface-4: #262626;
+    --ui-surface-5: #303030;
+    --ui-surface-6: #3a3a3a;
 
     /* Border ramp — Higher contrast, more "Mechanical" */
     --ui-border-subtle: rgba(255, 255, 255, 0.06);
@@ -159,9 +159,16 @@ a:focus-visible {
     --ui-font-mono: var(--brand-font-mono, "DM Mono", "Fira Code", monospace);
     --ui-font-serif: var(
         --brand-font-serif,
-        "DM Serif Display",
-        Georgia,
-        serif
+        "FiraMono Compressed Black",
+        "Fira Mono",
+        "Fira Code",
+        monospace
+    );
+    --ui-font-condensed: var(
+        --brand-font-condensed,
+        "Fira Sans Condensed",
+        "Oswald",
+        sans-serif
     );
 
     /* Type scale */
@@ -191,6 +198,39 @@ a:focus-visible {
     --ui-sp-10: 40px;
     --ui-sp-12: 48px;
 
+    /* Radius */
+    --ui-r-xs: 3px;
+    --ui-r-sm: 4px;
+    --ui-r-md: 6px;
+    --ui-r-lg: 8px;
+    --ui-r-xl: 12px;
+    --ui-r-2xl: 18px;
+    --ui-r-pill: 999px;
+
+    /* Motion */
+    --ui-ease-spring: cubic-bezier(0.2, 1, 0.3, 1);
+    --ui-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ui-ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ui-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+    --ui-ease-linear: linear;
+
+    --ui-dur-instant: 60ms;
+    --ui-dur-fast: 160ms;
+    --ui-dur-base: 240ms;
+    --ui-dur-slow: 380ms;
+    --ui-dur-drawer: 370ms;
+    --ui-dur-page: 420ms;
+
+    /* Shadows */
+    --ui-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --ui-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+    --ui-shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+    --ui-shadow-dock: 0 2px 8px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.4);
+    --ui-shadow-drawer: 0 -4px 20px rgba(0, 0, 0, 0.4);
+
+    /* Surface overrides / Terminal special */
+    --ui-surface-terminal: #0a0a0a;
+
     /* Z-index */
     --ui-z-base: 1;
     --ui-z-raised: 10;
@@ -203,16 +243,13 @@ a:focus-visible {
 
 /* ── LIGHT THEME OVERRIDES (Industrial Concrete / Hormigón) ── */
 [data-theme="light"] {
-    --ui-surface-0: var(--brand-surface-light-0, #c2c2c2); /* Deep Concrete */
-    --ui-surface-1: var(--brand-surface-light-1, #cbcbcb);
-    --ui-surface-2: var(--brand-surface-light-2, #d4d4d4);
-    --ui-surface-3: var(
-        --brand-surface-light-3,
-        #dedede
-    ); /* Main Concrete Canvas */
-    --ui-surface-4: var(--brand-surface-light-4, #e8e8e8);
-    --ui-surface-5: var(--brand-surface-light-5, #f0f0f0);
-    --ui-surface-6: var(--brand-surface-light-6, #f8f8f8);
+    --ui-surface-0: #c2c2c2; /* Deep Concrete */
+    --ui-surface-1: #cbcbcb;
+    --ui-surface-2: #d4d4d4;
+    --ui-surface-3: #dedede; /* Main Concrete Canvas */
+    --ui-surface-4: #e8e8e8;
+    --ui-surface-5: #f0f0f0;
+    --ui-surface-6: #f8f8f8;
 
     --ui-border-subtle: rgba(0, 0, 0, 0.08);
     --ui-border-default: rgba(0, 0, 0, 0.18);
@@ -505,16 +542,23 @@ a:focus-visible {
     justify-content: center;
     cursor: pointer;
     color: var(--ui-text-secondary);
+    box-shadow: var(--ui-edge-light), var(--ui-shadow-sm);
     transition: all var(--ui-dur-fast) var(--ui-ease-default);
 }
 .nav-theme-btn:hover {
-    border-color: var(--ui-border-hover);
-    background: var(--ui-surface-4);
+    background: var(--ui-surface-3);
+    border-top-color: var(--ui-border-hover);
+    border-left-color: var(--ui-border-hover);
+    border-right-color: var(--ui-border-hover);
+    border-bottom-color: var(--ui-border-hover);
     color: var(--ui-text-primary);
+    box-shadow: var(--ui-edge-light-strong), var(--ui-shadow-md);
+    transform: translateY(-1px);
 }
 .nav-theme-btn:active {
-    background: var(--ui-surface-5);
-    transform: scale(0.95);
+    background: var(--ui-surface-4);
+    box-shadow: var(--ui-inset-shallow);
+    transform: translateY(0);
 }
 
 /* ── SIDEBAR ── */
@@ -1290,6 +1334,7 @@ svg {
     }
     .dock-btn:active {
         transform: scale(0.96);
+        box-shadow: var(--ui-inset-shallow);
     }
     .dock-btn.active {
         background: var(--ui-accent-primary-bg);
@@ -2753,6 +2798,7 @@ svg {
     h2,
     h3,
     h4 {
+        font-family: var(--ui-font-condensed);
         letter-spacing: -0.02em;
         text-wrap: balance;
     }

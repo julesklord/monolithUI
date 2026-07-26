@@ -59,8 +59,7 @@ box-shadow: var(--ui-edge-light), var(--ui-shadow-*), var(--ui-inset-*);
 
 ### Surfaces — Pure Greyscale, No Colour Tint
 
-Surfaces use pure greyscale by default. Brand tint comes only from `--brand-*` accent tokens,
-never from surface values. Lower number = deeper/darker.
+Surfaces are strictly grayscale constants and do not inherit from `--brand-surface-*` or `--brand-surface-light-*` to guarantee absolute color neutrality under all color schemes and brands. Lower number = deeper/darker.
 
 ```css
 --ui-surface-0: #080808   /* deepest: modal backdrops, dock bg */
@@ -70,14 +69,18 @@ never from surface values. Lower number = deeper/darker.
 --ui-surface-4: #262626   /* cards, drawers, main canvas */
 --ui-surface-5: #303030   /* hover states */
 --ui-surface-6: #3a3a3a   /* active hover, border-adjacent */
---ui-surface-terminal: #0a0c0f  /* TUI blocks only */
+--ui-surface-terminal: #0a0a0a  /* TUI blocks only, pure grayscale */
 ```
 
 Light theme (applied via `[data-theme="light"]` on `<html>`):
 
 ```css
 --ui-surface-0: #c2c2c2   /* deep concrete */
+--ui-surface-1: #cbcbcb
+--ui-surface-2: #d4d4d4
 --ui-surface-3: #dedede   /* main concrete canvas */
+--ui-surface-4: #e8e8e8
+--ui-surface-5: #f0f0f0
 --ui-surface-6: #f8f8f8   /* lightest */
 ```
 
@@ -172,11 +175,12 @@ Core(1) → Raised(10) → Toolbars(20) → Drawers(30) → Dock(40) → Tooltip
 
 ### Typography
 
-Three fonts, distinct roles — never swap them:
+Four fonts with distinct roles — never swap them:
 
-- `--ui-font-serif` → **DM Serif Display** — display titles, section headers with `<em>`
-- `--ui-font-sans`  → **DM Sans** — all UI body text (weights 300–600)
-- `--ui-font-mono`  → **DM Mono** — data, status, values, code, labels, command segments
+- `--ui-font-serif`     → **FiraMono Compressed Black** — display/main titles, section headers with `<em>`
+- `--ui-font-condensed` → **Fira Sans Condensed** (fallback Oswald) — secondary titles (h2 except section-title, h3, h4)
+- `--ui-font-sans`      → **DM Sans** — all UI body text (weights 300–600)
+- `--ui-font-mono`      → **DM Mono** — data, status, values, code, labels, command segments
 
 Type scale tokens: `--ui-text-2xs` (9.5px) · `--ui-text-xs` (10.5px) · `--ui-text-sm` (11.5px) · `--ui-text-base` (13px) · `--ui-text-md` (14px) · `--ui-text-lg` (16px) · `--ui-text-xl` (20px) · `--ui-text-2xl` (26px) · `--ui-text-3xl` (34px) · `--ui-text-4xl` (44px)
 
@@ -444,6 +448,7 @@ When building TUI/terminal mockups:
 - Status bar: inverted (brand-primary bg, surface-0 text), ALL CAPS, DM Mono
 - **No gradients, no shadows, no border-radius in TUI**
 - Motion = character reveals, progress bar fills
+- Grid consistency: All nested sections (such as sidebars and lists) must share connected box-drawing character borders rather than having disjointed/floating visual elements.
 
 Layout archetypes:
 - **TYPE_A (Command Station):** 25% sidebar / 75% main / 2-line status — chat/editors
@@ -526,7 +531,7 @@ Any `--ui-*` token not in this table does not exist in the system:
 | Accent secondary | `--ui-accent-secondary` `--ui-accent-secondary-bg` `--ui-accent-secondary-border` |
 | Semantic | `--ui-success` `--ui-success-light` `--ui-success-bg` `--ui-success-border` `--ui-warning` `--ui-warning-bg` `--ui-warning-border` `--ui-danger` `--ui-danger-bg` `--ui-danger-border` `--ui-info` `--ui-info-bg` `--ui-info-border` |
 | Gradient | `--ui-gradient-primary` |
-| Typography | `--ui-font-sans` `--ui-font-mono` `--ui-font-serif` |
+| Typography | `--ui-font-sans` `--ui-font-mono` `--ui-font-serif` `--ui-font-condensed` |
 | Type scale | `--ui-text-2xs` `--ui-text-xs` `--ui-text-sm` `--ui-text-base` `--ui-text-md` `--ui-text-lg` `--ui-text-xl` `--ui-text-2xl` `--ui-text-3xl` `--ui-text-4xl` |
 | Leading | `--ui-leading-tight` `--ui-leading-base` `--ui-leading-loose` |
 | Spacing | `--ui-sp-1` `--ui-sp-2` `--ui-sp-3` `--ui-sp-4` `--ui-sp-5` `--ui-sp-6` `--ui-sp-8` `--ui-sp-10` `--ui-sp-12` |

@@ -12,13 +12,13 @@ export const TokenSpec: React.FC = () => {
         <table className="spec-table">
           <tbody>
             <tr><th>Token</th><th>Dark default</th><th>Light default</th><th>Usage</th></tr>
-            <tr><td className="td-token">--ui-surface-0</td><td className="td-val">#0a0c10</td><td className="td-val">#bcc0c9</td><td className="td-use">Deepest layer, dock bg, modal backdrop</td></tr>
-            <tr><td className="td-token">--ui-surface-1</td><td className="td-val">#0f1218</td><td className="td-val">#c5c9d2</td><td className="td-use">Command bar, nav, sidebar</td></tr>
-            <tr><td className="td-token">--ui-surface-2</td><td className="td-val">#14171f</td><td className="td-val">#ced3db</td><td className="td-use">Secondary panels, tab bars</td></tr>
-            <tr><td className="td-token">--ui-surface-3</td><td className="td-val">#1a1e26</td><td className="td-val">#d7dce4</td><td className="td-use">Root app background, concrete canvas</td></tr>
-            <tr><td className="td-token">--ui-surface-4</td><td className="td-val">#21252e</td><td className="td-val">#e0e4eb</td><td className="td-use">Main canvas, drawers, cards</td></tr>
-            <tr><td className="td-token">--ui-surface-5</td><td className="td-val">#292e38</td><td className="td-val">#e9ecf2</td><td className="td-use">Hover states, elevated cards</td></tr>
-            <tr><td className="td-token">--ui-surface-6</td><td className="td-val">#323845</td><td className="td-val">#f2f5f9</td><td className="td-use">Active hover, border-adjacent elements</td></tr>
+            <tr><td className="td-token">--ui-surface-0</td><td className="td-val">#080808</td><td className="td-val">#c2c2c2</td><td className="td-use">Deepest layer, dock bg, modal backdrop</td></tr>
+            <tr><td className="td-token">--ui-surface-1</td><td className="td-val">#0f0f0f</td><td className="td-val">#cbcbcb</td><td className="td-use">Command bar, nav, sidebar</td></tr>
+            <tr><td className="td-token">--ui-surface-2</td><td className="td-val">#161616</td><td className="td-val">#d4d4d4</td><td className="td-use">Secondary panels, tab bars</td></tr>
+            <tr><td className="td-token">--ui-surface-3</td><td className="td-val">#1e1e1e</td><td className="td-val">#dedede</td><td className="td-use">Root app background, concrete canvas</td></tr>
+            <tr><td className="td-token">--ui-surface-4</td><td className="td-val">#262626</td><td className="td-val">#e8e8e8</td><td className="td-use">Main canvas, drawers, cards</td></tr>
+            <tr><td className="td-token">--ui-surface-5</td><td className="td-val">#303030</td><td className="td-val">#f0f0f0</td><td className="td-use">Hover states, elevated cards</td></tr>
+            <tr><td className="td-token">--ui-surface-6</td><td className="td-val">#3a3a3a</td><td className="td-val">#f8f8f8</td><td className="td-use">Active hover, border-adjacent elements</td></tr>
           </tbody>
         </table>
       </div>
@@ -96,7 +96,7 @@ export const TokenSpec: React.FC = () => {
             <tr><td className="td-token">--brand-font-mono</td><td className="td-val">--ui-font-mono</td><td className="td-use">Optional: override monospace font</td></tr>
           </tbody>
         </table>
-        <div className="canvas-label">Surface variables (--brand-surface-0…6) are optional. Omitting them falls back to the neutral Tropic Vibes palette.</div>
+        <div className="canvas-label">Surface variables (--ui-surface-0…6) are strictly neutral grayscale across all themes and color schemes to guarantee background neutrality.</div>
       </div>
 
       <div className="subsection">

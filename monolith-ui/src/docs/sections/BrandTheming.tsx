@@ -19,6 +19,19 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
     },
     [handleBrandClick]
   );
+
+  const onBrandKeyDown = React.useCallback(
+    (e: React.KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        const selectedBrand = e.currentTarget.getAttribute("data-brand");
+        if (selectedBrand) {
+          handleBrandClick(selectedBrand);
+        }
+      }
+    },
+    [handleBrandClick]
+  );
   return (
     <section className="doc-section" id="branding">
       <div className="section-eyebrow">10</div>
@@ -38,6 +51,10 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
             className={`brand-btn ${brand === "brand-plasma-core" ? "active" : ""}`}
             data-brand="brand-plasma-core"
             onClick={onBrandClick}
+            onKeyDown={onBrandKeyDown}
+            role="tab"
+            aria-selected={brand === "brand-plasma-core"}
+            tabIndex={0}
           >
             <div className="brand-dot" style={{ background: "#22d3ee" }}></div>
             Plasma Core
@@ -46,6 +63,10 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
             className={`brand-btn ${brand === "brand-oxidized-gold" ? "active" : ""}`}
             data-brand="brand-oxidized-gold"
             onClick={onBrandClick}
+            onKeyDown={onBrandKeyDown}
+            role="tab"
+            aria-selected={brand === "brand-oxidized-gold"}
+            tabIndex={0}
           >
             <div className="brand-dot" style={{ background: "#f59e0b" }}></div>
             Oxidized Gold
@@ -54,6 +75,10 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
             className={`brand-btn ${brand === "brand-violet-reaction" ? "active" : ""}`}
             data-brand="brand-violet-reaction"
             onClick={onBrandClick}
+            onKeyDown={onBrandKeyDown}
+            role="tab"
+            aria-selected={brand === "brand-violet-reaction"}
+            tabIndex={0}
           >
             <div className="brand-dot" style={{ background: "#a855f7" }}></div>
             Violet Reaction
@@ -62,6 +87,10 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
             className={`brand-btn ${brand === "brand-coolant-liquid" ? "active" : ""}`}
             data-brand="brand-coolant-liquid"
             onClick={onBrandClick}
+            onKeyDown={onBrandKeyDown}
+            role="tab"
+            aria-selected={brand === "brand-coolant-liquid"}
+            tabIndex={0}
           >
             <div className="brand-dot" style={{ background: "#06b6d4" }}></div>
             Coolant Liquid
@@ -70,6 +99,10 @@ export const BrandTheming: React.FC<BrandThemingProps> = ({
             className={`brand-btn ${brand === "brand-critical-mass" ? "active" : ""}`}
             data-brand="brand-critical-mass"
             onClick={onBrandClick}
+            onKeyDown={onBrandKeyDown}
+            role="tab"
+            aria-selected={brand === "brand-critical-mass"}
+            tabIndex={0}
           >
             <div className="brand-dot" style={{ background: "#ef4444" }}></div>
             Critical Mass

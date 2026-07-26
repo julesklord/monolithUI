@@ -23,9 +23,20 @@ export const Drawer: React.FC<DrawerProps> = ({
       <div
         className={`drawer-backdrop ${isOpen ? "open" : ""}`}
         onClick={onClose}
+        aria-hidden="true"
       />
-      <div className={`drawer-preview ${isOpen ? "open" : ""}`}>
-        <div className="drawer-handle" onClick={onClose} />
+      <div
+        className={`drawer-preview ${isOpen ? "open" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label={title}
+      >
+        <button
+          type="button"
+          className="drawer-handle"
+          onClick={onClose}
+          aria-label="Close drawer handle"
+        />
         <div className="drawer-header">
           {icon && <span className="drawer-icon">{icon}</span>}
           {title && <div className="drawer-title">{title}</div>}
@@ -38,12 +49,14 @@ export const Drawer: React.FC<DrawerProps> = ({
             }}
           >
             {headerActions}
-            <div
+            <button
+              type="button"
               className="drawer-close"
               onClick={onClose}
+              aria-label="Close drawer"
             >
               <X size={16} weight="duotone" />
-            </div>
+            </button>
           </div>
         </div>
         <div className="drawer-body">{children}</div>

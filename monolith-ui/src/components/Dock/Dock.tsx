@@ -51,15 +51,18 @@ export const DockButton: React.FC<DockButtonProps> = ({
   };
 
   return (
-    <div 
+    <button
+      type="button"
       className={`dock-btn ${active ? 'active' : ''}`}
       onClick={handleClick}
       title={tooltip || label}
+      aria-label={tooltip || label}
+      aria-pressed={active ? 'true' : 'false'}
     >
       {icon}
       {label && <span className="dock-btn-label">{label}</span>}
       {badge && <div className="dock-badge" />}
-    </div>
+    </button>
   );
 };
 

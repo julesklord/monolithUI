@@ -1,5 +1,18 @@
 import React from "react";
 
+const TokenText: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div
+    style={{
+      fontSize: "10px",
+      fontFamily: "var(--ui-font-mono)",
+      color: "var(--ui-text-disabled)",
+      lineHeight: 1.7,
+    }}
+  >
+    {children}
+  </div>
+);
+
 const SURFACE_RAMP_DARK = [
   {
     name: "Surface 0",
@@ -265,17 +278,7 @@ export const ColorSystem: React.FC = () => {
               PRIMARY FAMILY
             </div>
             {PRIMARY_TOKENS.map((t) => (
-              <div
-                key={t}
-                style={{
-                  fontSize: "10px",
-                  fontFamily: "var(--ui-font-mono)",
-                  color: "var(--ui-text-disabled)",
-                  lineHeight: 1.7,
-                }}
-              >
-                {t}
-              </div>
+              <TokenText key={t}>{t}</TokenText>
             ))}
           </div>
           <div style={{ flex: "1", minWidth: "180px" }}>
@@ -299,17 +302,7 @@ export const ColorSystem: React.FC = () => {
               SECONDARY FAMILY
             </div>
             {SECONDARY_TOKENS.map((t) => (
-              <div
-                key={t}
-                style={{
-                  fontSize: "10px",
-                  fontFamily: "var(--ui-font-mono)",
-                  color: "var(--ui-text-disabled)",
-                  lineHeight: 1.7,
-                }}
-              >
-                {t}
-              </div>
+              <TokenText key={t}>{t}</TokenText>
             ))}
           </div>
           <div style={{ flex: "1", minWidth: "180px" }}>
@@ -326,21 +319,14 @@ export const ColorSystem: React.FC = () => {
             >
               <span>your brand</span>
             </div>
-            <div
-              style={{
-                fontSize: "10px",
-                fontFamily: "var(--ui-font-mono)",
-                color: "var(--ui-text-disabled)",
-                lineHeight: 1.7,
-              }}
-            >
+            <TokenText>
               <div>.brand-myapp {"{"}</div>
               <div style={{ paddingLeft: "12px" }}>--brand-primary: #HEX;</div>
               <div style={{ paddingLeft: "12px" }}>
                 --brand-secondary: #HEX;
               </div>
               <div>{"}"}</div>
-            </div>
+            </TokenText>
           </div>
         </div>
       </div>

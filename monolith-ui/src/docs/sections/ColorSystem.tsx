@@ -209,8 +209,8 @@ export const ColorSystem: React.FC = () => {
           Surface ramp · light mode (7 steps)
         </div>
         <div className="color-grid">
-          {SURFACE_RAMP_LIGHT.map((s, i) => (
-            <div className="swatch" key={i}>
+          {SURFACE_RAMP_LIGHT.map((s) => (
+            <div className="swatch" key={s.name}>
               <div
                 className="swatch-block"
                 style={{ background: s.val, border: "1px solid #ddd" }}

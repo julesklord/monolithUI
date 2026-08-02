@@ -5,6 +5,24 @@ Format: [keepachangelog.com](https://keepachangelog.com) · Versioning: [semver.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-08-02
+
+### Added
+
+- Interactive Landing page with product presentation showcase (`Landing.tsx`).
+- Full documentation routing structure (`/docs/...`).
+- Comprehensive unit test coverage for `BrandTheming` component and new layout routes.
+
+### Changed
+
+- Moved static data structures (`Sidebar`, `ColorSystem`, `DesktopUI`) to module level to eliminate allocation overhead during re-renders.
+- Upgraded list rendering keys across `IconSystem`, `TerminalUI`, `DesktopUI`, and `WebUI` from index-based keys to unique stable identifiers.
+
+### Fixed
+
+- Cleaned up debug logging statements across UI components (`Drawer`).
+- Extracted and deduplicated brand accent markup into reusable `ColorFamilyColumn` helper.
+
 ## [0.2.0] - 2026-07-25
 
 ### Added

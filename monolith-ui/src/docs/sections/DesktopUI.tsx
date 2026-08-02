@@ -198,7 +198,7 @@ export const DesktopUI: React.FC = () => {
                     label: "Neural_Visualizer",
                   },
                   { icon: <Cube size={14} />, label: "3D_Orbit_Render" },
-                ].map((item) => (
+                ].map((item, i) => (
                   <div
                     key={item.label}
                     style={{

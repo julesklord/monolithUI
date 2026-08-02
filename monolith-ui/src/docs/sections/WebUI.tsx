@@ -258,7 +258,7 @@ export const WebUI: React.FC = () => {
                     95, 60, 40, 85, 50,
                   ].map((h, i) => (
                     <div
-                      key={i}
+                      key={`bar-${i}`}
                       style={{
                         flex: 1,
                         height: `${h}%`,

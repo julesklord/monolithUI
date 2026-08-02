@@ -10,7 +10,12 @@ import {
   ArrowUpRight,
 } from "@phosphor-icons/react";
 
+const CHART_DATA = [
+  40, 65, 30, 85, 45, 90, 55, 70, 35, 60, 40, 80, 50, 75, 45, 95, 60, 40, 85, 50,
+].map((h, i) => ({ id: `chart-bar-${i}`, h, index: i }));
+
 export const WebUI: React.FC = () => {
+
   return (
     <section className="doc-section" id="web-ui">
       <div className="section-eyebrow">14</div>
@@ -253,25 +258,22 @@ export const WebUI: React.FC = () => {
                     paddingBottom: "8px",
                   }}
                 >
-                  {[
-                    40, 65, 30, 85, 45, 90, 55, 70, 35, 60, 40, 80, 50, 75, 45,
-                    95, 60, 40, 85, 50,
-                  ].map((h, i) => (
+                  {CHART_DATA.map((item) => (
                     <div
-                      key={i}
+                      key={item.id}
                       style={{
                         flex: 1,
-                        height: `${h}%`,
+                        height: `${item.h}%`,
                         background:
-                          i === 15
+                          item.index === 15
                             ? "var(--brand-primary)"
                             : "var(--ui-surface-5)",
                         borderRadius: "1px",
                         boxShadow:
-                          i === 15
+                          item.index === 15
                             ? "0 0 10px var(--ui-accent-primary-glow)"
                             : "none",
-                        opacity: i === 15 ? 1 : 0.6,
+                        opacity: item.index === 15 ? 1 : 0.6,
                       }}
                     ></div>
                   ))}

@@ -165,6 +165,47 @@ const COLOR_SEMANTICS_RULES = [
   },
 ];
 
+const ColorFamilyColumn: React.FC<{
+  background: string;
+  label: string;
+  tokens: string[];
+}> = ({ background, label, tokens }) => (
+  <div style={{ flex: "1", minWidth: "180px" }}>
+    <div
+      style={{
+        height: "56px",
+        background,
+        borderRadius: "var(--ui-r-md)",
+        marginBottom: "12px",
+      }}
+    />
+    <div
+      style={{
+        fontSize: "var(--ui-text-xs)",
+        fontFamily: "var(--ui-font-mono)",
+        color: "var(--ui-text-tertiary)",
+        marginBottom: "6px",
+        fontWeight: 700,
+      }}
+    >
+      {label}
+    </div>
+    {tokens.map((t) => (
+      <div
+        key={t}
+        style={{
+          fontSize: "10px",
+          fontFamily: "var(--ui-font-mono)",
+          color: "var(--ui-text-disabled)",
+          lineHeight: 1.7,
+        }}
+      >
+        {t}
+      </div>
+    ))}
+  </div>
+);
+
 export const ColorSystem: React.FC = () => {
   return (
     <section className="doc-section" id="color">
@@ -244,74 +285,16 @@ export const ColorSystem: React.FC = () => {
           </p>
         </div>
         <div className="canvas row" style={{ alignItems: "stretch" }}>
-          <div style={{ flex: "1", minWidth: "180px" }}>
-            <div
-              style={{
-                height: "56px",
-                background: "var(--ui-gradient-primary)",
-                borderRadius: "var(--ui-r-md)",
-                marginBottom: "12px",
-              }}
-            />
-            <div
-              style={{
-                fontSize: "var(--ui-text-xs)",
-                fontFamily: "var(--ui-font-mono)",
-                color: "var(--ui-text-tertiary)",
-                marginBottom: "6px",
-                fontWeight: 700,
-              }}
-            >
-              PRIMARY FAMILY
-            </div>
-            {PRIMARY_TOKENS.map((t) => (
-              <div
-                key={t}
-                style={{
-                  fontSize: "10px",
-                  fontFamily: "var(--ui-font-mono)",
-                  color: "var(--ui-text-disabled)",
-                  lineHeight: 1.7,
-                }}
-              >
-                {t}
-              </div>
-            ))}
-          </div>
-          <div style={{ flex: "1", minWidth: "180px" }}>
-            <div
-              style={{
-                height: "56px",
-                background: "var(--ui-accent-secondary)",
-                borderRadius: "var(--ui-r-md)",
-                marginBottom: "12px",
-              }}
-            />
-            <div
-              style={{
-                fontSize: "var(--ui-text-xs)",
-                fontFamily: "var(--ui-font-mono)",
-                color: "var(--ui-text-tertiary)",
-                marginBottom: "6px",
-                fontWeight: 700,
-              }}
-            >
-              SECONDARY FAMILY
-            </div>
-            {SECONDARY_TOKENS.map((t) => (
-              <div
-                key={t}
-                style={{
-                  fontSize: "10px",
-                  fontFamily: "var(--ui-font-mono)",
-                  color: "var(--ui-text-disabled)",
-                  lineHeight: 1.7,
-                }}
-              >
-                {t}
-              </div>
-            ))}
-          </div>
+          <ColorFamilyColumn
+            background="var(--ui-gradient-primary)"
+            label="PRIMARY FAMILY"
+            tokens={PRIMARY_TOKENS}
+          />
+          <ColorFamilyColumn
+            background="var(--ui-accent-secondary)"
+            label="SECONDARY FAMILY"
+            tokens={SECONDARY_TOKENS}
+          />
           <div style={{ flex: "1", minWidth: "180px" }}>
             <div
               className="open-slot"

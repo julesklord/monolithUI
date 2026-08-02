@@ -70,6 +70,10 @@ export const Header: React.FC = () => {
     ));
   }, [brand, setBrand]);
 
+  const toggleTheme = useCallback(() => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  }, [theme, setTheme]);
+
   return (
     <>
       {/* ── COMMAND BAR (top strip / OS bar) ── */}
@@ -179,7 +183,7 @@ export const Header: React.FC = () => {
             className="nav-theme-btn"
             id="themeBtn"
             title="Toggle theme (CTRL+T)"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={toggleTheme}
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>

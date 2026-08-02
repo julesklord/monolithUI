@@ -200,7 +200,7 @@ export const DesktopUI: React.FC = () => {
                   { icon: <Cube size={14} />, label: "3D_Orbit_Render" },
                 ].map((item, i) => (
                   <div
-                    key={i}
+                    key={item.label}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -379,7 +379,7 @@ export const DesktopUI: React.FC = () => {
                   "hat_orbital_v2.wav",
                 ].map((s, i) => (
                   <div
-                    key={i}
+                    key={s}
                     style={{
                       padding: "6px 8px",
                       fontSize: "11px",
@@ -463,14 +463,27 @@ export const DesktopUI: React.FC = () => {
                     }}
                   >
                     {[
-                      30, 50, 80, 40, 60, 90, 70, 50, 85, 30, 20, 60, 40, 80,
-                      55,
-                    ].map((h, i) => (
+                      { h: 30, id: "h1" },
+                      { h: 50, id: "h2" },
+                      { h: 80, id: "h3" },
+                      { h: 40, id: "h4" },
+                      { h: 60, id: "h5" },
+                      { h: 90, id: "h6" },
+                      { h: 70, id: "h7" },
+                      { h: 50, id: "h8" },
+                      { h: 85, id: "h9" },
+                      { h: 30, id: "h10" },
+                      { h: 20, id: "h11" },
+                      { h: 60, id: "h12" },
+                      { h: 40, id: "h13" },
+                      { h: 80, id: "h14" },
+                      { h: 55, id: "h15" },
+                    ].map((item) => (
                       <div
-                        key={i}
+                        key={item.id}
                         style={{
                           flex: 1,
-                          height: `${h}%`,
+                          height: `${item.h}%`,
                           background: "var(--brand-primary)",
                           opacity: 0.6,
                           borderRadius: "1px",

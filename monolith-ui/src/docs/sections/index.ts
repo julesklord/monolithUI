@@ -14,4 +14,3 @@ export * from './BrandTheming';
 export * from './TokenSpec';
 export * from './TUIComponents';
 export * from './Footer';
-export * from './Landing';

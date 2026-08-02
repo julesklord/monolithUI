@@ -18,7 +18,6 @@ import {
   TokenSpec,
   IconSystem,
   TUIComponents,
-  Landing,
 } from "./docs/sections";
 import "./styles/index.css";
 
@@ -29,8 +28,7 @@ export default function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/docs" element={<DocLayout />}>
+        <Route path="/" element={<DocLayout />}>
           <Route index element={<Hero />} />
           <Route path="principles" element={<Principles />} />
           <Route path="philosophy" element={<Philosophy />} />

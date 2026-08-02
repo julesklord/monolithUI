@@ -48,13 +48,8 @@ export const Header: React.FC = () => {
   const location = useLocation();
 
   const getBreadcrumb = () => {
-    const parts = location.pathname.split("/").filter(Boolean);
-    if (parts.length === 0) return "LANDING";
-    if (parts[0] === "docs") {
-      const subpath = parts[1] || "";
-      return SECTION_MAP[subpath] || "INTRODUCTION";
-    }
-    return SECTION_MAP[parts[0]] || parts[0].toUpperCase();
+    const path = location.pathname.split("/")[1] || "";
+    return SECTION_MAP[path] || path.toUpperCase();
   };
 
   const brandSwitcherItems = React.useMemo(() => {
@@ -69,10 +64,6 @@ export const Header: React.FC = () => {
       />
     ));
   }, [brand, setBrand]);
-
-  const toggleTheme = useCallback(() => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  }, [theme, setTheme]);
 
   return (
     <>
@@ -128,29 +119,6 @@ export const Header: React.FC = () => {
           </span>
         </NavLink>
         <div className="nav-sep" />
-        <NavLink 
-          to="/docs" 
-          className={({ isActive }) => `nav-theme-btn ${isActive ? "active" : ""}`}
-          style={({ isActive }) => ({
-            textDecoration: "none",
-            color: isActive ? "var(--brand-primary)" : "var(--ui-text-secondary)",
-            fontSize: "11px",
-            fontFamily: "var(--ui-font-mono)",
-            fontWeight: 700,
-            letterSpacing: "0.05em",
-            textTransform: "uppercase",
-            padding: "4px 10px",
-            border: "1px solid var(--ui-border-default)",
-            background: isActive ? "var(--ui-surface-2)" : "var(--ui-surface-1)",
-            boxShadow: isActive ? "var(--ui-inset-shallow)" : "var(--ui-shadow-sm)",
-            height: "26px",
-            display: "inline-flex",
-            alignItems: "center",
-          })}
-        >
-          DOCUMENTATION
-        </NavLink>
-        <div className="nav-sep" />
         <div className="nav-breadcrumb">
           <CaretRight size={14} style={{ opacity: 0.3 }} />
           <span>{getBreadcrumb()}</span>
@@ -183,7 +151,7 @@ export const Header: React.FC = () => {
             className="nav-theme-btn"
             id="themeBtn"
             title="Toggle theme (CTRL+T)"
-            onClick={toggleTheme}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>

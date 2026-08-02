@@ -68,7 +68,7 @@ export const Principles: React.FC = () => {
       <div className="grid-2" style={{ gap: "12px" }}>
         {principles.map((p, i) => (
           <div
-            key={p.title}
+            key={i}
             className="surface-card elevated"
             style={{ borderTop: `3px solid ${p.border}` }}
           >

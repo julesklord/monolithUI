@@ -31,15 +31,9 @@ describe("Header component", () => {
   });
 
   it("updates breadcrumbs correctly based on the route and SECTION_MAP", () => {
-    // Empty path (Landing page)
+    // Empty path
     renderHeader("/");
-    expect(screen.getByText("LANDING")).toBeInTheDocument();
-  });
-
-  it("updates breadcrumbs correctly for docs home path", () => {
-    // Docs index path (Introduction)
-    renderHeader("/docs");
-    expect(screen.getByText("01 · INTRODUCTION")).toBeInTheDocument();
+    expect(screen.getByText(SECTION_MAP[""])).toBeInTheDocument();
   });
 
   it("updates breadcrumbs correctly for 'principles' route", () => {

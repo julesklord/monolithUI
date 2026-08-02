@@ -381,8 +381,8 @@ export const WebUI: React.FC = () => {
                   title: "The Physics of Motion",
                   desc: "Emulating physical inertia in virtual scrolling systems.",
                 },
-              ].map((post, i) => (
-                <div key={i} style={{ display: "flex", gap: "24px" }}>
+              ].map((post) => (
+                <div key={post.title} style={{ display: "flex", gap: "24px" }}>
                   <div
                     style={{
                       width: "40px",
@@ -629,7 +629,7 @@ export const WebUI: React.FC = () => {
                 { label: "OUTPUT_BIT", val: "32-BIT" },
               ].map((stat, i) => (
                 <div
-                  key={i}
+                  key={stat.label}
                   style={{
                     flex: 1,
                     padding: "16px",

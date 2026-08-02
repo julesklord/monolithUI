@@ -48,8 +48,13 @@ export const Header: React.FC = () => {
   const location = useLocation();
 
   const getBreadcrumb = () => {
-    const path = location.pathname.split("/")[1] || "";
-    return SECTION_MAP[path] || path.toUpperCase();
+    const parts = location.pathname.split("/").filter(Boolean);
+    if (parts.length === 0) return "LANDING";
+    if (parts[0] === "docs") {
+      const subpath = parts[1] || "";
+      return SECTION_MAP[subpath] || "INTRODUCTION";
+    }
+    return SECTION_MAP[parts[0]] || parts[0].toUpperCase();
   };
 
   const brandSwitcherItems = React.useMemo(() => {
@@ -117,6 +122,29 @@ export const Header: React.FC = () => {
           >
             UI
           </span>
+        </NavLink>
+        <div className="nav-sep" />
+        <NavLink 
+          to="/docs" 
+          className={({ isActive }) => `nav-theme-btn ${isActive ? "active" : ""}`}
+          style={({ isActive }) => ({
+            textDecoration: "none",
+            color: isActive ? "var(--brand-primary)" : "var(--ui-text-secondary)",
+            fontSize: "11px",
+            fontFamily: "var(--ui-font-mono)",
+            fontWeight: 700,
+            letterSpacing: "0.05em",
+            textTransform: "uppercase",
+            padding: "4px 10px",
+            border: "1px solid var(--ui-border-default)",
+            background: isActive ? "var(--ui-surface-2)" : "var(--ui-surface-1)",
+            boxShadow: isActive ? "var(--ui-inset-shallow)" : "var(--ui-shadow-sm)",
+            height: "26px",
+            display: "inline-flex",
+            alignItems: "center",
+          })}
+        >
+          DOCUMENTATION
         </NavLink>
         <div className="nav-sep" />
         <div className="nav-breadcrumb">

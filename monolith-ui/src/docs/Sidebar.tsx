@@ -172,7 +172,7 @@ export const Sidebar: React.FC = () => {
           {section.items.map((item) => (
             <NavLink
               key={item.id}
-              to={`/${item.id}`}
+              to={item.id === "" ? "/docs" : `/docs/${item.id}`}
               className={({ isActive }) =>
                 `sidebar-link ${isActive ? "active" : ""}`
               }

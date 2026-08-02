@@ -200,7 +200,7 @@ export const DesktopUI: React.FC = () => {
                   { icon: <Cube size={14} />, label: "3D_Orbit_Render" },
                 ].map((item, i) => (
                   <div
-                    key={i}
+                    key={item.label}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -379,7 +379,7 @@ export const DesktopUI: React.FC = () => {
                   "hat_orbital_v2.wav",
                 ].map((s, i) => (
                   <div
-                    key={i}
+                    key={s}
                     style={{
                       padding: "6px 8px",
                       fontSize: "11px",
@@ -467,7 +467,7 @@ export const DesktopUI: React.FC = () => {
                       55,
                     ].map((h, i) => (
                       <div
-                        key={i}
+                        key={`bar-${i}-${h}`}
                         style={{
                           flex: 1,
                           height: `${h}%`,

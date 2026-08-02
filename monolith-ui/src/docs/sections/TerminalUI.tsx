@@ -292,9 +292,9 @@ export const TerminalUI: React.FC = () => {
                       temp: "31°C",
                       col: "var(--ui-text-tertiary)",
                     },
-                  ].map((row, i) => (
+                  ].map((row) => (
                     <div
-                      key={i}
+                      key={row.name}
                       style={{
                         display: "grid",
                         gridTemplateColumns: "1.5fr 1fr 1fr",

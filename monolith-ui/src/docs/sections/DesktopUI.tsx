@@ -10,6 +10,27 @@ import {
   MonitorPlay,
   Cube,
 } from "@phosphor-icons/react";
+const OPERATIONS = [
+  {
+    icon: <TerminalWindow size={14} />,
+    label: "Active_Console",
+  },
+  {
+    icon: <MonitorPlay size={14} />,
+    label: "Neural_Visualizer",
+  },
+  { icon: <Cube size={14} />, label: "3D_Orbit_Render" },
+];
+
+const AUDIO_SAMPLES = [
+  "kick_core_01.wav",
+  "snare_machined.wav",
+  "hat_orbital_v2.wav",
+];
+
+const SYNTH_LEVELS = [
+  30, 50, 80, 40, 60, 90, 70, 50, 85, 30, 20, 60, 40, 80, 55,
+].map((value, index) => ({ id: `level-${index}`, value }));
 
 export const DesktopUI: React.FC = () => {
   return (
@@ -188,19 +209,9 @@ export const DesktopUI: React.FC = () => {
                 >
                   OPERATIONS
                 </div>
-                {[
-                  {
-                    icon: <TerminalWindow size={14} />,
-                    label: "Active_Console",
-                  },
-                  {
-                    icon: <MonitorPlay size={14} />,
-                    label: "Neural_Visualizer",
-                  },
-                  { icon: <Cube size={14} />, label: "3D_Orbit_Render" },
-                ].map((item, i) => (
+                {OPERATIONS.map((item, i) => (
                   <div
-                    key={i}
+                    key={item.label}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -373,13 +384,9 @@ export const DesktopUI: React.FC = () => {
               <div
                 style={{ display: "flex", flexDirection: "column", gap: "2px" }}
               >
-                {[
-                  "kick_core_01.wav",
-                  "snare_machined.wav",
-                  "hat_orbital_v2.wav",
-                ].map((s, i) => (
+                {AUDIO_SAMPLES.map((s, i) => (
                   <div
-                    key={i}
+                    key={s}
                     style={{
                       padding: "6px 8px",
                       fontSize: "11px",
@@ -462,15 +469,12 @@ export const DesktopUI: React.FC = () => {
                       alignItems: "flex-end",
                     }}
                   >
-                    {[
-                      30, 50, 80, 40, 60, 90, 70, 50, 85, 30, 20, 60, 40, 80,
-                      55,
-                    ].map((h, i) => (
+                    {SYNTH_LEVELS.map((level) => (
                       <div
-                        key={i}
+                        key={level.id}
                         style={{
                           flex: 1,
-                          height: `${h}%`,
+                          height: `${level.value}%`,
                           background: "var(--brand-primary)",
                           opacity: 0.6,
                           borderRadius: "1px",

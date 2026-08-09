@@ -9,6 +9,61 @@ import {
 } from "@phosphor-icons/react";
 import { Logo } from "../../components";
 
+
+interface PillarCardProps {
+  icon: React.ReactNode;
+  iconColor: string;
+  title: string;
+  description: string;
+}
+
+const PillarCard: React.FC<PillarCardProps> = ({ icon, iconColor, title, description }) => (
+  <div
+    style={{
+      display: "flex",
+      padding: "20px",
+      background: "var(--ui-surface-2)",
+      border: "1px solid var(--ui-border-default)",
+      borderRadius: "var(--ui-r-md)",
+      gap: "20px",
+      boxShadow: "var(--ui-inset-shallow)",
+      transition: "all var(--ui-dur-fast) var(--ui-ease-default)",
+    }}
+  >
+    <div
+      style={{
+        color: iconColor,
+        width: "20px",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      {icon}
+    </div>
+    <div style={{ flex: 1 }}>
+      <div
+        style={{
+          fontSize: "13px",
+          fontWeight: 600,
+          color: "var(--ui-text-primary)",
+          marginBottom: "4px",
+        }}
+      >
+        {title}
+      </div>
+      <div
+        style={{
+          fontSize: "12px",
+          color: "var(--ui-text-secondary)",
+          lineHeight: 1.5,
+        }}
+      >
+        {description}
+      </div>
+    </div>
+  </div>
+);
+
 export const Hero: React.FC = () => {
   return (
     <section className="doc-section" style={{ paddingTop: "0px" }}>
@@ -133,147 +188,26 @@ export const Hero: React.FC = () => {
       <div className="subsection">
         <div className="subsection-title">Architectural Pillars</div>
         <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-          <div
-            style={{
-              display: "flex",
-              padding: "20px",
-              background: "var(--ui-surface-2)",
-              border: "1px solid var(--ui-border-default)",
-              borderRadius: "var(--ui-r-md)",
-              gap: "20px",
-              boxShadow: "var(--ui-inset-shallow)",
-              transition: "all var(--ui-dur-fast) var(--ui-ease-default)",
-            }}
-          >
-            <div
-              style={{
-                color: "var(--brand-primary)",
-                width: "20px",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Meteor weight="duotone" size={20} />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div
-                style={{
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  color: "var(--ui-text-primary)",
-                  marginBottom: "4px",
-                }}
-              >
-                Native OS Physics
-              </div>
-              <div
-                style={{
-                  fontSize: "12px",
-                  color: "var(--ui-text-secondary)",
-                  lineHeight: 1.5,
-                }}
-              >
-                Linear interpolation is banned. Every motion utilizes bezier
-                curves or spring physics to emulate real momentum and tactile
-                feedback, ensuring web apps feel as solid as desktop software.
-              </div>
-            </div>
-          </div>
+          <PillarCard
+            icon={<Meteor weight="duotone" size={20} />}
+            iconColor="var(--brand-primary)"
+            title="Native OS Physics"
+            description="Linear interpolation is banned. Every motion utilizes bezier curves or spring physics to emulate real momentum and tactile feedback, ensuring web apps feel as solid as desktop software."
+          />
 
-          <div
-            style={{
-              display: "flex",
-              padding: "20px",
-              background: "var(--ui-surface-2)",
-              border: "1px solid var(--ui-border-default)",
-              borderRadius: "var(--ui-r-md)",
-              gap: "20px",
-              boxShadow: "var(--ui-inset-shallow)",
-              transition: "all var(--ui-dur-fast) var(--ui-ease-default)",
-            }}
-          >
-            <div
-              style={{
-                color: "var(--ui-accent-secondary)",
-                width: "20px",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Palette weight="duotone" size={20} />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div
-                style={{
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  color: "var(--ui-text-primary)",
-                  marginBottom: "4px",
-                }}
-              >
-                Semantic Theming Engine
-              </div>
-              <div
-                style={{
-                  fontSize: "12px",
-                  color: "var(--ui-text-secondary)",
-                  lineHeight: 1.5,
-                }}
-              >
-                A rigid separation between brand colors and structural tokens.
-                By changing a few base variables, the entire application—from
-                buttons to complex charts—re-themes automatically without
-                touching component code.
-              </div>
-            </div>
-          </div>
+          <PillarCard
+            icon={<Palette weight="duotone" size={20} />}
+            iconColor="var(--ui-accent-secondary)"
+            title="Semantic Theming Engine"
+            description="A rigid separation between brand colors and structural tokens. By changing a few base variables, the entire application—from buttons to complex charts—re-themes automatically without touching component code."
+          />
 
-          <div
-            style={{
-              display: "flex",
-              padding: "20px",
-              background: "var(--ui-surface-2)",
-              border: "1px solid var(--ui-border-default)",
-              borderRadius: "var(--ui-r-md)",
-              gap: "20px",
-              boxShadow: "var(--ui-inset-shallow)",
-              transition: "all var(--ui-dur-fast) var(--ui-ease-default)",
-            }}
-          >
-            <div
-              style={{
-                color: "var(--ui-success)",
-                width: "20px",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Layout weight="duotone" size={20} />
-            </div>
-            <div style={{ flex: 1 }}>
-              <div
-                style={{
-                  fontSize: "13px",
-                  fontWeight: 600,
-                  color: "var(--ui-text-primary)",
-                  marginBottom: "4px",
-                }}
-              >
-                Universal Scalability
-              </div>
-              <div
-                style={{
-                  fontSize: "12px",
-                  color: "var(--ui-text-secondary)",
-                  lineHeight: 1.5,
-                }}
-              >
-                Components are designed to scale. The same pill component used
-                in a dense command bar works seamlessly in a sprawling
-                e-commerce product filter or a data-heavy analytics dashboard.
-              </div>
-            </div>
-          </div>
+          <PillarCard
+            icon={<Layout weight="duotone" size={20} />}
+            iconColor="var(--ui-success)"
+            title="Universal Scalability"
+            description="Components are designed to scale. The same pill component used in a dense command bar works seamlessly in a sprawling e-commerce product filter or a data-heavy analytics dashboard."
+          />
         </div>
       </div>
 
